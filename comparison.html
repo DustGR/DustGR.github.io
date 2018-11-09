@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Comparisons - Weather Data</title>
+</head>
+  <!--Nav Bar (for index.html)-->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#" id="brandlogo"><strong>Homework</strong></a>
+      </div>
+  
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class='collapse navbar-collapse' id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right">
+            <li><a href="index.html"><span class="icon-bar glyphicon glyphicon-home"></span> Home</a></li>
+            <li><a><span class="icon-bar glyphicon glyphicon-blackboard"></span> Comparison</a></li>
+            <li><a href="data.html"><span class="icon-bar glyphicon glyphicon-list-alt"></span> Data</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-eye-open"></span> Plots<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="Vis1.html">Temperature</a></li>
+                <li><a href="Vis2.html">Cloud Cover</a></li>
+                <li><a href="Vis3.html">Wind</a></li>
+                <li><a href="Vis4.html">Humidity</a></li>
+              </ul>
+            </li>
+          </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+<body>
+<div class='container-fluid'>
+  <div class='row'>
+    <div class='col-md-12'>
+      <p>These graphs will help us determine if certain weather conditions correlate to different lattitudes.  The lattitude of the recording is shown as the X axis, while four different metrics on the Y axis.
+
+      </p>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-6'>
+      <h2 class='text-center comparison-header'>
+        Temperature
+      </h2>
+      <figure>
+        <img src="figures/Temperature_Scatter.png" class='img-responsive'>
+      </figure>
+      <figcaption>
+        This graph shows a curve toward higher temperature near the equator (lattitude 0°). The data was collected at the end of summer in the northern hemisphere, which might explain why temperatures are still higher from 0 to 20° lattitude, just north of the equator, instead of directly at the equator.
+      </figcaption>
+    </div>
+    <div class='col-md-6'>
+      <h2 class='text-center comparison-header'>
+          Wind Speed
+      </h2>
+      <figure>
+        <img src="figures/Wind_Speed_Scatter.png" class='img-responsive'>
+      </figure>
+      <figcaption>
+        The few data points available at lattitudes above 60° show a loose tendency to higher wind speed.  Due to the scarcity of data south of -60° lattitude, 
+        it's difficult to tell if these conditions occur near both poles or is unique to the arctic.
+      </figcaption>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-6'>
+      <h2 class='text-center comparison-header'>
+          Clouds
+      </h2>
+      <figure>
+          <img src="figures/Cloudiness_Scatter.png" class='img-responsive'>
+      </figure>
+      <figcaption>
+        Cloud conditions appear to be fairly evenly distributed among different lattitudes.  Cloud conditions do not appear to be affected by lattitude.
+      </figcaption>
+    </div>
+    <div class='col-md-6'>
+      <h2 class='text-center comparison-header'>
+          Humidity
+      </h2>
+      <figure>
+        <img src="figures/Humidity_Scatter.png" class='img-responsive'>
+      </figure>
+      <figcaption>
+        Low humidity measurements are more common at certain lattitudes, such as -20° and 40°.
+      </figcaption>
+    </div>
+  </div>
+  <div class='row'>
+    <div class='col-md-12'>
+      <h3 class='align-center'>Conclusions</h3>
+      <p class='tab'>
+        It is apparent that temperature is strongly correlated with lattitude.  There appears to be weaker tendency for humidity to be lower in the ranges of -20° and 40°.  It is more difficult to draw conclusions about wind speed's connection to lattitude, and there does not appear to be any trend between lattitude and clouds.
+      </p>
+      <br>
+      <h4>Role of Geography</h4>
+      <p class='tab'>
+        The tendency of humidity to be high in equatorial and polar regions and lower in certain bands lattitude is likely due to the distribution of continents on the globe.  Water is necessary for humidity, meaning coastal regions and small land masses are more prone to high humidity.  In contrast, larger land masses can include more inland area, which may have less rainfall and humidity.  
+        Clouds are visible collections of water in the atmosphere, but surprisingly did not follow the same trends as humidity (if they followed any trend at all).  
+        Similarly, wind can be the result of a storm or other event, but may occur more frequently in certain valleys or coastal areas due to temperature differences.
+        The behavior and distribution of wind, clouds, and humidity are more likely explained by regional geography than by distance from the equator.
+      </p>
+      <br>
+      <p class='tab'>
+        <h4>Notes and post-mortem</h4>
+        Please note that there are very few places measuring conditions south of -60° lattitude, and none were randomly selected by this dataset.  This results in the graphs beginning at -60° lattitude at the X origin point, and ending at 80° lattitude.  In other words, the extreme left edge of the graphs do not represent the same distance from the equator as the extreme right side of the graph.
+        <br>
+        This project was intended to show proficiency in HTML and CSS to present data, rather than to thoroughly explore weather and meteorology.  In a more extended project, it would behoove me to include maps and citations to discuss geography.
+      </p>
+    </div>
+  </div>
+</div>

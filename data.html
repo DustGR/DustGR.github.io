@@ -1,0 +1,6533 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<!-- Optional theme -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Data Table - Weather Data</title>
+</head>
+
+  <!--Nav Bar (for data.html)-->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="#" id="brandlogo"><strong>Homework</strong></a>
+      </div>
+  
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class='collapse navbar-collapse sticky' id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-right sticky">
+            <li><a href="index.html"><span class="icon-bar glyphicon glyphicon-home"></span> Home</a></li>
+            <li><a href="comparison.html"><span class="icon-bar glyphicon glyphicon-blackboard"></span> Comparison</a></li>
+            <li><a><span class="icon-bar glyphicon glyphicon-list-alt"></span> Data</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-eye-open"></span> Plots<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="Vis1.html">Temperature</a></li>
+                <li><a href="Vis2.html">Cloud Cover</a></li>
+                <li><a href="Vis3.html">Wind</a></li>
+                <li><a href="Vis4.html">Humidity</a></li>
+              </ul>
+            </li>
+          </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <body class='tablebody'>
+<div class="page-header">
+  <h1 class="text-center">Data Table</h1>
+</div>
+<div class='container-fluid'>
+  <article>
+  <div class='row'>
+    <div class='col-md-12'>
+      <p>All data used in this project are contained in this table.</p>
+    </div>
+  </div>
+<!--Table HTML-->
+<table class="table table-bordered table-hover table-condensed table-responsive stickyheader">
+  <thead><tr><th class='stickyheader'>City</th>
+  <th class='stickyheader'>Country</th>
+  <th class='stickyheader'>Max Temperature</th>
+  <th class='stickyheader'>Cloudiness</th>
+  <th class='stickyheader'>Humidity</th>
+  <th class='stickyheader'>Wind</th>
+  <th class='stickyheader'>Lat</th>
+  <th class='stickyheader'>Lng</th>
+  <th class='stickyheader'>Date</th>
+  </tr></thead>
+  <tbody><tr>
+  <td>Acajutla</td>
+  <td>SV</td>
+  <td align="right">72.71</td>
+  <td align="right">48</td>
+  <td align="right">96</td>
+  <td align="right">3.62</td>
+  <td align="right">13.59</td>
+  <td align="right">-89.83</td>
+  <td>2018-09-29, 23:30:23</td>
+  </tr>
+  <tr>
+  <td>Acari</td>
+  <td>BR</td>
+  <td align="right">68.66</td>
+  <td align="right">12</td>
+  <td align="right">95</td>
+  <td align="right">10.0</td>
+  <td align="right">-6.44</td>
+  <td align="right">-36.64</td>
+  <td>2018-09-29, 23:32:21</td>
+  </tr>
+  <tr>
+  <td>Adrar</td>
+  <td>DZ</td>
+  <td align="right">66.2</td>
+  <td align="right">0</td>
+  <td align="right">39</td>
+  <td align="right">11.41</td>
+  <td align="right">27.87</td>
+  <td align="right">-0.29</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Agua Dulce</td>
+  <td>MX</td>
+  <td align="right">73.97</td>
+  <td align="right">44</td>
+  <td align="right">100</td>
+  <td align="right">3.62</td>
+  <td align="right">18.14</td>
+  <td align="right">-94.15</td>
+  <td>2018-09-29, 23:28:17</td>
+  </tr>
+  <tr>
+  <td>Ahipara</td>
+  <td>NZ</td>
+  <td align="right">58.94</td>
+  <td align="right">48</td>
+  <td align="right">73</td>
+  <td align="right">11.68</td>
+  <td align="right">-35.17</td>
+  <td align="right">173.16</td>
+  <td>2018-09-29, 23:29:01</td>
+  </tr>
+  <tr>
+  <td>Airai</td>
+  <td>TL</td>
+  <td align="right">86.12</td>
+  <td align="right">0</td>
+  <td align="right">35</td>
+  <td align="right">3.06</td>
+  <td align="right">-8.93</td>
+  <td align="right">125.41</td>
+  <td>2018-09-29, 23:25:57</td>
+  </tr>
+  <tr>
+  <td>Akdepe</td>
+  <td>TM</td>
+  <td align="right">73.4</td>
+  <td align="right">0</td>
+  <td align="right">13</td>
+  <td align="right">4.7</td>
+  <td align="right">42.05</td>
+  <td align="right">59.39</td>
+  <td>2018-09-29, 22:30:00</td>
+  </tr>
+  <tr>
+  <td>Aklavik</td>
+  <td>CA</td>
+  <td align="right">23.0</td>
+  <td align="right">20</td>
+  <td align="right">92</td>
+  <td align="right">4.7</td>
+  <td align="right">68.22</td>
+  <td align="right">-135.01</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Albany</td>
+  <td>US</td>
+  <td align="right">46.94</td>
+  <td align="right">1</td>
+  <td align="right">86</td>
+  <td align="right">2.17</td>
+  <td align="right">42.65</td>
+  <td align="right">-73.75</td>
+  <td>2018-09-29, 23:13:00</td>
+  </tr>
+  <tr>
+  <td>Alexandria</td>
+  <td>US</td>
+  <td align="right">73.04</td>
+  <td align="right">90</td>
+  <td align="right">90</td>
+  <td align="right">3.36</td>
+  <td align="right">31.31</td>
+  <td align="right">-92.44</td>
+  <td>2018-09-29, 23:15:00</td>
+  </tr>
+  <tr>
+  <td>Alice Springs</td>
+  <td>AU</td>
+  <td align="right">89.6</td>
+  <td align="right">8</td>
+  <td align="right">11</td>
+  <td align="right">11.41</td>
+  <td align="right">-23.7</td>
+  <td align="right">133.88</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Alofi</td>
+  <td>NU</td>
+  <td align="right">71.6</td>
+  <td align="right">80</td>
+  <td align="right">78</td>
+  <td align="right">12.75</td>
+  <td align="right">-19.06</td>
+  <td align="right">-169.92</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Along</td>
+  <td>IN</td>
+  <td align="right">75.68</td>
+  <td align="right">76</td>
+  <td align="right">76</td>
+  <td align="right">1.83</td>
+  <td align="right">28.17</td>
+  <td align="right">94.8</td>
+  <td>2018-09-29, 23:29:18</td>
+  </tr>
+  <tr>
+  <td>Alphen</td>
+  <td>NL</td>
+  <td align="right">37.4</td>
+  <td align="right">0</td>
+  <td align="right">79</td>
+  <td align="right">1.12</td>
+  <td align="right">51.82</td>
+  <td align="right">5.47</td>
+  <td>2018-09-29, 22:55:00</td>
+  </tr>
+  <tr>
+  <td>Altamira</td>
+  <td>BR</td>
+  <td align="right">78.29</td>
+  <td align="right">20</td>
+  <td align="right">80</td>
+  <td align="right">5.64</td>
+  <td align="right">-3.2</td>
+  <td align="right">-52.21</td>
+  <td>2018-09-29, 23:25:56</td>
+  </tr>
+  <tr>
+  <td>Ambilobe</td>
+  <td>MG</td>
+  <td align="right">82.79</td>
+  <td align="right">0</td>
+  <td align="right">43</td>
+  <td align="right">5.53</td>
+  <td align="right">-13.19</td>
+  <td align="right">49.05</td>
+  <td>2018-09-29, 23:32:13</td>
+  </tr>
+  <tr>
+  <td>Ambon</td>
+  <td>FR</td>
+  <td align="right">39.2</td>
+  <td align="right">0</td>
+  <td align="right">93</td>
+  <td align="right">3.36</td>
+  <td align="right">47.55</td>
+  <td align="right">-2.56</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Amnat Charoen</td>
+  <td>TH</td>
+  <td align="right">85.13</td>
+  <td align="right">88</td>
+  <td align="right">74</td>
+  <td align="right">10.0</td>
+  <td align="right">15.86</td>
+  <td align="right">104.63</td>
+  <td>2018-09-29, 23:30:46</td>
+  </tr>
+  <tr>
+  <td>Anadyr</td>
+  <td>RU</td>
+  <td align="right">50.0</td>
+  <td align="right">75</td>
+  <td align="right">93</td>
+  <td align="right">40.26</td>
+  <td align="right">64.73</td>
+  <td align="right">177.51</td>
+  <td>2018-09-29, 22:00:00</td>
+  </tr>
+  <tr>
+  <td>Ancud</td>
+  <td>CL</td>
+  <td align="right">38.33</td>
+  <td align="right">88</td>
+  <td align="right">99</td>
+  <td align="right">8.99</td>
+  <td align="right">-41.87</td>
+  <td align="right">-73.83</td>
+  <td>2018-09-29, 23:25:33</td>
+  </tr>
+  <tr>
+  <td>Andilamena</td>
+  <td>MG</td>
+  <td align="right">66.86</td>
+  <td align="right">8</td>
+  <td align="right">67</td>
+  <td align="right">5.41</td>
+  <td align="right">-17.01</td>
+  <td align="right">48.57</td>
+  <td>2018-09-29, 23:31:50</td>
+  </tr>
+  <tr>
+  <td>Anju</td>
+  <td>KP</td>
+  <td align="right">64.43</td>
+  <td align="right">0</td>
+  <td align="right">90</td>
+  <td align="right">11.45</td>
+  <td align="right">39.62</td>
+  <td align="right">125.66</td>
+  <td>2018-09-29, 23:29:39</td>
+  </tr>
+  <tr>
+  <td>Antigonish</td>
+  <td>CA</td>
+  <td align="right">50.0</td>
+  <td align="right">40</td>
+  <td align="right">87</td>
+  <td align="right">4.7</td>
+  <td align="right">45.62</td>
+  <td align="right">-61.99</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Antofagasta</td>
+  <td>CL</td>
+  <td align="right">59.0</td>
+  <td align="right">90</td>
+  <td align="right">82</td>
+  <td align="right">5.82</td>
+  <td align="right">-23.65</td>
+  <td align="right">-70.4</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Apucarana</td>
+  <td>BR</td>
+  <td align="right">73.4</td>
+  <td align="right">0</td>
+  <td align="right">78</td>
+  <td align="right">11.68</td>
+  <td align="right">-23.55</td>
+  <td align="right">-51.46</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Arkhipo-Osipovka</td>
+  <td>RU</td>
+  <td align="right">62.81</td>
+  <td align="right">76</td>
+  <td align="right">81</td>
+  <td align="right">4.74</td>
+  <td align="right">44.37</td>
+  <td align="right">38.53</td>
+  <td>2018-09-29, 23:29:05</td>
+  </tr>
+  <tr>
+  <td>Arman</td>
+  <td>RU</td>
+  <td align="right">48.2</td>
+  <td align="right">90</td>
+  <td align="right">57</td>
+  <td align="right">6.71</td>
+  <td align="right">59.7</td>
+  <td align="right">150.17</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Arraial do Cabo</td>
+  <td>BR</td>
+  <td align="right">72.71</td>
+  <td align="right">88</td>
+  <td align="right">99</td>
+  <td align="right">13.69</td>
+  <td align="right">-22.97</td>
+  <td align="right">-42.02</td>
+  <td>2018-09-29, 23:25:31</td>
+  </tr>
+  <tr>
+  <td>Asosa</td>
+  <td>ET</td>
+  <td align="right">68.39</td>
+  <td align="right">68</td>
+  <td align="right">97</td>
+  <td align="right">3.74</td>
+  <td align="right">10.07</td>
+  <td align="right">34.53</td>
+  <td>2018-09-29, 23:27:49</td>
+  </tr>
+  <tr>
+  <td>Aswan</td>
+  <td>EG</td>
+  <td align="right">91.07</td>
+  <td align="right">8</td>
+  <td align="right">27</td>
+  <td align="right">5.75</td>
+  <td align="right">24.09</td>
+  <td align="right">32.9</td>
+  <td>2018-09-29, 23:30:17</td>
+  </tr>
+  <tr>
+  <td>Asyut</td>
+  <td>EG</td>
+  <td align="right">73.4</td>
+  <td align="right">0</td>
+  <td align="right">49</td>
+  <td align="right">9.17</td>
+  <td align="right">27.18</td>
+  <td align="right">31.19</td>
+  <td>2018-09-29, 22:00:00</td>
+  </tr>
+  <tr>
+  <td>Atagay</td>
+  <td>RU</td>
+  <td align="right">57.59</td>
+  <td align="right">0</td>
+  <td align="right">55</td>
+  <td align="right">3.62</td>
+  <td align="right">55.1</td>
+  <td align="right">99.39</td>
+  <td>2018-09-29, 23:31:10</td>
+  </tr>
+  <tr>
+  <td>Atar</td>
+  <td>MR</td>
+  <td align="right">68.93</td>
+  <td align="right">0</td>
+  <td align="right">83</td>
+  <td align="right">1.83</td>
+  <td align="right">20.52</td>
+  <td align="right">-13.05</td>
+  <td>2018-09-29, 23:32:20</td>
+  </tr>
+  <tr>
+  <td>Athabasca</td>
+  <td>CA</td>
+  <td align="right">18.08</td>
+  <td align="right">0</td>
+  <td align="right">72</td>
+  <td align="right">2.95</td>
+  <td align="right">54.72</td>
+  <td align="right">-113.29</td>
+  <td>2018-09-29, 23:28:15</td>
+  </tr>
+  <tr>
+  <td>Atuona</td>
+  <td>PF</td>
+  <td align="right">79.46</td>
+  <td align="right">88</td>
+  <td align="right">100</td>
+  <td align="right">9.44</td>
+  <td align="right">-9.8</td>
+  <td align="right">-139.03</td>
+  <td>2018-09-29, 23:25:54</td>
+  </tr>
+  <tr>
+  <td>Avarua</td>
+  <td>CK</td>
+  <td align="right">69.8</td>
+  <td align="right">75</td>
+  <td align="right">68</td>
+  <td align="right">5.82</td>
+  <td align="right">-21.21</td>
+  <td align="right">-159.78</td>
+  <td>2018-09-29, 22:00:00</td>
+  </tr>
+  <tr>
+  <td>Avera</td>
+  <td>US</td>
+  <td align="right">73.94</td>
+  <td align="right">90</td>
+  <td align="right">90</td>
+  <td align="right">3.36</td>
+  <td align="right">33.19</td>
+  <td align="right">-82.53</td>
+  <td>2018-09-29, 23:08:00</td>
+  </tr>
+  <tr>
+  <td>Ayorou</td>
+  <td>NE</td>
+  <td align="right">75.68</td>
+  <td align="right">8</td>
+  <td align="right">63</td>
+  <td align="right">2.95</td>
+  <td align="right">14.73</td>
+  <td align="right">0.92</td>
+  <td>2018-09-29, 23:31:37</td>
+  </tr>
+  <tr>
+  <td>Bakel</td>
+  <td>SN</td>
+  <td align="right">76.49</td>
+  <td align="right">88</td>
+  <td align="right">95</td>
+  <td align="right">8.99</td>
+  <td align="right">14.9</td>
+  <td align="right">-12.46</td>
+  <td>2018-09-29, 23:30:37</td>
+  </tr>
+  <tr>
+  <td>Balkanabat</td>
+  <td>TM</td>
+  <td align="right">77.66</td>
+  <td align="right">12</td>
+  <td align="right">26</td>
+  <td align="right">3.4</td>
+  <td align="right">39.51</td>
+  <td align="right">54.36</td>
+  <td>2018-09-29, 23:29:17</td>
+  </tr>
+  <tr>
+  <td>Bambous Virieux</td>
+  <td>MU</td>
+  <td align="right">78.8</td>
+  <td align="right">40</td>
+  <td align="right">65</td>
+  <td align="right">14.99</td>
+  <td align="right">-20.34</td>
+  <td align="right">57.76</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Banda Aceh</td>
+  <td>ID</td>
+  <td align="right">81.17</td>
+  <td align="right">76</td>
+  <td align="right">92</td>
+  <td align="right">2.51</td>
+  <td align="right">5.56</td>
+  <td align="right">95.32</td>
+  <td>2018-09-29, 23:31:34</td>
+  </tr>
+  <tr>
+  <td>Bandarbeyla</td>
+  <td>SO</td>
+  <td align="right">79.01</td>
+  <td align="right">8</td>
+  <td align="right">92</td>
+  <td align="right">12.91</td>
+  <td align="right">9.49</td>
+  <td align="right">50.81</td>
+  <td>2018-09-29, 23:29:26</td>
+  </tr>
+  <tr>
+  <td>Banjar</td>
+  <td>ID</td>
+  <td align="right">86.39</td>
+  <td align="right">12</td>
+  <td align="right">56</td>
+  <td align="right">3.96</td>
+  <td align="right">-7.37</td>
+  <td align="right">108.54</td>
+  <td>2018-09-29, 23:31:49</td>
+  </tr>
+  <tr>
+  <td>Barranco</td>
+  <td>BR</td>
+  <td align="right">64.61</td>
+  <td align="right">92</td>
+  <td align="right">97</td>
+  <td align="right">3.06</td>
+  <td align="right">-20.59</td>
+  <td align="right">-41.2</td>
+  <td>2018-09-29, 23:30:43</td>
+  </tr>
+  <tr>
+  <td>Barrow</td>
+  <td>AR</td>
+  <td align="right">45.98</td>
+  <td align="right">20</td>
+  <td align="right">84</td>
+  <td align="right">6.2</td>
+  <td align="right">-38.31</td>
+  <td align="right">-60.23</td>
+  <td>2018-09-29, 23:25:29</td>
+  </tr>
+  <tr>
+  <td>Baruun-Urt</td>
+  <td>MN</td>
+  <td align="right">55.79</td>
+  <td align="right">64</td>
+  <td align="right">48</td>
+  <td align="right">16.82</td>
+  <td align="right">46.68</td>
+  <td align="right">113.28</td>
+  <td>2018-09-29, 23:29:00</td>
+  </tr>
+  <tr>
+  <td>Bastia</td>
+  <td>IT</td>
+  <td align="right">66.2</td>
+  <td align="right">0</td>
+  <td align="right">55</td>
+  <td align="right">9.17</td>
+  <td align="right">44.6</td>
+  <td align="right">8.98</td>
+  <td>2018-09-29, 22:55:00</td>
+  </tr>
+  <tr>
+  <td>Batagay-Alyta</td>
+  <td>RU</td>
+  <td align="right">26.54</td>
+  <td align="right">24</td>
+  <td align="right">86</td>
+  <td align="right">3.85</td>
+  <td align="right">67.8</td>
+  <td align="right">130.41</td>
+  <td>2018-09-29, 23:31:59</td>
+  </tr>
+  <tr>
+  <td>Bataipora</td>
+  <td>BR</td>
+  <td align="right">72.89</td>
+  <td align="right">88</td>
+  <td align="right">84</td>
+  <td align="right">3.18</td>
+  <td align="right">-22.3</td>
+  <td align="right">-53.27</td>
+  <td>2018-09-29, 23:31:00</td>
+  </tr>
+  <tr>
+  <td>Batsfjord</td>
+  <td>NO</td>
+  <td align="right">41.03</td>
+  <td align="right">88</td>
+  <td align="right">100</td>
+  <td align="right">18.5</td>
+  <td align="right">70.63</td>
+  <td align="right">29.72</td>
+  <td>2018-09-29, 23:29:21</td>
+  </tr>
+  <tr>
+  <td>Bayan</td>
+  <td>MN</td>
+  <td align="right">51.29</td>
+  <td align="right">0</td>
+  <td align="right">48</td>
+  <td align="right">9.55</td>
+  <td align="right">47.25</td>
+  <td align="right">107.54</td>
+  <td>2018-09-29, 23:29:42</td>
+  </tr>
+  <tr>
+  <td>Beringovskiy</td>
+  <td>RU</td>
+  <td align="right">46.79</td>
+  <td align="right">68</td>
+  <td align="right">98</td>
+  <td align="right">13.8</td>
+  <td align="right">63.05</td>
+  <td align="right">179.32</td>
+  <td>2018-09-29, 23:29:19</td>
+  </tr>
+  <tr>
+  <td>Berlevag</td>
+  <td>NO</td>
+  <td align="right">37.16</td>
+  <td align="right">92</td>
+  <td align="right">100</td>
+  <td align="right">12.46</td>
+  <td align="right">70.86</td>
+  <td align="right">29.09</td>
+  <td>2018-09-29, 23:27:55</td>
+  </tr>
+  <tr>
+  <td>Bethel</td>
+  <td>US</td>
+  <td align="right">59.0</td>
+  <td align="right">40</td>
+  <td align="right">62</td>
+  <td align="right">12.75</td>
+  <td align="right">60.79</td>
+  <td align="right">-161.76</td>
+  <td>2018-09-29, 22:53:00</td>
+  </tr>
+  <tr>
+  <td>Beziers</td>
+  <td>FR</td>
+  <td align="right">64.4</td>
+  <td align="right">90</td>
+  <td align="right">63</td>
+  <td align="right">5.82</td>
+  <td align="right">43.35</td>
+  <td align="right">3.22</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Biak</td>
+  <td>ID</td>
+  <td align="right">80.45</td>
+  <td align="right">36</td>
+  <td align="right">92</td>
+  <td align="right">6.98</td>
+  <td align="right">-0.91</td>
+  <td align="right">122.88</td>
+  <td>2018-09-29, 23:28:10</td>
+  </tr>
+  <tr>
+  <td>Bijie</td>
+  <td>CN</td>
+  <td align="right">65.06</td>
+  <td align="right">100</td>
+  <td align="right">73</td>
+  <td align="right">3.85</td>
+  <td align="right">27.3</td>
+  <td align="right">105.3</td>
+  <td>2018-09-29, 23:27:55</td>
+  </tr>
+  <tr>
+  <td>Bilibino</td>
+  <td>RU</td>
+  <td align="right">47.15</td>
+  <td align="right">92</td>
+  <td align="right">97</td>
+  <td align="right">5.3</td>
+  <td align="right">68.06</td>
+  <td align="right">166.44</td>
+  <td>2018-09-29, 23:32:51</td>
+  </tr>
+  <tr>
+  <td>Billings</td>
+  <td>US</td>
+  <td align="right">37.04</td>
+  <td align="right">90</td>
+  <td align="right">95</td>
+  <td align="right">12.75</td>
+  <td align="right">45.79</td>
+  <td align="right">-108.5</td>
+  <td>2018-09-29, 22:53:00</td>
+  </tr>
+  <tr>
+  <td>Bilma</td>
+  <td>NE</td>
+  <td align="right">74.96</td>
+  <td align="right">0</td>
+  <td align="right">23</td>
+  <td align="right">4.74</td>
+  <td align="right">18.69</td>
+  <td align="right">12.92</td>
+  <td>2018-09-29, 23:32:03</td>
+  </tr>
+  <tr>
+  <td>Bima</td>
+  <td>ID</td>
+  <td align="right">86.03</td>
+  <td align="right">12</td>
+  <td align="right">69</td>
+  <td align="right">3.06</td>
+  <td align="right">-8.45</td>
+  <td align="right">118.73</td>
+  <td>2018-09-29, 23:29:17</td>
+  </tr>
+  <tr>
+  <td>Bintulu</td>
+  <td>MY</td>
+  <td align="right">91.4</td>
+  <td align="right">75</td>
+  <td align="right">63</td>
+  <td align="right">6.93</td>
+  <td align="right">3.17</td>
+  <td align="right">113.03</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Binzhou</td>
+  <td>CN</td>
+  <td align="right">68.3</td>
+  <td align="right">0</td>
+  <td align="right">41</td>
+  <td align="right">17.16</td>
+  <td align="right">37.38</td>
+  <td align="right">117.96</td>
+  <td>2018-09-29, 23:28:08</td>
+  </tr>
+  <tr>
+  <td>Biscarrosse</td>
+  <td>FR</td>
+  <td align="right">48.2</td>
+  <td align="right">0</td>
+  <td align="right">93</td>
+  <td align="right">1.12</td>
+  <td align="right">44.41</td>
+  <td align="right">-1.18</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Bluff</td>
+  <td>AU</td>
+  <td align="right">85.76</td>
+  <td align="right">36</td>
+  <td align="right">34</td>
+  <td align="right">8.43</td>
+  <td align="right">-23.58</td>
+  <td align="right">149.07</td>
+  <td>2018-09-29, 23:21:56</td>
+  </tr>
+  <tr>
+  <td>Bolgatanga</td>
+  <td>GH</td>
+  <td align="right">72.08</td>
+  <td align="right">64</td>
+  <td align="right">94</td>
+  <td align="right">3.4</td>
+  <td align="right">10.79</td>
+  <td align="right">-0.85</td>
+  <td>2018-09-29, 23:32:49</td>
+  </tr>
+  <tr>
+  <td>Bonavista</td>
+  <td>CA</td>
+  <td align="right">52.55</td>
+  <td align="right">8</td>
+  <td align="right">96</td>
+  <td align="right">14.92</td>
+  <td align="right">48.65</td>
+  <td align="right">-53.11</td>
+  <td>2018-09-29, 23:25:30</td>
+  </tr>
+  <tr>
+  <td>Bongandanga</td>
+  <td>CD</td>
+  <td align="right">76.49</td>
+  <td align="right">64</td>
+  <td align="right">91</td>
+  <td align="right">3.06</td>
+  <td align="right">1.51</td>
+  <td align="right">21.07</td>
+  <td>2018-09-29, 23:32:23</td>
+  </tr>
+  <tr>
+  <td>Bonthe</td>
+  <td>SL</td>
+  <td align="right">73.07</td>
+  <td align="right">92</td>
+  <td align="right">100</td>
+  <td align="right">5.41</td>
+  <td align="right">7.53</td>
+  <td align="right">-12.5</td>
+  <td>2018-09-29, 23:29:01</td>
+  </tr>
+  <tr>
+  <td>Borovsk</td>
+  <td>RU</td>
+  <td align="right">35.6</td>
+  <td align="right">0</td>
+  <td align="right">73</td>
+  <td align="right">6.71</td>
+  <td align="right">55.21</td>
+  <td align="right">36.48</td>
+  <td>2018-09-29, 22:30:00</td>
+  </tr>
+  <tr>
+  <td>Bose</td>
+  <td>IT</td>
+  <td align="right">59.0</td>
+  <td align="right">75</td>
+  <td align="right">76</td>
+  <td align="right">3.36</td>
+  <td align="right">45.46</td>
+  <td align="right">8.01</td>
+  <td>2018-09-29, 22:50:00</td>
+  </tr>
+  <tr>
+  <td>Bowen</td>
+  <td>AU</td>
+  <td align="right">80.6</td>
+  <td align="right">0</td>
+  <td align="right">54</td>
+  <td align="right">11.41</td>
+  <td align="right">-20.01</td>
+  <td align="right">148.25</td>
+  <td>2018-09-29, 22:00:00</td>
+  </tr>
+  <tr>
+  <td>Brae</td>
+  <td>GB</td>
+  <td align="right">50.0</td>
+  <td align="right">92</td>
+  <td align="right">96</td>
+  <td align="right">17.22</td>
+  <td align="right">60.4</td>
+  <td align="right">-1.35</td>
+  <td>2018-09-29, 22:50:00</td>
+  </tr>
+  <tr>
+  <td>Brasy</td>
+  <td>CZ</td>
+  <td align="right">37.4</td>
+  <td align="right">0</td>
+  <td align="right">82</td>
+  <td align="right">1.12</td>
+  <td align="right">49.84</td>
+  <td align="right">13.58</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Bredasdorp</td>
+  <td>ZA</td>
+  <td align="right">59.0</td>
+  <td align="right">8</td>
+  <td align="right">77</td>
+  <td align="right">2.24</td>
+  <td align="right">-34.53</td>
+  <td align="right">20.04</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Bridlington</td>
+  <td>GB</td>
+  <td align="right">48.2</td>
+  <td align="right">32</td>
+  <td align="right">87</td>
+  <td align="right">5.82</td>
+  <td align="right">54.08</td>
+  <td align="right">-0.19</td>
+  <td>2018-09-29, 22:50:00</td>
+  </tr>
+  <tr>
+  <td>Broken Hill</td>
+  <td>AU</td>
+  <td align="right">70.1</td>
+  <td align="right">8</td>
+  <td align="right">32</td>
+  <td align="right">9.78</td>
+  <td align="right">-31.97</td>
+  <td align="right">141.45</td>
+  <td>2018-09-29, 23:32:41</td>
+  </tr>
+  <tr>
+  <td>Brookings</td>
+  <td>US</td>
+  <td align="right">48.38</td>
+  <td align="right">90</td>
+  <td align="right">100</td>
+  <td align="right">3.18</td>
+  <td align="right">44.31</td>
+  <td align="right">-96.8</td>
+  <td>2018-09-29, 23:20:00</td>
+  </tr>
+  <tr>
+  <td>Broome</td>
+  <td>GB</td>
+  <td align="right">40.64</td>
+  <td align="right">20</td>
+  <td align="right">93</td>
+  <td align="right">5.82</td>
+  <td align="right">52.47</td>
+  <td align="right">1.45</td>
+  <td>2018-09-29, 22:50:00</td>
+  </tr>
+  <tr>
+  <td>Brotas</td>
+  <td>BR</td>
+  <td align="right">69.74</td>
+  <td align="right">76</td>
+  <td align="right">77</td>
+  <td align="right">5.75</td>
+  <td align="right">-22.28</td>
+  <td align="right">-48.12</td>
+  <td>2018-09-29, 23:29:25</td>
+  </tr>
+  <tr>
+  <td>Buraydah</td>
+  <td>SA</td>
+  <td align="right">84.2</td>
+  <td align="right">0</td>
+  <td align="right">21</td>
+  <td align="right">4.7</td>
+  <td align="right">26.33</td>
+  <td align="right">43.97</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Burns Lake</td>
+  <td>CA</td>
+  <td align="right">35.18</td>
+  <td align="right">0</td>
+  <td align="right">66</td>
+  <td align="right">7.99</td>
+  <td align="right">54.23</td>
+  <td align="right">-125.76</td>
+  <td>2018-09-29, 23:30:38</td>
+  </tr>
+  <tr>
+  <td>Busselton</td>
+  <td>AU</td>
+  <td align="right">65.78</td>
+  <td align="right">0</td>
+  <td align="right">88</td>
+  <td align="right">23.76</td>
+  <td align="right">-33.64</td>
+  <td align="right">115.35</td>
+  <td>2018-09-29, 23:25:50</td>
+  </tr>
+  <tr>
+  <td>Butaritari</td>
+  <td>KI</td>
+  <td align="right">85.49</td>
+  <td align="right">0</td>
+  <td align="right">100</td>
+  <td align="right">7.31</td>
+  <td align="right">3.07</td>
+  <td align="right">172.79</td>
+  <td>2018-09-29, 23:25:52</td>
+  </tr>
+  <tr>
+  <td>Cabedelo</td>
+  <td>BR</td>
+  <td align="right">75.2</td>
+  <td align="right">75</td>
+  <td align="right">88</td>
+  <td align="right">3.36</td>
+  <td align="right">-6.97</td>
+  <td align="right">-34.84</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Cabo San Lucas</td>
+  <td>MX</td>
+  <td align="right">81.8</td>
+  <td align="right">64</td>
+  <td align="right">100</td>
+  <td align="right">3.18</td>
+  <td align="right">22.89</td>
+  <td align="right">-109.91</td>
+  <td>2018-09-29, 23:23:51</td>
+  </tr>
+  <tr>
+  <td>Cam Ranh</td>
+  <td>VN</td>
+  <td align="right">80.27</td>
+  <td align="right">48</td>
+  <td align="right">100</td>
+  <td align="right">4.41</td>
+  <td align="right">11.92</td>
+  <td align="right">109.15</td>
+  <td>2018-09-29, 23:32:39</td>
+  </tr>
+  <tr>
+  <td>Camacha</td>
+  <td>PT</td>
+  <td align="right">71.6</td>
+  <td align="right">75</td>
+  <td align="right">73</td>
+  <td align="right">11.41</td>
+  <td align="right">33.08</td>
+  <td align="right">-16.33</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Cape Town</td>
+  <td>ZA</td>
+  <td align="right">59.0</td>
+  <td align="right">0</td>
+  <td align="right">67</td>
+  <td align="right">6.93</td>
+  <td align="right">-33.93</td>
+  <td align="right">18.42</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Carballo</td>
+  <td>ES</td>
+  <td align="right">53.6</td>
+  <td align="right">75</td>
+  <td align="right">100</td>
+  <td align="right">2.24</td>
+  <td align="right">43.21</td>
+  <td align="right">-8.69</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Carbonia</td>
+  <td>IT</td>
+  <td align="right">62.6</td>
+  <td align="right">40</td>
+  <td align="right">82</td>
+  <td align="right">4.7</td>
+  <td align="right">39.17</td>
+  <td align="right">8.53</td>
+  <td>2018-09-29, 22:50:00</td>
+  </tr>
+  <tr>
+  <td>Carnarvon</td>
+  <td>ZA</td>
+  <td align="right">60.11</td>
+  <td align="right">0</td>
+  <td align="right">10</td>
+  <td align="right">12.57</td>
+  <td align="right">-30.97</td>
+  <td align="right">22.13</td>
+  <td>2018-09-29, 23:28:58</td>
+  </tr>
+  <tr>
+  <td>Carnduff</td>
+  <td>CA</td>
+  <td align="right">36.26</td>
+  <td align="right">80</td>
+  <td align="right">71</td>
+  <td align="right">9.33</td>
+  <td align="right">49.17</td>
+  <td align="right">-101.8</td>
+  <td>2018-09-29, 23:32:52</td>
+  </tr>
+  <tr>
+  <td>Castro</td>
+  <td>CL</td>
+  <td align="right">36.89</td>
+  <td align="right">80</td>
+  <td align="right">100</td>
+  <td align="right">7.2</td>
+  <td align="right">-42.48</td>
+  <td align="right">-73.76</td>
+  <td>2018-09-29, 23:22:48</td>
+  </tr>
+  <tr>
+  <td>Cayenne</td>
+  <td>GF</td>
+  <td align="right">71.6</td>
+  <td align="right">8</td>
+  <td align="right">100</td>
+  <td align="right">8.21</td>
+  <td align="right">4.94</td>
+  <td align="right">-52.33</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Cedar City</td>
+  <td>US</td>
+  <td align="right">64.94</td>
+  <td align="right">1</td>
+  <td align="right">35</td>
+  <td align="right">12.75</td>
+  <td align="right">37.68</td>
+  <td align="right">-113.06</td>
+  <td>2018-09-29, 22:53:00</td>
+  </tr>
+  <tr>
+  <td>Chapais</td>
+  <td>CA</td>
+  <td align="right">37.4</td>
+  <td align="right">90</td>
+  <td align="right">86</td>
+  <td align="right">5.82</td>
+  <td align="right">49.78</td>
+  <td align="right">-74.86</td>
+  <td>2018-09-29, 23:09:00</td>
+  </tr>
+  <tr>
+  <td>Charleston</td>
+  <td>US</td>
+  <td align="right">55.04</td>
+  <td align="right">40</td>
+  <td align="right">100</td>
+  <td align="right">2.84</td>
+  <td align="right">38.35</td>
+  <td align="right">-81.63</td>
+  <td>2018-09-29, 22:54:00</td>
+  </tr>
+  <tr>
+  <td>Cherskiy</td>
+  <td>RU</td>
+  <td align="right">45.26</td>
+  <td align="right">24</td>
+  <td align="right">75</td>
+  <td align="right">4.85</td>
+  <td align="right">68.75</td>
+  <td align="right">161.3</td>
+  <td>2018-09-29, 23:20:58</td>
+  </tr>
+  <tr>
+  <td>Chicama</td>
+  <td>PE</td>
+  <td align="right">60.8</td>
+  <td align="right">90</td>
+  <td align="right">93</td>
+  <td align="right">9.17</td>
+  <td align="right">-7.84</td>
+  <td align="right">-79.15</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Chifeng</td>
+  <td>CN</td>
+  <td align="right">45.8</td>
+  <td align="right">92</td>
+  <td align="right">74</td>
+  <td align="right">12.46</td>
+  <td align="right">42.27</td>
+  <td align="right">118.96</td>
+  <td>2018-09-29, 23:28:50</td>
+  </tr>
+  <tr>
+  <td>Chihuahua</td>
+  <td>MX</td>
+  <td align="right">53.18</td>
+  <td align="right">0</td>
+  <td align="right">74</td>
+  <td align="right">0.6</td>
+  <td align="right">28.66</td>
+  <td align="right">-106.08</td>
+  <td>2018-09-29, 23:28:35</td>
+  </tr>
+  <tr>
+  <td>Chiredzi</td>
+  <td>ZW</td>
+  <td align="right">67.31</td>
+  <td align="right">92</td>
+  <td align="right">68</td>
+  <td align="right">15.26</td>
+  <td align="right">-21.05</td>
+  <td align="right">31.67</td>
+  <td>2018-09-29, 23:32:15</td>
+  </tr>
+  <tr>
+  <td>Chokurdakh</td>
+  <td>RU</td>
+  <td align="right">36.08</td>
+  <td align="right">92</td>
+  <td align="right">95</td>
+  <td align="right">19.73</td>
+  <td align="right">70.62</td>
+  <td align="right">147.9</td>
+  <td>2018-09-29, 23:30:09</td>
+  </tr>
+  <tr>
+  <td>Chumikan</td>
+  <td>RU</td>
+  <td align="right">50.66</td>
+  <td align="right">80</td>
+  <td align="right">64</td>
+  <td align="right">7.87</td>
+  <td align="right">54.72</td>
+  <td align="right">135.31</td>
+  <td>2018-09-29, 23:32:14</td>
+  </tr>
+  <tr>
+  <td>Churapcha</td>
+  <td>RU</td>
+  <td align="right">40.4</td>
+  <td align="right">0</td>
+  <td align="right">39</td>
+  <td align="right">8.43</td>
+  <td align="right">62.0</td>
+  <td align="right">132.43</td>
+  <td>2018-09-29, 23:29:00</td>
+  </tr>
+  <tr>
+  <td>Chuy</td>
+  <td>UY</td>
+  <td align="right">65.78</td>
+  <td align="right">92</td>
+  <td align="right">96</td>
+  <td align="right">4.63</td>
+  <td align="right">-33.69</td>
+  <td align="right">-53.46</td>
+  <td>2018-09-29, 23:27:47</td>
+  </tr>
+  <tr>
+  <td>Cidreira</td>
+  <td>BR</td>
+  <td align="right">71.72</td>
+  <td align="right">36</td>
+  <td align="right">77</td>
+  <td align="right">11.01</td>
+  <td align="right">-30.17</td>
+  <td align="right">-50.22</td>
+  <td>2018-09-29, 23:29:20</td>
+  </tr>
+  <tr>
+  <td>Clemson</td>
+  <td>US</td>
+  <td align="right">71.96</td>
+  <td align="right">1</td>
+  <td align="right">97</td>
+  <td align="right">3.06</td>
+  <td align="right">34.69</td>
+  <td align="right">-82.84</td>
+  <td>2018-09-29, 22:56:00</td>
+  </tr>
+  <tr>
+  <td>Clyde River</td>
+  <td>CA</td>
+  <td align="right">28.4</td>
+  <td align="right">90</td>
+  <td align="right">100</td>
+  <td align="right">21.92</td>
+  <td align="right">70.47</td>
+  <td align="right">-68.59</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Cocorit</td>
+  <td>MX</td>
+  <td align="right">80.99</td>
+  <td align="right">24</td>
+  <td align="right">74</td>
+  <td align="right">3.4</td>
+  <td align="right">27.57</td>
+  <td align="right">-109.96</td>
+  <td>2018-09-29, 23:31:57</td>
+  </tr>
+  <tr>
+  <td>Codrington</td>
+  <td>AU</td>
+  <td align="right">56.96</td>
+  <td align="right">92</td>
+  <td align="right">100</td>
+  <td align="right">4.18</td>
+  <td align="right">-28.95</td>
+  <td align="right">153.24</td>
+  <td>2018-09-29, 23:28:36</td>
+  </tr>
+  <tr>
+  <td>Coihaique</td>
+  <td>CL</td>
+  <td align="right">30.2</td>
+  <td align="right">90</td>
+  <td align="right">92</td>
+  <td align="right">5.82</td>
+  <td align="right">-45.58</td>
+  <td align="right">-72.07</td>
+  <td>2018-09-29, 23:18:00</td>
+  </tr>
+  <tr>
+  <td>College</td>
+  <td>US</td>
+  <td align="right">41.0</td>
+  <td align="right">1</td>
+  <td align="right">14</td>
+  <td align="right">8.05</td>
+  <td align="right">64.86</td>
+  <td align="right">-147.8</td>
+  <td>2018-09-29, 22:58:00</td>
+  </tr>
+  <tr>
+  <td>Coquimbo</td>
+  <td>CL</td>
+  <td align="right">53.6</td>
+  <td align="right">88</td>
+  <td align="right">93</td>
+  <td align="right">3.36</td>
+  <td align="right">-29.95</td>
+  <td align="right">-71.34</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Cravo Norte</td>
+  <td>CO</td>
+  <td align="right">72.89</td>
+  <td align="right">12</td>
+  <td align="right">94</td>
+  <td align="right">2.84</td>
+  <td align="right">6.3</td>
+  <td align="right">-70.2</td>
+  <td>2018-09-29, 23:29:17</td>
+  </tr>
+  <tr>
+  <td>Crnomelj</td>
+  <td>SI</td>
+  <td align="right">55.4</td>
+  <td align="right">0</td>
+  <td align="right">93</td>
+  <td align="right">1.12</td>
+  <td align="right">45.57</td>
+  <td align="right">15.19</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Dalbandin</td>
+  <td>PK</td>
+  <td align="right">86.48</td>
+  <td align="right">0</td>
+  <td align="right">13</td>
+  <td align="right">2.39</td>
+  <td align="right">28.9</td>
+  <td align="right">64.41</td>
+  <td>2018-09-29, 23:31:53</td>
+  </tr>
+  <tr>
+  <td>Darnah</td>
+  <td>LY</td>
+  <td align="right">72.89</td>
+  <td align="right">32</td>
+  <td align="right">100</td>
+  <td align="right">14.7</td>
+  <td align="right">32.77</td>
+  <td align="right">22.64</td>
+  <td>2018-09-29, 23:29:52</td>
+  </tr>
+  <tr>
+  <td>Deer Lake</td>
+  <td>CA</td>
+  <td align="right">46.4</td>
+  <td align="right">40</td>
+  <td align="right">81</td>
+  <td align="right">9.17</td>
+  <td align="right">49.18</td>
+  <td align="right">-57.43</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Dera Bugti</td>
+  <td>PK</td>
+  <td align="right">91.34</td>
+  <td align="right">0</td>
+  <td align="right">41</td>
+  <td align="right">3.96</td>
+  <td align="right">29.03</td>
+  <td align="right">69.15</td>
+  <td>2018-09-29, 23:30:24</td>
+  </tr>
+  <tr>
+  <td>Dharchula</td>
+  <td>IN</td>
+  <td align="right">60.65</td>
+  <td align="right">0</td>
+  <td align="right">64</td>
+  <td align="right">1.72</td>
+  <td align="right">29.85</td>
+  <td align="right">80.53</td>
+  <td>2018-09-29, 23:32:44</td>
+  </tr>
+  <tr>
+  <td>Dicabisagan</td>
+  <td>PH</td>
+  <td align="right">77.39</td>
+  <td align="right">80</td>
+  <td align="right">100</td>
+  <td align="right">3.29</td>
+  <td align="right">17.08</td>
+  <td align="right">122.42</td>
+  <td>2018-09-29, 23:29:03</td>
+  </tr>
+  <tr>
+  <td>Dikson</td>
+  <td>RU</td>
+  <td align="right">39.77</td>
+  <td align="right">80</td>
+  <td align="right">93</td>
+  <td align="right">12.46</td>
+  <td align="right">73.51</td>
+  <td align="right">80.55</td>
+  <td>2018-09-29, 23:29:04</td>
+  </tr>
+  <tr>
+  <td>Dingle</td>
+  <td>PH</td>
+  <td align="right">81.62</td>
+  <td align="right">32</td>
+  <td align="right">88</td>
+  <td align="right">7.76</td>
+  <td align="right">11.0</td>
+  <td align="right">122.67</td>
+  <td>2018-09-29, 23:31:31</td>
+  </tr>
+  <tr>
+  <td>Dukat</td>
+  <td>RS</td>
+  <td align="right">43.1</td>
+  <td align="right">68</td>
+  <td align="right">84</td>
+  <td align="right">2.73</td>
+  <td align="right">42.44</td>
+  <td align="right">22.31</td>
+  <td>2018-09-29, 23:30:35</td>
+  </tr>
+  <tr>
+  <td>Dunedin</td>
+  <td>NZ</td>
+  <td align="right">49.94</td>
+  <td align="right">0</td>
+  <td align="right">92</td>
+  <td align="right">2.62</td>
+  <td align="right">-45.87</td>
+  <td align="right">170.5</td>
+  <td>2018-09-29, 23:27:08</td>
+  </tr>
+  <tr>
+  <td>Dwarka</td>
+  <td>IN</td>
+  <td align="right">87.8</td>
+  <td align="right">0</td>
+  <td align="right">55</td>
+  <td align="right">9.17</td>
+  <td align="right">28.58</td>
+  <td align="right">77.04</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>East London</td>
+  <td>ZA</td>
+  <td align="right">64.4</td>
+  <td align="right">0</td>
+  <td align="right">63</td>
+  <td align="right">19.46</td>
+  <td align="right">-33.02</td>
+  <td align="right">27.91</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Emerald</td>
+  <td>AU</td>
+  <td align="right">87.2</td>
+  <td align="right">24</td>
+  <td align="right">30</td>
+  <td align="right">8.66</td>
+  <td align="right">-23.53</td>
+  <td align="right">148.16</td>
+  <td>2018-09-29, 23:31:38</td>
+  </tr>
+  <tr>
+  <td>Epinal</td>
+  <td>FR</td>
+  <td align="right">46.4</td>
+  <td align="right">0</td>
+  <td align="right">81</td>
+  <td align="right">5.82</td>
+  <td align="right">48.18</td>
+  <td align="right">6.45</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Erenhot</td>
+  <td>CN</td>
+  <td align="right">55.16</td>
+  <td align="right">32</td>
+  <td align="right">56</td>
+  <td align="right">18.16</td>
+  <td align="right">43.65</td>
+  <td align="right">111.97</td>
+  <td>2018-09-29, 23:31:07</td>
+  </tr>
+  <tr>
+  <td>Esna</td>
+  <td>RO</td>
+  <td align="right">52.37</td>
+  <td align="right">12</td>
+  <td align="right">75</td>
+  <td align="right">19.39</td>
+  <td align="right">45.2</td>
+  <td align="right">27.57</td>
+  <td>2018-09-29, 23:28:08</td>
+  </tr>
+  <tr>
+  <td>Esperance</td>
+  <td>TT</td>
+  <td align="right">78.8</td>
+  <td align="right">20</td>
+  <td align="right">94</td>
+  <td align="right">6.53</td>
+  <td align="right">10.24</td>
+  <td align="right">-61.45</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Esso</td>
+  <td>RU</td>
+  <td align="right">35.45</td>
+  <td align="right">24</td>
+  <td align="right">55</td>
+  <td align="right">7.31</td>
+  <td align="right">55.93</td>
+  <td align="right">158.7</td>
+  <td>2018-09-29, 23:29:18</td>
+  </tr>
+  <tr>
+  <td>Eyl</td>
+  <td>SO</td>
+  <td align="right">78.83</td>
+  <td align="right">8</td>
+  <td align="right">89</td>
+  <td align="right">11.34</td>
+  <td align="right">7.98</td>
+  <td align="right">49.82</td>
+  <td>2018-09-29, 23:28:42</td>
+  </tr>
+  <tr>
+  <td>Faanui</td>
+  <td>PF</td>
+  <td align="right">78.11</td>
+  <td align="right">20</td>
+  <td align="right">100</td>
+  <td align="right">6.42</td>
+  <td align="right">-16.48</td>
+  <td align="right">-151.75</td>
+  <td>2018-09-29, 23:29:24</td>
+  </tr>
+  <tr>
+  <td>Fairbanks</td>
+  <td>US</td>
+  <td align="right">41.0</td>
+  <td align="right">1</td>
+  <td align="right">14</td>
+  <td align="right">8.05</td>
+  <td align="right">64.84</td>
+  <td align="right">-147.72</td>
+  <td>2018-09-29, 22:58:00</td>
+  </tr>
+  <tr>
+  <td>Fairview</td>
+  <td>US</td>
+  <td align="right">62.96</td>
+  <td align="right">1</td>
+  <td align="right">87</td>
+  <td align="right">6.76</td>
+  <td align="right">40.81</td>
+  <td align="right">-74.0</td>
+  <td>2018-09-29, 23:21:00</td>
+  </tr>
+  <tr>
+  <td>Farmington</td>
+  <td>US</td>
+  <td align="right">60.08</td>
+  <td align="right">1</td>
+  <td align="right">6</td>
+  <td align="right">4.7</td>
+  <td align="right">36.73</td>
+  <td align="right">-108.21</td>
+  <td>2018-09-29, 22:53:00</td>
+  </tr>
+  <tr>
+  <td>Faya</td>
+  <td>SA</td>
+  <td align="right">69.8</td>
+  <td align="right">0</td>
+  <td align="right">23</td>
+  <td align="right">6.93</td>
+  <td align="right">18.39</td>
+  <td align="right">42.45</td>
+  <td>2018-09-29, 22:00:00</td>
+  </tr>
+  <tr>
+  <td>Flin Flon</td>
+  <td>CA</td>
+  <td align="right">30.95</td>
+  <td align="right">0</td>
+  <td align="right">90</td>
+  <td align="right">10.78</td>
+  <td align="right">54.77</td>
+  <td align="right">-101.88</td>
+  <td>2018-09-29, 23:32:42</td>
+  </tr>
+  <tr>
+  <td>Fomboni</td>
+  <td>KM</td>
+  <td align="right">77.21</td>
+  <td align="right">56</td>
+  <td align="right">100</td>
+  <td align="right">5.19</td>
+  <td align="right">-12.28</td>
+  <td align="right">43.74</td>
+  <td>2018-09-29, 23:30:04</td>
+  </tr>
+  <tr>
+  <td>Forest Hills</td>
+  <td>ZA</td>
+  <td align="right">61.46</td>
+  <td align="right">0</td>
+  <td align="right">69</td>
+  <td align="right">9.89</td>
+  <td align="right">-29.76</td>
+  <td align="right">30.83</td>
+  <td>2018-09-29, 23:31:28</td>
+  </tr>
+  <tr>
+  <td>Fort Nelson</td>
+  <td>CA</td>
+  <td align="right">23.0</td>
+  <td align="right">40</td>
+  <td align="right">85</td>
+  <td align="right">3.36</td>
+  <td align="right">58.81</td>
+  <td align="right">-122.69</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Fortuna</td>
+  <td>ES</td>
+  <td align="right">64.4</td>
+  <td align="right">0</td>
+  <td align="right">93</td>
+  <td align="right">3.18</td>
+  <td align="right">38.18</td>
+  <td align="right">-1.13</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Freeport</td>
+  <td>BS</td>
+  <td align="right">83.33</td>
+  <td align="right">36</td>
+  <td align="right">95</td>
+  <td align="right">18.72</td>
+  <td align="right">26.54</td>
+  <td align="right">-78.7</td>
+  <td>2018-09-29, 23:27:50</td>
+  </tr>
+  <tr>
+  <td>Frickenhausen</td>
+  <td>DE</td>
+  <td align="right">29.69</td>
+  <td align="right">0</td>
+  <td align="right">74</td>
+  <td align="right">2.51</td>
+  <td align="right">50.41</td>
+  <td align="right">10.23</td>
+  <td>2018-09-29, 23:32:22</td>
+  </tr>
+  <tr>
+  <td>Fuerte Olimpo</td>
+  <td>BR</td>
+  <td align="right">77.93</td>
+  <td align="right">0</td>
+  <td align="right">62</td>
+  <td align="right">10.33</td>
+  <td align="right">-21.04</td>
+  <td align="right">-57.87</td>
+  <td>2018-09-29, 23:31:08</td>
+  </tr>
+  <tr>
+  <td>Funadhoo</td>
+  <td>MV</td>
+  <td align="right">82.79</td>
+  <td align="right">80</td>
+  <td align="right">100</td>
+  <td align="right">15.03</td>
+  <td align="right">6.15</td>
+  <td align="right">73.27</td>
+  <td>2018-09-29, 23:28:07</td>
+  </tr>
+  <tr>
+  <td>Gabriel Leyva Solano</td>
+  <td>MX</td>
+  <td align="right">77.66</td>
+  <td align="right">32</td>
+  <td align="right">87</td>
+  <td align="right">2.84</td>
+  <td align="right">25.66</td>
+  <td align="right">-108.64</td>
+  <td>2018-09-29, 23:25:35</td>
+  </tr>
+  <tr>
+  <td>Gamba</td>
+  <td>CN</td>
+  <td align="right">45.17</td>
+  <td align="right">0</td>
+  <td align="right">39</td>
+  <td align="right">1.95</td>
+  <td align="right">28.28</td>
+  <td align="right">88.52</td>
+  <td>2018-09-29, 23:32:01</td>
+  </tr>
+  <tr>
+  <td>Gander</td>
+  <td>CA</td>
+  <td align="right">48.2</td>
+  <td align="right">20</td>
+  <td align="right">87</td>
+  <td align="right">14.99</td>
+  <td align="right">48.95</td>
+  <td align="right">-54.61</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Gao</td>
+  <td>ML</td>
+  <td align="right">78.38</td>
+  <td align="right">68</td>
+  <td align="right">57</td>
+  <td align="right">4.85</td>
+  <td align="right">16.28</td>
+  <td align="right">-0.04</td>
+  <td>2018-09-29, 23:30:36</td>
+  </tr>
+  <tr>
+  <td>Gat</td>
+  <td>SN</td>
+  <td align="right">76.67</td>
+  <td align="right">56</td>
+  <td align="right">93</td>
+  <td align="right">4.85</td>
+  <td align="right">14.69</td>
+  <td align="right">-16.54</td>
+  <td>2018-09-29, 23:31:26</td>
+  </tr>
+  <tr>
+  <td>General Roca</td>
+  <td>AR</td>
+  <td align="right">53.6</td>
+  <td align="right">0</td>
+  <td align="right">39</td>
+  <td align="right">12.75</td>
+  <td align="right">-39.03</td>
+  <td align="right">-67.58</td>
+  <td>2018-09-29, 22:00:00</td>
+  </tr>
+  <tr>
+  <td>Georgetown</td>
+  <td>GY</td>
+  <td align="right">75.2</td>
+  <td align="right">0</td>
+  <td align="right">94</td>
+  <td align="right">2.24</td>
+  <td align="right">6.8</td>
+  <td align="right">-58.16</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Geraldton</td>
+  <td>CA</td>
+  <td align="right">33.8</td>
+  <td align="right">90</td>
+  <td align="right">80</td>
+  <td align="right">5.82</td>
+  <td align="right">49.72</td>
+  <td align="right">-86.95</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Gigmoto</td>
+  <td>PH</td>
+  <td align="right">83.96</td>
+  <td align="right">56</td>
+  <td align="right">100</td>
+  <td align="right">3.62</td>
+  <td align="right">13.78</td>
+  <td align="right">124.39</td>
+  <td>2018-09-29, 23:29:45</td>
+  </tr>
+  <tr>
+  <td>Ginda</td>
+  <td>IN</td>
+  <td align="right">64.7</td>
+  <td align="right">0</td>
+  <td align="right">80</td>
+  <td align="right">1.95</td>
+  <td align="right">30.69</td>
+  <td align="right">78.49</td>
+  <td>2018-09-29, 23:29:52</td>
+  </tr>
+  <tr>
+  <td>Gladstone</td>
+  <td>AU</td>
+  <td align="right">69.02</td>
+  <td align="right">92</td>
+  <td align="right">84</td>
+  <td align="right">14.25</td>
+  <td align="right">-23.84</td>
+  <td align="right">151.26</td>
+  <td>2018-09-29, 23:29:17</td>
+  </tr>
+  <tr>
+  <td>Glenwood Springs</td>
+  <td>US</td>
+  <td align="right">57.92</td>
+  <td align="right">1</td>
+  <td align="right">45</td>
+  <td align="right">14.99</td>
+  <td align="right">39.55</td>
+  <td align="right">-107.33</td>
+  <td>2018-09-29, 22:56:00</td>
+  </tr>
+  <tr>
+  <td>Gobabis</td>
+  <td> </td>
+  <td align="right">77.0</td>
+  <td align="right">64</td>
+  <td align="right">36</td>
+  <td align="right">8.05</td>
+  <td align="right">-22.45</td>
+  <td align="right">18.97</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Gold Coast</td>
+  <td>AU</td>
+  <td align="right">62.6</td>
+  <td align="right">90</td>
+  <td align="right">77</td>
+  <td align="right">10.29</td>
+  <td align="right">-28.0</td>
+  <td align="right">153.41</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Gornyy</td>
+  <td>RU</td>
+  <td align="right">44.99</td>
+  <td align="right">92</td>
+  <td align="right">99</td>
+  <td align="right">15.37</td>
+  <td align="right">51.76</td>
+  <td align="right">48.54</td>
+  <td>2018-09-29, 23:32:19</td>
+  </tr>
+  <tr>
+  <td>Goya</td>
+  <td>AR</td>
+  <td align="right">68.39</td>
+  <td align="right">64</td>
+  <td align="right">97</td>
+  <td align="right">4.52</td>
+  <td align="right">-29.14</td>
+  <td align="right">-59.27</td>
+  <td>2018-09-29, 23:28:53</td>
+  </tr>
+  <tr>
+  <td>Granada</td>
+  <td>NI</td>
+  <td align="right">75.2</td>
+  <td align="right">75</td>
+  <td align="right">88</td>
+  <td align="right">6.93</td>
+  <td align="right">11.93</td>
+  <td align="right">-85.96</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Grayslake</td>
+  <td>US</td>
+  <td align="right">55.94</td>
+  <td align="right">90</td>
+  <td align="right">82</td>
+  <td align="right">9.17</td>
+  <td align="right">42.34</td>
+  <td align="right">-88.04</td>
+  <td>2018-09-29, 23:17:00</td>
+  </tr>
+  <tr>
+  <td>Grindavik</td>
+  <td>IS</td>
+  <td align="right">37.4</td>
+  <td align="right">75</td>
+  <td align="right">69</td>
+  <td align="right">11.41</td>
+  <td align="right">63.84</td>
+  <td align="right">-22.43</td>
+  <td>2018-09-29, 22:30:00</td>
+  </tr>
+  <tr>
+  <td>Grudziadz</td>
+  <td>PL</td>
+  <td align="right">41.0</td>
+  <td align="right">0</td>
+  <td align="right">80</td>
+  <td align="right">5.82</td>
+  <td align="right">53.48</td>
+  <td align="right">18.75</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Guerrero Negro</td>
+  <td>MX</td>
+  <td align="right">69.65</td>
+  <td align="right">36</td>
+  <td align="right">91</td>
+  <td align="right">3.62</td>
+  <td align="right">27.97</td>
+  <td align="right">-114.04</td>
+  <td>2018-09-29, 23:29:39</td>
+  </tr>
+  <tr>
+  <td>Gunnedah</td>
+  <td>AU</td>
+  <td align="right">71.6</td>
+  <td align="right">0</td>
+  <td align="right">28</td>
+  <td align="right">11.41</td>
+  <td align="right">-30.98</td>
+  <td align="right">150.25</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Gura Teghii</td>
+  <td>RO</td>
+  <td align="right">39.86</td>
+  <td align="right">0</td>
+  <td align="right">75</td>
+  <td align="right">2.73</td>
+  <td align="right">45.5</td>
+  <td align="right">26.43</td>
+  <td>2018-09-29, 23:28:54</td>
+  </tr>
+  <tr>
+  <td>Gurlan</td>
+  <td>UZ</td>
+  <td align="right">75.2</td>
+  <td align="right">0</td>
+  <td align="right">27</td>
+  <td align="right">6.93</td>
+  <td align="right">41.84</td>
+  <td align="right">60.39</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Haines Junction</td>
+  <td>CA</td>
+  <td align="right">22.31</td>
+  <td align="right">0</td>
+  <td align="right">82</td>
+  <td align="right">1.95</td>
+  <td align="right">60.75</td>
+  <td align="right">-137.51</td>
+  <td>2018-09-29, 23:32:25</td>
+  </tr>
+  <tr>
+  <td>Half Moon Bay</td>
+  <td>US</td>
+  <td align="right">64.4</td>
+  <td align="right">90</td>
+  <td align="right">72</td>
+  <td align="right">7.54</td>
+  <td align="right">37.46</td>
+  <td align="right">-122.43</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Hambantota</td>
+  <td>LK</td>
+  <td align="right">78.65</td>
+  <td align="right">80</td>
+  <td align="right">100</td>
+  <td align="right">8.21</td>
+  <td align="right">6.12</td>
+  <td align="right">81.12</td>
+  <td>2018-09-29, 23:27:39</td>
+  </tr>
+  <tr>
+  <td>Hamilton</td>
+  <td>CA</td>
+  <td align="right">51.8</td>
+  <td align="right">90</td>
+  <td align="right">81</td>
+  <td align="right">3.36</td>
+  <td align="right">43.26</td>
+  <td align="right">-79.87</td>
+  <td>2018-09-29, 23:12:00</td>
+  </tr>
+  <tr>
+  <td>Harnosand</td>
+  <td>SE</td>
+  <td align="right">33.8</td>
+  <td align="right">8</td>
+  <td align="right">100</td>
+  <td align="right">3.36</td>
+  <td align="right">62.63</td>
+  <td align="right">17.94</td>
+  <td>2018-09-29, 22:50:00</td>
+  </tr>
+  <tr>
+  <td>Harper</td>
+  <td>US</td>
+  <td align="right">71.6</td>
+  <td align="right">90</td>
+  <td align="right">92</td>
+  <td align="right">8.05</td>
+  <td align="right">30.3</td>
+  <td align="right">-99.24</td>
+  <td>2018-09-29, 22:59:00</td>
+  </tr>
+  <tr>
+  <td>Hasaki</td>
+  <td>JP</td>
+  <td align="right">71.6</td>
+  <td align="right">75</td>
+  <td align="right">88</td>
+  <td align="right">2.24</td>
+  <td align="right">35.73</td>
+  <td align="right">140.83</td>
+  <td>2018-09-29, 22:30:00</td>
+  </tr>
+  <tr>
+  <td>Hearst</td>
+  <td>CA</td>
+  <td align="right">28.16</td>
+  <td align="right">0</td>
+  <td align="right">87</td>
+  <td align="right">5.97</td>
+  <td align="right">49.69</td>
+  <td align="right">-83.67</td>
+  <td>2018-09-29, 23:31:24</td>
+  </tr>
+  <tr>
+  <td>Helena</td>
+  <td>US</td>
+  <td align="right">35.96</td>
+  <td align="right">90</td>
+  <td align="right">15</td>
+  <td align="right">9.17</td>
+  <td align="right">46.59</td>
+  <td align="right">-112.04</td>
+  <td>2018-09-29, 23:09:00</td>
+  </tr>
+  <tr>
+  <td>Henties Bay</td>
+  <td> </td>
+  <td align="right">57.59</td>
+  <td align="right">64</td>
+  <td align="right">93</td>
+  <td align="right">2.62</td>
+  <td align="right">-22.12</td>
+  <td align="right">14.28</td>
+  <td>2018-09-29, 23:29:40</td>
+  </tr>
+  <tr>
+  <td>Hermanus</td>
+  <td>ZA</td>
+  <td align="right">54.26</td>
+  <td align="right">8</td>
+  <td align="right">53</td>
+  <td align="right">2.73</td>
+  <td align="right">-34.42</td>
+  <td align="right">19.24</td>
+  <td>2018-09-29, 23:25:47</td>
+  </tr>
+  <tr>
+  <td>Hervey Bay</td>
+  <td>AU</td>
+  <td align="right">65.78</td>
+  <td align="right">100</td>
+  <td align="right">100</td>
+  <td align="right">16.82</td>
+  <td align="right">-25.3</td>
+  <td align="right">152.85</td>
+  <td>2018-09-29, 23:31:57</td>
+  </tr>
+  <tr>
+  <td>High Rock</td>
+  <td>BS</td>
+  <td align="right">83.24</td>
+  <td align="right">32</td>
+  <td align="right">100</td>
+  <td align="right">19.62</td>
+  <td align="right">26.63</td>
+  <td align="right">-78.28</td>
+  <td>2018-09-29, 23:32:44</td>
+  </tr>
+  <tr>
+  <td>Hilo</td>
+  <td>US</td>
+  <td align="right">78.98</td>
+  <td align="right">90</td>
+  <td align="right">84</td>
+  <td align="right">3.36</td>
+  <td align="right">19.71</td>
+  <td align="right">-155.08</td>
+  <td>2018-09-29, 22:56:00</td>
+  </tr>
+  <tr>
+  <td>Hirara</td>
+  <td>JP</td>
+  <td align="right">84.2</td>
+  <td align="right">40</td>
+  <td align="right">48</td>
+  <td align="right">17.22</td>
+  <td align="right">24.8</td>
+  <td align="right">125.28</td>
+  <td>2018-09-29, 22:00:00</td>
+  </tr>
+  <tr>
+  <td>Hithadhoo</td>
+  <td>MV</td>
+  <td align="right">82.7</td>
+  <td align="right">92</td>
+  <td align="right">100</td>
+  <td align="right">13.24</td>
+  <td align="right">-0.6</td>
+  <td align="right">73.08</td>
+  <td>2018-09-29, 23:25:32</td>
+  </tr>
+  <tr>
+  <td>Hobart</td>
+  <td>AU</td>
+  <td align="right">62.6</td>
+  <td align="right">75</td>
+  <td align="right">48</td>
+  <td align="right">10.29</td>
+  <td align="right">-42.88</td>
+  <td align="right">147.33</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Hobyo</td>
+  <td>SO</td>
+  <td align="right">79.28</td>
+  <td align="right">76</td>
+  <td align="right">90</td>
+  <td align="right">12.01</td>
+  <td align="right">5.35</td>
+  <td align="right">48.53</td>
+  <td>2018-09-29, 23:28:41</td>
+  </tr>
+  <tr>
+  <td>Hofn</td>
+  <td>IS</td>
+  <td align="right">37.79</td>
+  <td align="right">0</td>
+  <td align="right">100</td>
+  <td align="right">24.43</td>
+  <td align="right">64.25</td>
+  <td align="right">-15.21</td>
+  <td>2018-09-29, 23:31:58</td>
+  </tr>
+  <tr>
+  <td>Homer</td>
+  <td>US</td>
+  <td align="right">51.08</td>
+  <td align="right">90</td>
+  <td align="right">92</td>
+  <td align="right">2.84</td>
+  <td align="right">59.64</td>
+  <td align="right">-151.54</td>
+  <td>2018-09-29, 23:05:00</td>
+  </tr>
+  <tr>
+  <td>Honiara</td>
+  <td>SB</td>
+  <td align="right">86.0</td>
+  <td align="right">75</td>
+  <td align="right">66</td>
+  <td align="right">2.24</td>
+  <td align="right">-9.43</td>
+  <td align="right">159.96</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Hualmay</td>
+  <td>PE</td>
+  <td align="right">54.8</td>
+  <td align="right">32</td>
+  <td align="right">90</td>
+  <td align="right">4.52</td>
+  <td align="right">-11.1</td>
+  <td align="right">-77.61</td>
+  <td>2018-09-29, 23:31:32</td>
+  </tr>
+  <tr>
+  <td>Huambo</td>
+  <td>AO</td>
+  <td align="right">59.0</td>
+  <td align="right">75</td>
+  <td align="right">100</td>
+  <td align="right">2.17</td>
+  <td align="right">-12.78</td>
+  <td align="right">15.73</td>
+  <td>2018-09-29, 22:00:00</td>
+  </tr>
+  <tr>
+  <td>Huanren</td>
+  <td>CN</td>
+  <td align="right">55.25</td>
+  <td align="right">56</td>
+  <td align="right">78</td>
+  <td align="right">4.18</td>
+  <td align="right">41.26</td>
+  <td align="right">125.37</td>
+  <td>2018-09-29, 23:30:44</td>
+  </tr>
+  <tr>
+  <td>Hudson Bay</td>
+  <td>CA</td>
+  <td align="right">29.51</td>
+  <td align="right">8</td>
+  <td align="right">63</td>
+  <td align="right">6.64</td>
+  <td align="right">52.86</td>
+  <td align="right">-102.4</td>
+  <td>2018-09-29, 23:30:17</td>
+  </tr>
+  <tr>
+  <td>Huilong</td>
+  <td>CN</td>
+  <td align="right">76.76</td>
+  <td align="right">64</td>
+  <td align="right">56</td>
+  <td align="right">2.95</td>
+  <td align="right">28.89</td>
+  <td align="right">110.18</td>
+  <td>2018-09-29, 23:30:49</td>
+  </tr>
+  <tr>
+  <td>Hun</td>
+  <td>BE</td>
+  <td align="right">42.8</td>
+  <td align="right">0</td>
+  <td align="right">93</td>
+  <td align="right">3.36</td>
+  <td align="right">50.34</td>
+  <td align="right">4.87</td>
+  <td>2018-09-29, 23:20:00</td>
+  </tr>
+  <tr>
+  <td>Ibra</td>
+  <td>OM</td>
+  <td align="right">85.31</td>
+  <td align="right">0</td>
+  <td align="right">49</td>
+  <td align="right">3.51</td>
+  <td align="right">22.69</td>
+  <td align="right">58.55</td>
+  <td>2018-09-29, 23:29:47</td>
+  </tr>
+  <tr>
+  <td>Ihiala</td>
+  <td>NG</td>
+  <td align="right">74.51</td>
+  <td align="right">88</td>
+  <td align="right">100</td>
+  <td align="right">6.42</td>
+  <td align="right">5.86</td>
+  <td align="right">6.86</td>
+  <td>2018-09-29, 23:31:10</td>
+  </tr>
+  <tr>
+  <td>Ilulissat</td>
+  <td>GL</td>
+  <td align="right">37.4</td>
+  <td align="right">48</td>
+  <td align="right">55</td>
+  <td align="right">19.46</td>
+  <td align="right">69.22</td>
+  <td align="right">-51.1</td>
+  <td>2018-09-29, 22:50:00</td>
+  </tr>
+  <tr>
+  <td>Imeni Poliny Osipenko</td>
+  <td>RU</td>
+  <td align="right">52.1</td>
+  <td align="right">20</td>
+  <td align="right">60</td>
+  <td align="right">2.62</td>
+  <td align="right">52.42</td>
+  <td align="right">136.49</td>
+  <td>2018-09-29, 23:29:16</td>
+  </tr>
+  <tr>
+  <td>Imeni Zhelyabova</td>
+  <td>RU</td>
+  <td align="right">38.33</td>
+  <td align="right">48</td>
+  <td align="right">88</td>
+  <td align="right">10.22</td>
+  <td align="right">58.95</td>
+  <td align="right">36.6</td>
+  <td>2018-09-29, 23:29:29</td>
+  </tr>
+  <tr>
+  <td>Indian Head</td>
+  <td>CA</td>
+  <td align="right">30.23</td>
+  <td align="right">0</td>
+  <td align="right">65</td>
+  <td align="right">10.22</td>
+  <td align="right">50.53</td>
+  <td align="right">-103.67</td>
+  <td>2018-09-29, 23:29:27</td>
+  </tr>
+  <tr>
+  <td>Inhambane</td>
+  <td>MZ</td>
+  <td align="right">71.6</td>
+  <td align="right">75</td>
+  <td align="right">64</td>
+  <td align="right">13.87</td>
+  <td align="right">-23.87</td>
+  <td align="right">35.38</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Inuvik</td>
+  <td>CA</td>
+  <td align="right">23.0</td>
+  <td align="right">20</td>
+  <td align="right">92</td>
+  <td align="right">4.7</td>
+  <td align="right">68.36</td>
+  <td align="right">-133.71</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Iqaluit</td>
+  <td>CA</td>
+  <td align="right">30.2</td>
+  <td align="right">90</td>
+  <td align="right">92</td>
+  <td align="right">29.97</td>
+  <td align="right">63.75</td>
+  <td align="right">-68.52</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Iquitos</td>
+  <td>PE</td>
+  <td align="right">75.2</td>
+  <td align="right">0</td>
+  <td align="right">94</td>
+  <td align="right">2.24</td>
+  <td align="right">-3.75</td>
+  <td align="right">-73.25</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Iracoubo</td>
+  <td>GF</td>
+  <td align="right">77.66</td>
+  <td align="right">0</td>
+  <td align="right">81</td>
+  <td align="right">5.97</td>
+  <td align="right">5.48</td>
+  <td align="right">-53.21</td>
+  <td>2018-09-29, 23:26:18</td>
+  </tr>
+  <tr>
+  <td>Isangel</td>
+  <td>VU</td>
+  <td align="right">72.89</td>
+  <td align="right">92</td>
+  <td align="right">100</td>
+  <td align="right">21.3</td>
+  <td align="right">-19.55</td>
+  <td align="right">169.27</td>
+  <td>2018-09-29, 23:32:24</td>
+  </tr>
+  <tr>
+  <td>Itacoatiara</td>
+  <td>BR</td>
+  <td align="right">81.62</td>
+  <td align="right">12</td>
+  <td align="right">69</td>
+  <td align="right">5.41</td>
+  <td align="right">-3.14</td>
+  <td align="right">-58.44</td>
+  <td>2018-09-29, 23:27:46</td>
+  </tr>
+  <tr>
+  <td>Itarema</td>
+  <td>BR</td>
+  <td align="right">77.21</td>
+  <td align="right">92</td>
+  <td align="right">89</td>
+  <td align="right">15.03</td>
+  <td align="right">-2.92</td>
+  <td align="right">-39.92</td>
+  <td>2018-09-29, 23:28:39</td>
+  </tr>
+  <tr>
+  <td>Jackson</td>
+  <td>US</td>
+  <td align="right">60.98</td>
+  <td align="right">1</td>
+  <td align="right">96</td>
+  <td align="right">2.51</td>
+  <td align="right">35.61</td>
+  <td align="right">-88.82</td>
+  <td>2018-09-29, 22:56:00</td>
+  </tr>
+  <tr>
+  <td>Jalu</td>
+  <td>LY</td>
+  <td align="right">69.29</td>
+  <td align="right">0</td>
+  <td align="right">37</td>
+  <td align="right">3.18</td>
+  <td align="right">29.03</td>
+  <td align="right">21.55</td>
+  <td>2018-09-29, 23:30:06</td>
+  </tr>
+  <tr>
+  <td>Jamestown</td>
+  <td>AU</td>
+  <td align="right">66.23</td>
+  <td align="right">8</td>
+  <td align="right">25</td>
+  <td align="right">13.69</td>
+  <td align="right">-33.21</td>
+  <td align="right">138.6</td>
+  <td>2018-09-29, 23:25:52</td>
+  </tr>
+  <tr>
+  <td>Jidong</td>
+  <td>CN</td>
+  <td align="right">61.91</td>
+  <td align="right">76</td>
+  <td align="right">78</td>
+  <td align="right">3.4</td>
+  <td align="right">45.25</td>
+  <td align="right">131.14</td>
+  <td>2018-09-29, 23:28:38</td>
+  </tr>
+  <tr>
+  <td>Jining</td>
+  <td>CN</td>
+  <td align="right">69.83</td>
+  <td align="right">0</td>
+  <td align="right">46</td>
+  <td align="right">15.26</td>
+  <td align="right">35.41</td>
+  <td align="right">116.58</td>
+  <td>2018-09-29, 23:28:43</td>
+  </tr>
+  <tr>
+  <td>Jizan</td>
+  <td>SA</td>
+  <td align="right">95.0</td>
+  <td align="right">0</td>
+  <td align="right">59</td>
+  <td align="right">7.54</td>
+  <td align="right">16.89</td>
+  <td align="right">42.56</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Jodar</td>
+  <td>ES</td>
+  <td align="right">50.3</td>
+  <td align="right">8</td>
+  <td align="right">83</td>
+  <td align="right">2.39</td>
+  <td align="right">37.84</td>
+  <td align="right">-3.35</td>
+  <td>2018-09-29, 23:32:49</td>
+  </tr>
+  <tr>
+  <td>Joensuu</td>
+  <td>FI</td>
+  <td align="right">44.6</td>
+  <td align="right">90</td>
+  <td align="right">93</td>
+  <td align="right">8.05</td>
+  <td align="right">62.6</td>
+  <td align="right">29.76</td>
+  <td>2018-09-29, 23:20:00</td>
+  </tr>
+  <tr>
+  <td>Junqueiro</td>
+  <td>BR</td>
+  <td align="right">73.88</td>
+  <td align="right">92</td>
+  <td align="right">95</td>
+  <td align="right">7.65</td>
+  <td align="right">-9.92</td>
+  <td align="right">-36.47</td>
+  <td>2018-09-29, 23:31:31</td>
+  </tr>
+  <tr>
+  <td>Jutai</td>
+  <td>BR</td>
+  <td align="right">75.05</td>
+  <td align="right">0</td>
+  <td align="right">89</td>
+  <td align="right">5.19</td>
+  <td align="right">-1.71</td>
+  <td align="right">-47.89</td>
+  <td>2018-09-29, 23:32:48</td>
+  </tr>
+  <tr>
+  <td>Kabalo</td>
+  <td>CD</td>
+  <td align="right">74.78</td>
+  <td align="right">44</td>
+  <td align="right">87</td>
+  <td align="right">4.52</td>
+  <td align="right">-6.05</td>
+  <td align="right">26.92</td>
+  <td>2018-09-29, 23:31:06</td>
+  </tr>
+  <tr>
+  <td>Kabwe</td>
+  <td>ZM</td>
+  <td align="right">71.45</td>
+  <td align="right">0</td>
+  <td align="right">57</td>
+  <td align="right">21.74</td>
+  <td align="right">-14.44</td>
+  <td align="right">28.44</td>
+  <td>2018-09-29, 23:31:31</td>
+  </tr>
+  <tr>
+  <td>Kaeo</td>
+  <td>NZ</td>
+  <td align="right">58.31</td>
+  <td align="right">64</td>
+  <td align="right">56</td>
+  <td align="right">10.67</td>
+  <td align="right">-35.1</td>
+  <td align="right">173.78</td>
+  <td>2018-09-29, 23:28:33</td>
+  </tr>
+  <tr>
+  <td>Kahului</td>
+  <td>US</td>
+  <td align="right">80.06</td>
+  <td align="right">1</td>
+  <td align="right">81</td>
+  <td align="right">11.41</td>
+  <td align="right">20.89</td>
+  <td align="right">-156.47</td>
+  <td>2018-09-29, 22:56:00</td>
+  </tr>
+  <tr>
+  <td>Kaitangata</td>
+  <td>NZ</td>
+  <td align="right">53.9</td>
+  <td align="right">44</td>
+  <td align="right">86</td>
+  <td align="right">4.63</td>
+  <td align="right">-46.28</td>
+  <td align="right">169.85</td>
+  <td>2018-09-29, 23:25:28</td>
+  </tr>
+  <tr>
+  <td>Kaka</td>
+  <td>TM</td>
+  <td align="right">73.16</td>
+  <td align="right">0</td>
+  <td align="right">32</td>
+  <td align="right">3.74</td>
+  <td align="right">37.35</td>
+  <td align="right">59.62</td>
+  <td>2018-09-29, 23:32:49</td>
+  </tr>
+  <tr>
+  <td>Kalabo</td>
+  <td>ZM</td>
+  <td align="right">77.93</td>
+  <td align="right">0</td>
+  <td align="right">32</td>
+  <td align="right">19.51</td>
+  <td align="right">-15.0</td>
+  <td align="right">22.67</td>
+  <td>2018-09-29, 23:31:04</td>
+  </tr>
+  <tr>
+  <td>Kalmunai</td>
+  <td>LK</td>
+  <td align="right">84.05</td>
+  <td align="right">68</td>
+  <td align="right">81</td>
+  <td align="right">5.64</td>
+  <td align="right">7.42</td>
+  <td align="right">81.82</td>
+  <td>2018-09-29, 23:30:24</td>
+  </tr>
+  <tr>
+  <td>Kangaatsiaq</td>
+  <td>GL</td>
+  <td align="right">36.35</td>
+  <td align="right">56</td>
+  <td align="right">98</td>
+  <td align="right">16.82</td>
+  <td align="right">68.31</td>
+  <td align="right">-53.46</td>
+  <td>2018-09-29, 23:30:12</td>
+  </tr>
+  <tr>
+  <td>Kapaa</td>
+  <td>US</td>
+  <td align="right">78.08</td>
+  <td align="right">40</td>
+  <td align="right">100</td>
+  <td align="right">11.41</td>
+  <td align="right">22.08</td>
+  <td align="right">-159.32</td>
+  <td>2018-09-29, 23:07:00</td>
+  </tr>
+  <tr>
+  <td>Kargat</td>
+  <td>RU</td>
+  <td align="right">60.29</td>
+  <td align="right">12</td>
+  <td align="right">48</td>
+  <td align="right">13.91</td>
+  <td align="right">55.19</td>
+  <td align="right">80.28</td>
+  <td>2018-09-29, 23:29:41</td>
+  </tr>
+  <tr>
+  <td>Kariba</td>
+  <td>ZW</td>
+  <td align="right">78.38</td>
+  <td align="right">48</td>
+  <td align="right">45</td>
+  <td align="right">13.91</td>
+  <td align="right">-16.53</td>
+  <td align="right">28.78</td>
+  <td>2018-09-29, 23:29:52</td>
+  </tr>
+  <tr>
+  <td>Karpogory</td>
+  <td>RU</td>
+  <td align="right">33.47</td>
+  <td align="right">0</td>
+  <td align="right">95</td>
+  <td align="right">5.41</td>
+  <td align="right">64.0</td>
+  <td align="right">44.44</td>
+  <td>2018-09-29, 23:28:57</td>
+  </tr>
+  <tr>
+  <td>Karratha</td>
+  <td>AU</td>
+  <td align="right">85.13</td>
+  <td align="right">0</td>
+  <td align="right">32</td>
+  <td align="right">14.03</td>
+  <td align="right">-20.74</td>
+  <td align="right">116.85</td>
+  <td>2018-09-29, 23:27:52</td>
+  </tr>
+  <tr>
+  <td>Katherine</td>
+  <td>AU</td>
+  <td align="right">98.6</td>
+  <td align="right">0</td>
+  <td align="right">14</td>
+  <td align="right">16.11</td>
+  <td align="right">-14.47</td>
+  <td align="right">132.26</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Katsuura</td>
+  <td>JP</td>
+  <td align="right">80.6</td>
+  <td align="right">90</td>
+  <td align="right">83</td>
+  <td align="right">44.96</td>
+  <td align="right">33.93</td>
+  <td align="right">134.5</td>
+  <td>2018-09-29, 22:45:00</td>
+  </tr>
+  <tr>
+  <td>Kavaratti</td>
+  <td>IN</td>
+  <td align="right">82.61</td>
+  <td align="right">44</td>
+  <td align="right">100</td>
+  <td align="right">8.1</td>
+  <td align="right">10.57</td>
+  <td align="right">72.64</td>
+  <td>2018-09-29, 23:25:48</td>
+  </tr>
+  <tr>
+  <td>Kavieng</td>
+  <td>PG</td>
+  <td align="right">86.12</td>
+  <td align="right">12</td>
+  <td align="right">100</td>
+  <td align="right">3.74</td>
+  <td align="right">-2.57</td>
+  <td align="right">150.8</td>
+  <td>2018-09-29, 23:25:22</td>
+  </tr>
+  <tr>
+  <td>Keetmanshoop</td>
+  <td> </td>
+  <td align="right">66.86</td>
+  <td align="right">0</td>
+  <td align="right">51</td>
+  <td align="right">11.23</td>
+  <td align="right">-26.57</td>
+  <td align="right">18.15</td>
+  <td>2018-09-29, 23:29:27</td>
+  </tr>
+  <tr>
+  <td>Ketchikan</td>
+  <td>US</td>
+  <td align="right">57.92</td>
+  <td align="right">1</td>
+  <td align="right">51</td>
+  <td align="right">13.24</td>
+  <td align="right">55.34</td>
+  <td align="right">-131.65</td>
+  <td>2018-09-29, 22:56:00</td>
+  </tr>
+  <tr>
+  <td>Khani</td>
+  <td>GE</td>
+  <td align="right">71.6</td>
+  <td align="right">0</td>
+  <td align="right">53</td>
+  <td align="right">12.75</td>
+  <td align="right">41.96</td>
+  <td align="right">42.96</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Khasan</td>
+  <td>RU</td>
+  <td align="right">64.25</td>
+  <td align="right">20</td>
+  <td align="right">90</td>
+  <td align="right">9.44</td>
+  <td align="right">42.43</td>
+  <td align="right">130.64</td>
+  <td>2018-09-29, 23:30:35</td>
+  </tr>
+  <tr>
+  <td>Khatanga</td>
+  <td>RU</td>
+  <td align="right">47.42</td>
+  <td align="right">12</td>
+  <td align="right">88</td>
+  <td align="right">14.58</td>
+  <td align="right">71.98</td>
+  <td align="right">102.47</td>
+  <td>2018-09-29, 23:25:48</td>
+  </tr>
+  <tr>
+  <td>Kholodnyy</td>
+  <td>RU</td>
+  <td align="right">27.08</td>
+  <td align="right">80</td>
+  <td align="right">80</td>
+  <td align="right">12.01</td>
+  <td align="right">62.72</td>
+  <td align="right">147.95</td>
+  <td>2018-09-29, 23:29:53</td>
+  </tr>
+  <tr>
+  <td>Khor</td>
+  <td>RU</td>
+  <td align="right">63.71</td>
+  <td align="right">0</td>
+  <td align="right">84</td>
+  <td align="right">6.53</td>
+  <td align="right">47.88</td>
+  <td align="right">134.96</td>
+  <td>2018-09-29, 23:31:12</td>
+  </tr>
+  <tr>
+  <td>Khovu-Aksy</td>
+  <td>RU</td>
+  <td align="right">57.77</td>
+  <td align="right">0</td>
+  <td align="right">55</td>
+  <td align="right">2.95</td>
+  <td align="right">51.13</td>
+  <td align="right">93.72</td>
+  <td>2018-09-29, 23:30:21</td>
+  </tr>
+  <tr>
+  <td>Khudumelapye</td>
+  <td>BW</td>
+  <td align="right">63.89</td>
+  <td align="right">0</td>
+  <td align="right">51</td>
+  <td align="right">20.51</td>
+  <td align="right">-23.91</td>
+  <td align="right">24.95</td>
+  <td>2018-09-29, 23:29:19</td>
+  </tr>
+  <tr>
+  <td>Kiama</td>
+  <td>AU</td>
+  <td align="right">62.6</td>
+  <td align="right">0</td>
+  <td align="right">42</td>
+  <td align="right">12.75</td>
+  <td align="right">-34.67</td>
+  <td align="right">150.86</td>
+  <td>2018-09-29, 22:00:00</td>
+  </tr>
+  <tr>
+  <td>Kieta</td>
+  <td>PG</td>
+  <td align="right">80.9</td>
+  <td align="right">48</td>
+  <td align="right">98</td>
+  <td align="right">2.73</td>
+  <td align="right">-6.22</td>
+  <td align="right">155.63</td>
+  <td>2018-09-29, 23:27:55</td>
+  </tr>
+  <tr>
+  <td>Kimbe</td>
+  <td>PG</td>
+  <td align="right">86.21</td>
+  <td align="right">32</td>
+  <td align="right">86</td>
+  <td align="right">7.43</td>
+  <td align="right">-5.56</td>
+  <td align="right">150.15</td>
+  <td>2018-09-29, 23:29:50</td>
+  </tr>
+  <tr>
+  <td>Kinshasa</td>
+  <td>CD</td>
+  <td align="right">75.2</td>
+  <td align="right">90</td>
+  <td align="right">83</td>
+  <td align="right">4.7</td>
+  <td align="right">-4.32</td>
+  <td align="right">15.31</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Kintampo</td>
+  <td>GH</td>
+  <td align="right">70.55</td>
+  <td align="right">44</td>
+  <td align="right">97</td>
+  <td align="right">5.75</td>
+  <td align="right">8.05</td>
+  <td align="right">-1.73</td>
+  <td>2018-09-29, 23:31:29</td>
+  </tr>
+  <tr>
+  <td>Kirakira</td>
+  <td>SB</td>
+  <td align="right">80.63</td>
+  <td align="right">68</td>
+  <td align="right">100</td>
+  <td align="right">6.31</td>
+  <td align="right">-10.46</td>
+  <td align="right">161.92</td>
+  <td>2018-09-29, 23:29:20</td>
+  </tr>
+  <tr>
+  <td>Klaksvik</td>
+  <td>FO</td>
+  <td align="right">42.8</td>
+  <td align="right">92</td>
+  <td align="right">87</td>
+  <td align="right">25.28</td>
+  <td align="right">62.23</td>
+  <td align="right">-6.59</td>
+  <td>2018-09-29, 22:50:00</td>
+  </tr>
+  <tr>
+  <td>Kodiak</td>
+  <td>US</td>
+  <td align="right">57.92</td>
+  <td align="right">90</td>
+  <td align="right">93</td>
+  <td align="right">6.87</td>
+  <td align="right">39.95</td>
+  <td align="right">-94.76</td>
+  <td>2018-09-29, 22:53:00</td>
+  </tr>
+  <tr>
+  <td>Kolchugino</td>
+  <td>RU</td>
+  <td align="right">36.53</td>
+  <td align="right">48</td>
+  <td align="right">84</td>
+  <td align="right">6.76</td>
+  <td align="right">56.3</td>
+  <td align="right">39.38</td>
+  <td>2018-09-29, 23:31:53</td>
+  </tr>
+  <tr>
+  <td>Kompaniyivka</td>
+  <td>UA</td>
+  <td align="right">48.41</td>
+  <td align="right">24</td>
+  <td align="right">94</td>
+  <td align="right">12.24</td>
+  <td align="right">48.25</td>
+  <td align="right">32.21</td>
+  <td>2018-09-29, 23:31:30</td>
+  </tr>
+  <tr>
+  <td>Komsomolets</td>
+  <td>RU</td>
+  <td align="right">40.76</td>
+  <td align="right">0</td>
+  <td align="right">100</td>
+  <td align="right">4.85</td>
+  <td align="right">52.77</td>
+  <td align="right">41.29</td>
+  <td>2018-09-29, 23:30:48</td>
+  </tr>
+  <tr>
+  <td>Korhogo</td>
+  <td>CI</td>
+  <td align="right">68.75</td>
+  <td align="right">76</td>
+  <td align="right">99</td>
+  <td align="right">4.74</td>
+  <td align="right">9.46</td>
+  <td align="right">-5.63</td>
+  <td>2018-09-29, 23:28:56</td>
+  </tr>
+  <tr>
+  <td>Kormilovka</td>
+  <td>RU</td>
+  <td align="right">59.0</td>
+  <td align="right">0</td>
+  <td align="right">58</td>
+  <td align="right">4.47</td>
+  <td align="right">55.0</td>
+  <td align="right">74.1</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Kostino</td>
+  <td>BG</td>
+  <td align="right">55.4</td>
+  <td align="right">92</td>
+  <td align="right">100</td>
+  <td align="right">4.7</td>
+  <td align="right">41.7</td>
+  <td align="right">25.3</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Kota Belud</td>
+  <td>MY</td>
+  <td align="right">91.4</td>
+  <td align="right">75</td>
+  <td align="right">75</td>
+  <td align="right">2.24</td>
+  <td align="right">6.35</td>
+  <td align="right">116.43</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Koumac</td>
+  <td>NC</td>
+  <td align="right">73.25</td>
+  <td align="right">92</td>
+  <td align="right">79</td>
+  <td align="right">10.67</td>
+  <td align="right">-20.56</td>
+  <td align="right">164.28</td>
+  <td>2018-09-29, 23:30:16</td>
+  </tr>
+  <tr>
+  <td>Kruisfontein</td>
+  <td>ZA</td>
+  <td align="right">62.0</td>
+  <td align="right">0</td>
+  <td align="right">79</td>
+  <td align="right">13.47</td>
+  <td align="right">-34.0</td>
+  <td align="right">24.73</td>
+  <td>2018-09-29, 23:26:02</td>
+  </tr>
+  <tr>
+  <td>Kununurra</td>
+  <td>AU</td>
+  <td align="right">98.6</td>
+  <td align="right">0</td>
+  <td align="right">17</td>
+  <td align="right">17.22</td>
+  <td align="right">-15.77</td>
+  <td align="right">128.74</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Kuruman</td>
+  <td>ZA</td>
+  <td align="right">63.53</td>
+  <td align="right">0</td>
+  <td align="right">55</td>
+  <td align="right">18.05</td>
+  <td align="right">-27.46</td>
+  <td align="right">23.43</td>
+  <td>2018-09-29, 23:28:31</td>
+  </tr>
+  <tr>
+  <td>Kutulik</td>
+  <td>RU</td>
+  <td align="right">58.49</td>
+  <td align="right">0</td>
+  <td align="right">75</td>
+  <td align="right">6.42</td>
+  <td align="right">53.35</td>
+  <td align="right">102.79</td>
+  <td>2018-09-29, 23:27:53</td>
+  </tr>
+  <tr>
+  <td>Kutum</td>
+  <td>SD</td>
+  <td align="right">78.47</td>
+  <td align="right">0</td>
+  <td align="right">41</td>
+  <td align="right">9.1</td>
+  <td align="right">14.2</td>
+  <td align="right">24.66</td>
+  <td>2018-09-29, 23:30:45</td>
+  </tr>
+  <tr>
+  <td>Kwekwe</td>
+  <td>ZW</td>
+  <td align="right">58.58</td>
+  <td align="right">36</td>
+  <td align="right">77</td>
+  <td align="right">20.4</td>
+  <td align="right">-18.93</td>
+  <td align="right">29.81</td>
+  <td>2018-09-29, 23:29:21</td>
+  </tr>
+  <tr>
+  <td>Kyaukse</td>
+  <td>MM</td>
+  <td align="right">95.0</td>
+  <td align="right">75</td>
+  <td align="right">53</td>
+  <td align="right">3.36</td>
+  <td align="right">21.6</td>
+  <td align="right">96.13</td>
+  <td>2018-09-29, 22:30:00</td>
+  </tr>
+  <tr>
+  <td>Kyshtovka</td>
+  <td>RU</td>
+  <td align="right">57.59</td>
+  <td align="right">20</td>
+  <td align="right">59</td>
+  <td align="right">12.12</td>
+  <td align="right">56.56</td>
+  <td align="right">76.62</td>
+  <td>2018-09-29, 23:28:19</td>
+  </tr>
+  <tr>
+  <td>La Orilla</td>
+  <td>MX</td>
+  <td align="right">79.28</td>
+  <td align="right">68</td>
+  <td align="right">99</td>
+  <td align="right">2.73</td>
+  <td align="right">18.0</td>
+  <td align="right">-102.23</td>
+  <td>2018-09-29, 23:31:51</td>
+  </tr>
+  <tr>
+  <td>La Rioja</td>
+  <td>AR</td>
+  <td align="right">63.8</td>
+  <td align="right">0</td>
+  <td align="right">51</td>
+  <td align="right">7.43</td>
+  <td align="right">-29.41</td>
+  <td align="right">-66.86</td>
+  <td>2018-09-29, 23:25:26</td>
+  </tr>
+  <tr>
+  <td>La Ronge</td>
+  <td>CA</td>
+  <td align="right">26.6</td>
+  <td align="right">75</td>
+  <td align="right">63</td>
+  <td align="right">10.29</td>
+  <td align="right">55.1</td>
+  <td align="right">-105.3</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Labuhan</td>
+  <td>ID</td>
+  <td align="right">84.41</td>
+  <td align="right">36</td>
+  <td align="right">79</td>
+  <td align="right">3.4</td>
+  <td align="right">-2.54</td>
+  <td align="right">115.51</td>
+  <td>2018-09-29, 23:28:16</td>
+  </tr>
+  <tr>
+  <td>Lagoa</td>
+  <td>PT</td>
+  <td align="right">73.4</td>
+  <td align="right">0</td>
+  <td align="right">73</td>
+  <td align="right">3.36</td>
+  <td align="right">37.14</td>
+  <td align="right">-8.45</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Lagos</td>
+  <td>NG</td>
+  <td align="right">76.04</td>
+  <td align="right">100</td>
+  <td align="right">98</td>
+  <td align="right">3.51</td>
+  <td align="right">6.46</td>
+  <td align="right">3.39</td>
+  <td>2018-09-29, 23:29:04</td>
+  </tr>
+  <tr>
+  <td>Laguna</td>
+  <td>MX</td>
+  <td align="right">80.99</td>
+  <td align="right">24</td>
+  <td align="right">74</td>
+  <td align="right">3.4</td>
+  <td align="right">27.52</td>
+  <td align="right">-110.01</td>
+  <td>2018-09-29, 23:32:24</td>
+  </tr>
+  <tr>
+  <td>Lakes Entrance</td>
+  <td>AU</td>
+  <td align="right">57.86</td>
+  <td align="right">0</td>
+  <td align="right">78</td>
+  <td align="right">6.42</td>
+  <td align="right">-37.88</td>
+  <td align="right">147.99</td>
+  <td>2018-09-29, 23:28:14</td>
+  </tr>
+  <tr>
+  <td>Lamu</td>
+  <td>ID</td>
+  <td align="right">87.56</td>
+  <td align="right">0</td>
+  <td align="right">59</td>
+  <td align="right">3.96</td>
+  <td align="right">0.57</td>
+  <td align="right">122.3</td>
+  <td>2018-09-29, 23:32:44</td>
+  </tr>
+  <tr>
+  <td>Lang Suan</td>
+  <td>TH</td>
+  <td align="right">89.6</td>
+  <td align="right">40</td>
+  <td align="right">75</td>
+  <td align="right">8.05</td>
+  <td align="right">9.95</td>
+  <td align="right">99.07</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Lasa</td>
+  <td>CY</td>
+  <td align="right">84.2</td>
+  <td align="right">20</td>
+  <td align="right">61</td>
+  <td align="right">3.36</td>
+  <td align="right">34.92</td>
+  <td align="right">32.53</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Lata</td>
+  <td>IN</td>
+  <td align="right">64.7</td>
+  <td align="right">0</td>
+  <td align="right">80</td>
+  <td align="right">1.95</td>
+  <td align="right">30.78</td>
+  <td align="right">78.62</td>
+  <td>2018-09-29, 23:28:41</td>
+  </tr>
+  <tr>
+  <td>Lavrentiya</td>
+  <td>RU</td>
+  <td align="right">47.51</td>
+  <td align="right">92</td>
+  <td align="right">87</td>
+  <td align="right">24.2</td>
+  <td align="right">65.58</td>
+  <td align="right">-170.99</td>
+  <td>2018-09-29, 23:29:25</td>
+  </tr>
+  <tr>
+  <td>Lazaro Cardenas</td>
+  <td>MX</td>
+  <td align="right">69.65</td>
+  <td align="right">36</td>
+  <td align="right">54</td>
+  <td align="right">8.32</td>
+  <td align="right">28.39</td>
+  <td align="right">-105.62</td>
+  <td>2018-09-29, 23:30:47</td>
+  </tr>
+  <tr>
+  <td>Lebanon</td>
+  <td>US</td>
+  <td align="right">46.04</td>
+  <td align="right">90</td>
+  <td align="right">88</td>
+  <td align="right">3.36</td>
+  <td align="right">43.64</td>
+  <td align="right">-72.25</td>
+  <td>2018-09-29, 23:24:00</td>
+  </tr>
+  <tr>
+  <td>Lebu</td>
+  <td>ET</td>
+  <td align="right">62.6</td>
+  <td align="right">0</td>
+  <td align="right">55</td>
+  <td align="right">9.17</td>
+  <td align="right">8.96</td>
+  <td align="right">38.73</td>
+  <td>2018-09-29, 22:00:00</td>
+  </tr>
+  <tr>
+  <td>Leh</td>
+  <td>IN</td>
+  <td align="right">31.94</td>
+  <td align="right">0</td>
+  <td align="right">39</td>
+  <td align="right">1.5</td>
+  <td align="right">34.16</td>
+  <td align="right">77.58</td>
+  <td>2018-09-29, 23:30:18</td>
+  </tr>
+  <tr>
+  <td>Leningradskiy</td>
+  <td>RU</td>
+  <td align="right">44.0</td>
+  <td align="right">56</td>
+  <td align="right">85</td>
+  <td align="right">25.55</td>
+  <td align="right">69.38</td>
+  <td align="right">178.42</td>
+  <td>2018-09-29, 23:32:43</td>
+  </tr>
+  <tr>
+  <td>Lima</td>
+  <td>PE</td>
+  <td align="right">54.53</td>
+  <td align="right">12</td>
+  <td align="right">80</td>
+  <td align="right">2.17</td>
+  <td align="right">-12.06</td>
+  <td align="right">-77.04</td>
+  <td>2018-09-29, 23:24:50</td>
+  </tr>
+  <tr>
+  <td>Livingston</td>
+  <td>US</td>
+  <td align="right">69.08</td>
+  <td align="right">1</td>
+  <td align="right">96</td>
+  <td align="right">2.28</td>
+  <td align="right">32.58</td>
+  <td align="right">-88.19</td>
+  <td>2018-09-29, 22:58:00</td>
+  </tr>
+  <tr>
+  <td>Lompoc</td>
+  <td>US</td>
+  <td align="right">57.02</td>
+  <td align="right">1</td>
+  <td align="right">82</td>
+  <td align="right">5.41</td>
+  <td align="right">34.64</td>
+  <td align="right">-120.46</td>
+  <td>2018-09-29, 22:58:00</td>
+  </tr>
+  <tr>
+  <td>Longyearbyen</td>
+  <td>NO</td>
+  <td align="right">17.6</td>
+  <td align="right">20</td>
+  <td align="right">72</td>
+  <td align="right">2.24</td>
+  <td align="right">78.22</td>
+  <td align="right">15.63</td>
+  <td>2018-09-29, 22:50:00</td>
+  </tr>
+  <tr>
+  <td>Lososina</td>
+  <td>RU</td>
+  <td align="right">60.83</td>
+  <td align="right">44</td>
+  <td align="right">81</td>
+  <td align="right">4.85</td>
+  <td align="right">49.0</td>
+  <td align="right">140.31</td>
+  <td>2018-09-29, 23:30:08</td>
+  </tr>
+  <tr>
+  <td>Lovozero</td>
+  <td>RU</td>
+  <td align="right">35.09</td>
+  <td align="right">92</td>
+  <td align="right">94</td>
+  <td align="right">6.76</td>
+  <td align="right">68.01</td>
+  <td align="right">35.02</td>
+  <td>2018-09-29, 23:29:26</td>
+  </tr>
+  <tr>
+  <td>Lubango</td>
+  <td>AO</td>
+  <td align="right">64.61</td>
+  <td align="right">32</td>
+  <td align="right">85</td>
+  <td align="right">1.61</td>
+  <td align="right">-14.92</td>
+  <td align="right">13.49</td>
+  <td>2018-09-29, 23:31:26</td>
+  </tr>
+  <tr>
+  <td>Lucapa</td>
+  <td>AO</td>
+  <td align="right">70.55</td>
+  <td align="right">32</td>
+  <td align="right">93</td>
+  <td align="right">4.18</td>
+  <td align="right">-8.42</td>
+  <td align="right">20.74</td>
+  <td>2018-09-29, 23:31:35</td>
+  </tr>
+  <tr>
+  <td>Luderitz</td>
+  <td> </td>
+  <td align="right">59.48</td>
+  <td align="right">0</td>
+  <td align="right">78</td>
+  <td align="right">12.01</td>
+  <td align="right">-26.65</td>
+  <td align="right">15.16</td>
+  <td>2018-09-29, 23:25:47</td>
+  </tr>
+  <tr>
+  <td>Lugovoy</td>
+  <td>RU</td>
+  <td align="right">46.61</td>
+  <td align="right">80</td>
+  <td align="right">77</td>
+  <td align="right">10.33</td>
+  <td align="right">59.72</td>
+  <td align="right">65.88</td>
+  <td>2018-09-29, 23:29:03</td>
+  </tr>
+  <tr>
+  <td>Luis Correia</td>
+  <td>BR</td>
+  <td align="right">76.85</td>
+  <td align="right">48</td>
+  <td align="right">87</td>
+  <td align="right">17.72</td>
+  <td align="right">-2.88</td>
+  <td align="right">-41.67</td>
+  <td>2018-09-29, 23:30:21</td>
+  </tr>
+  <tr>
+  <td>Lukovetskiy</td>
+  <td>RU</td>
+  <td align="right">33.8</td>
+  <td align="right">0</td>
+  <td align="right">86</td>
+  <td align="right">6.71</td>
+  <td align="right">64.29</td>
+  <td align="right">41.92</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Lumeje</td>
+  <td>AO</td>
+  <td align="right">68.21</td>
+  <td align="right">44</td>
+  <td align="right">83</td>
+  <td align="right">3.85</td>
+  <td align="right">-11.56</td>
+  <td align="right">20.78</td>
+  <td>2018-09-29, 23:31:59</td>
+  </tr>
+  <tr>
+  <td>Luyang</td>
+  <td>CN</td>
+  <td align="right">82.4</td>
+  <td align="right">0</td>
+  <td align="right">34</td>
+  <td align="right">15.66</td>
+  <td align="right">31.88</td>
+  <td align="right">117.26</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Mabaruma</td>
+  <td>GY</td>
+  <td align="right">81.35</td>
+  <td align="right">80</td>
+  <td align="right">87</td>
+  <td align="right">6.31</td>
+  <td align="right">8.2</td>
+  <td align="right">-59.78</td>
+  <td>2018-09-29, 23:30:59</td>
+  </tr>
+  <tr>
+  <td>Maceio</td>
+  <td>BR</td>
+  <td align="right">73.4</td>
+  <td align="right">40</td>
+  <td align="right">94</td>
+  <td align="right">6.93</td>
+  <td align="right">-9.67</td>
+  <td align="right">-35.74</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Mahebourg</td>
+  <td>MU</td>
+  <td align="right">78.8</td>
+  <td align="right">40</td>
+  <td align="right">65</td>
+  <td align="right">14.99</td>
+  <td align="right">-20.41</td>
+  <td align="right">57.7</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Maine-Soroa</td>
+  <td>NE</td>
+  <td align="right">75.68</td>
+  <td align="right">0</td>
+  <td align="right">72</td>
+  <td align="right">3.18</td>
+  <td align="right">13.21</td>
+  <td align="right">12.02</td>
+  <td>2018-09-29, 23:28:19</td>
+  </tr>
+  <tr>
+  <td>Maldonado</td>
+  <td>UY</td>
+  <td align="right">59.0</td>
+  <td align="right">75</td>
+  <td align="right">93</td>
+  <td align="right">4.18</td>
+  <td align="right">-34.91</td>
+  <td align="right">-54.96</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Mandalgovi</td>
+  <td>MN</td>
+  <td align="right">49.58</td>
+  <td align="right">0</td>
+  <td align="right">72</td>
+  <td align="right">10.22</td>
+  <td align="right">45.76</td>
+  <td align="right">106.27</td>
+  <td>2018-09-29, 23:31:33</td>
+  </tr>
+  <tr>
+  <td>Manggar</td>
+  <td>ID</td>
+  <td align="right">90.35</td>
+  <td align="right">8</td>
+  <td align="right">60</td>
+  <td align="right">14.14</td>
+  <td align="right">-2.88</td>
+  <td align="right">108.27</td>
+  <td>2018-09-29, 23:31:17</td>
+  </tr>
+  <tr>
+  <td>Mangrol</td>
+  <td>IN</td>
+  <td align="right">92.69</td>
+  <td align="right">0</td>
+  <td align="right">46</td>
+  <td align="right">4.85</td>
+  <td align="right">25.33</td>
+  <td align="right">76.51</td>
+  <td>2018-09-29, 23:31:01</td>
+  </tr>
+  <tr>
+  <td>Manokwari</td>
+  <td>ID</td>
+  <td align="right">79.46</td>
+  <td align="right">64</td>
+  <td align="right">100</td>
+  <td align="right">1.95</td>
+  <td align="right">-0.87</td>
+  <td align="right">134.08</td>
+  <td>2018-09-29, 23:31:57</td>
+  </tr>
+  <tr>
+  <td>Mar del Plata</td>
+  <td>AR</td>
+  <td align="right">35.72</td>
+  <td align="right">8</td>
+  <td align="right">74</td>
+  <td align="right">15.7</td>
+  <td align="right">-46.43</td>
+  <td align="right">-67.52</td>
+  <td>2018-09-29, 23:25:58</td>
+  </tr>
+  <tr>
+  <td>Maralal</td>
+  <td>KE</td>
+  <td align="right">65.15</td>
+  <td align="right">32</td>
+  <td align="right">88</td>
+  <td align="right">3.51</td>
+  <td align="right">1.1</td>
+  <td align="right">36.7</td>
+  <td>2018-09-29, 23:31:52</td>
+  </tr>
+  <tr>
+  <td>Maravilha</td>
+  <td>BR</td>
+  <td align="right">70.19</td>
+  <td align="right">36</td>
+  <td align="right">82</td>
+  <td align="right">7.31</td>
+  <td align="right">-26.76</td>
+  <td align="right">-53.17</td>
+  <td>2018-09-29, 23:30:23</td>
+  </tr>
+  <tr>
+  <td>Margate</td>
+  <td>AU</td>
+  <td align="right">62.6</td>
+  <td align="right">75</td>
+  <td align="right">48</td>
+  <td align="right">10.29</td>
+  <td align="right">-43.03</td>
+  <td align="right">147.26</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Marica</td>
+  <td>BR</td>
+  <td align="right">75.2</td>
+  <td align="right">40</td>
+  <td align="right">83</td>
+  <td align="right">6.93</td>
+  <td align="right">-22.92</td>
+  <td align="right">-42.82</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Marsa Matruh</td>
+  <td>EG</td>
+  <td align="right">71.6</td>
+  <td align="right">75</td>
+  <td align="right">68</td>
+  <td align="right">5.82</td>
+  <td align="right">31.35</td>
+  <td align="right">27.25</td>
+  <td>2018-09-29, 22:00:00</td>
+  </tr>
+  <tr>
+  <td>Marshall</td>
+  <td>US</td>
+  <td align="right">57.92</td>
+  <td align="right">40</td>
+  <td align="right">94</td>
+  <td align="right">3.36</td>
+  <td align="right">39.39</td>
+  <td align="right">-87.69</td>
+  <td>2018-09-29, 23:15:00</td>
+  </tr>
+  <tr>
+  <td>Marzuq</td>
+  <td>YE</td>
+  <td align="right">79.73</td>
+  <td align="right">0</td>
+  <td align="right">25</td>
+  <td align="right">3.62</td>
+  <td align="right">14.4</td>
+  <td align="right">46.47</td>
+  <td>2018-09-29, 23:32:41</td>
+  </tr>
+  <tr>
+  <td>Matagami</td>
+  <td>NG</td>
+  <td align="right">65.69</td>
+  <td align="right">24</td>
+  <td align="right">95</td>
+  <td align="right">2.62</td>
+  <td align="right">9.67</td>
+  <td align="right">8.4</td>
+  <td>2018-09-29, 23:30:47</td>
+  </tr>
+  <tr>
+  <td>Matara</td>
+  <td>PE</td>
+  <td align="right">37.43</td>
+  <td align="right">12</td>
+  <td align="right">94</td>
+  <td align="right">1.95</td>
+  <td align="right">-13.74</td>
+  <td align="right">-72.9</td>
+  <td>2018-09-29, 23:29:41</td>
+  </tr>
+  <tr>
+  <td>Mataura</td>
+  <td>NZ</td>
+  <td align="right">54.98</td>
+  <td align="right">64</td>
+  <td align="right">81</td>
+  <td align="right">4.85</td>
+  <td align="right">-46.19</td>
+  <td align="right">168.86</td>
+  <td>2018-09-29, 23:25:29</td>
+  </tr>
+  <tr>
+  <td>Mazagao</td>
+  <td>BR</td>
+  <td align="right">78.8</td>
+  <td align="right">0</td>
+  <td align="right">88</td>
+  <td align="right">8.05</td>
+  <td align="right">-0.12</td>
+  <td align="right">-51.29</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Mecca</td>
+  <td>SA</td>
+  <td align="right">86.03</td>
+  <td align="right">0</td>
+  <td align="right">74</td>
+  <td align="right">1.39</td>
+  <td align="right">21.43</td>
+  <td align="right">39.83</td>
+  <td>2018-09-29, 23:31:58</td>
+  </tr>
+  <tr>
+  <td>Mehamn</td>
+  <td>NO</td>
+  <td align="right">37.7</td>
+  <td align="right">92</td>
+  <td align="right">100</td>
+  <td align="right">12.24</td>
+  <td align="right">71.03</td>
+  <td align="right">27.85</td>
+  <td>2018-09-29, 23:30:21</td>
+  </tr>
+  <tr>
+  <td>Mendi</td>
+  <td>ET</td>
+  <td align="right">66.5</td>
+  <td align="right">88</td>
+  <td align="right">87</td>
+  <td align="right">4.18</td>
+  <td align="right">9.8</td>
+  <td align="right">35.1</td>
+  <td>2018-09-29, 23:31:03</td>
+  </tr>
+  <tr>
+  <td>Menongue</td>
+  <td>AO</td>
+  <td align="right">73.88</td>
+  <td align="right">64</td>
+  <td align="right">43</td>
+  <td align="right">5.64</td>
+  <td align="right">-14.66</td>
+  <td align="right">17.68</td>
+  <td>2018-09-29, 23:25:30</td>
+  </tr>
+  <tr>
+  <td>Methoni</td>
+  <td>GR</td>
+  <td align="right">62.6</td>
+  <td align="right">75</td>
+  <td align="right">93</td>
+  <td align="right">5.82</td>
+  <td align="right">36.82</td>
+  <td align="right">21.7</td>
+  <td>2018-09-29, 22:50:00</td>
+  </tr>
+  <tr>
+  <td>Meulaboh</td>
+  <td>ID</td>
+  <td align="right">80.18</td>
+  <td align="right">68</td>
+  <td align="right">100</td>
+  <td align="right">5.41</td>
+  <td align="right">4.14</td>
+  <td align="right">96.13</td>
+  <td>2018-09-29, 23:30:46</td>
+  </tr>
+  <tr>
+  <td>Mnogovershinnyy</td>
+  <td>RU</td>
+  <td align="right">45.98</td>
+  <td align="right">76</td>
+  <td align="right">57</td>
+  <td align="right">5.08</td>
+  <td align="right">53.94</td>
+  <td align="right">139.92</td>
+  <td>2018-09-29, 23:32:20</td>
+  </tr>
+  <tr>
+  <td>Mocuba</td>
+  <td>MZ</td>
+  <td align="right">75.95</td>
+  <td align="right">88</td>
+  <td align="right">73</td>
+  <td align="right">5.75</td>
+  <td align="right">-16.84</td>
+  <td align="right">36.99</td>
+  <td>2018-09-29, 23:29:53</td>
+  </tr>
+  <tr>
+  <td>Mogadishu</td>
+  <td>SO</td>
+  <td align="right">80.6</td>
+  <td align="right">40</td>
+  <td align="right">78</td>
+  <td align="right">13.87</td>
+  <td align="right">2.04</td>
+  <td align="right">45.34</td>
+  <td>2018-09-29, 22:00:00</td>
+  </tr>
+  <tr>
+  <td>Montlucon</td>
+  <td>FR</td>
+  <td align="right">42.74</td>
+  <td align="right">0</td>
+  <td align="right">80</td>
+  <td align="right">4.85</td>
+  <td align="right">46.33</td>
+  <td align="right">2.6</td>
+  <td>2018-09-29, 23:30:48</td>
+  </tr>
+  <tr>
+  <td>Moose Factory</td>
+  <td>CA</td>
+  <td align="right">32.0</td>
+  <td align="right">90</td>
+  <td align="right">90</td>
+  <td align="right">9.17</td>
+  <td align="right">51.26</td>
+  <td align="right">-80.61</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Moree</td>
+  <td>AU</td>
+  <td align="right">70.73</td>
+  <td align="right">32</td>
+  <td align="right">46</td>
+  <td align="right">7.2</td>
+  <td align="right">-29.46</td>
+  <td align="right">149.84</td>
+  <td>2018-09-29, 23:31:01</td>
+  </tr>
+  <tr>
+  <td>Mount Gambier</td>
+  <td>AU</td>
+  <td align="right">62.0</td>
+  <td align="right">20</td>
+  <td align="right">71</td>
+  <td align="right">2.95</td>
+  <td align="right">-37.83</td>
+  <td align="right">140.78</td>
+  <td>2018-09-29, 23:28:37</td>
+  </tr>
+  <tr>
+  <td>Mudhol</td>
+  <td>IN</td>
+  <td align="right">84.41</td>
+  <td align="right">12</td>
+  <td align="right">83</td>
+  <td align="right">4.29</td>
+  <td align="right">16.33</td>
+  <td align="right">75.29</td>
+  <td>2018-09-29, 23:29:51</td>
+  </tr>
+  <tr>
+  <td>Muisne</td>
+  <td>EC</td>
+  <td align="right">70.64</td>
+  <td align="right">68</td>
+  <td align="right">98</td>
+  <td align="right">3.29</td>
+  <td align="right">0.61</td>
+  <td align="right">-80.02</td>
+  <td>2018-09-29, 23:30:20</td>
+  </tr>
+  <tr>
+  <td>Mujiayingzi</td>
+  <td>CN</td>
+  <td align="right">45.8</td>
+  <td align="right">92</td>
+  <td align="right">74</td>
+  <td align="right">12.46</td>
+  <td align="right">42.12</td>
+  <td align="right">118.78</td>
+  <td>2018-09-29, 23:30:22</td>
+  </tr>
+  <tr>
+  <td>Murgab</td>
+  <td>TM</td>
+  <td align="right">77.0</td>
+  <td align="right">0</td>
+  <td align="right">29</td>
+  <td align="right">4.63</td>
+  <td align="right">37.5</td>
+  <td align="right">61.97</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Muros</td>
+  <td>ES</td>
+  <td align="right">53.6</td>
+  <td align="right">32</td>
+  <td align="right">100</td>
+  <td align="right">1.12</td>
+  <td align="right">42.77</td>
+  <td align="right">-9.06</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Nago</td>
+  <td>IT</td>
+  <td align="right">59.0</td>
+  <td align="right">75</td>
+  <td align="right">44</td>
+  <td align="right">9.17</td>
+  <td align="right">45.88</td>
+  <td align="right">10.89</td>
+  <td>2018-09-29, 22:50:00</td>
+  </tr>
+  <tr>
+  <td>Namibe</td>
+  <td>AO</td>
+  <td align="right">68.84</td>
+  <td align="right">20</td>
+  <td align="right">99</td>
+  <td align="right">3.51</td>
+  <td align="right">-15.19</td>
+  <td align="right">12.15</td>
+  <td>2018-09-29, 23:25:48</td>
+  </tr>
+  <tr>
+  <td>Nanortalik</td>
+  <td>GL</td>
+  <td align="right">37.07</td>
+  <td align="right">92</td>
+  <td align="right">97</td>
+  <td align="right">35.95</td>
+  <td align="right">60.14</td>
+  <td align="right">-45.24</td>
+  <td>2018-09-29, 23:25:31</td>
+  </tr>
+  <tr>
+  <td>Nantucket</td>
+  <td>US</td>
+  <td align="right">55.94</td>
+  <td align="right">40</td>
+  <td align="right">93</td>
+  <td align="right">3.36</td>
+  <td align="right">41.28</td>
+  <td align="right">-70.1</td>
+  <td>2018-09-29, 23:15:00</td>
+  </tr>
+  <tr>
+  <td>Nara</td>
+  <td>JP</td>
+  <td align="right">77.0</td>
+  <td align="right">75</td>
+  <td align="right">78</td>
+  <td align="right">27.51</td>
+  <td align="right">34.68</td>
+  <td align="right">135.8</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Narsaq</td>
+  <td>GL</td>
+  <td align="right">48.2</td>
+  <td align="right">92</td>
+  <td align="right">94</td>
+  <td align="right">18.34</td>
+  <td align="right">60.91</td>
+  <td align="right">-46.05</td>
+  <td>2018-09-29, 22:50:00</td>
+  </tr>
+  <tr>
+  <td>Navsari</td>
+  <td>IN</td>
+  <td align="right">97.46</td>
+  <td align="right">0</td>
+  <td align="right">45</td>
+  <td align="right">5.3</td>
+  <td align="right">20.95</td>
+  <td align="right">72.93</td>
+  <td>2018-09-29, 23:31:50</td>
+  </tr>
+  <tr>
+  <td>Naze</td>
+  <td>NG</td>
+  <td align="right">74.51</td>
+  <td align="right">92</td>
+  <td align="right">98</td>
+  <td align="right">4.63</td>
+  <td align="right">5.43</td>
+  <td align="right">7.07</td>
+  <td>2018-09-29, 23:28:32</td>
+  </tr>
+  <tr>
+  <td>Nemuro</td>
+  <td>JP</td>
+  <td align="right">60.8</td>
+  <td align="right">75</td>
+  <td align="right">93</td>
+  <td align="right">9.17</td>
+  <td align="right">43.32</td>
+  <td align="right">145.57</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>New Norfolk</td>
+  <td>AU</td>
+  <td align="right">62.6</td>
+  <td align="right">75</td>
+  <td align="right">48</td>
+  <td align="right">10.29</td>
+  <td align="right">-42.78</td>
+  <td align="right">147.06</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Ngunguru</td>
+  <td>NZ</td>
+  <td align="right">59.12</td>
+  <td align="right">32</td>
+  <td align="right">94</td>
+  <td align="right">13.13</td>
+  <td align="right">-35.62</td>
+  <td align="right">174.5</td>
+  <td>2018-09-29, 23:31:37</td>
+  </tr>
+  <tr>
+  <td>Nikolskoye</td>
+  <td>RU</td>
+  <td align="right">44.6</td>
+  <td align="right">40</td>
+  <td align="right">87</td>
+  <td align="right">6.71</td>
+  <td align="right">59.7</td>
+  <td align="right">30.79</td>
+  <td>2018-09-29, 22:30:00</td>
+  </tr>
+  <tr>
+  <td>Nizhniy Kuranakh</td>
+  <td>RU</td>
+  <td align="right">39.95</td>
+  <td align="right">92</td>
+  <td align="right">98</td>
+  <td align="right">7.65</td>
+  <td align="right">58.84</td>
+  <td align="right">125.49</td>
+  <td>2018-09-29, 23:32:44</td>
+  </tr>
+  <tr>
+  <td>Nome</td>
+  <td>US</td>
+  <td align="right">75.92</td>
+  <td align="right">1</td>
+  <td align="right">90</td>
+  <td align="right">6.42</td>
+  <td align="right">30.04</td>
+  <td align="right">-94.42</td>
+  <td>2018-09-29, 22:55:00</td>
+  </tr>
+  <tr>
+  <td>Norman Wells</td>
+  <td>CA</td>
+  <td align="right">26.6</td>
+  <td align="right">20</td>
+  <td align="right">86</td>
+  <td align="right">3.36</td>
+  <td align="right">65.28</td>
+  <td align="right">-126.83</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>North Bend</td>
+  <td>US</td>
+  <td align="right">57.92</td>
+  <td align="right">90</td>
+  <td align="right">83</td>
+  <td align="right">4.7</td>
+  <td align="right">43.41</td>
+  <td align="right">-124.22</td>
+  <td>2018-09-29, 22:56:00</td>
+  </tr>
+  <tr>
+  <td>Nouakchott</td>
+  <td>MR</td>
+  <td align="right">78.83</td>
+  <td align="right">0</td>
+  <td align="right">100</td>
+  <td align="right">11.79</td>
+  <td align="right">18.08</td>
+  <td align="right">-15.98</td>
+  <td>2018-09-29, 23:32:45</td>
+  </tr>
+  <tr>
+  <td>Novobirilyussy</td>
+  <td>RU</td>
+  <td align="right">57.05</td>
+  <td align="right">0</td>
+  <td align="right">55</td>
+  <td align="right">15.26</td>
+  <td align="right">56.95</td>
+  <td align="right">90.69</td>
+  <td>2018-09-29, 23:30:18</td>
+  </tr>
+  <tr>
+  <td>Oistins</td>
+  <td>BB</td>
+  <td align="right">80.6</td>
+  <td align="right">40</td>
+  <td align="right">78</td>
+  <td align="right">17.22</td>
+  <td align="right">13.07</td>
+  <td align="right">-59.53</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Oktyabrskiy</td>
+  <td>RU</td>
+  <td align="right">37.4</td>
+  <td align="right">0</td>
+  <td align="right">73</td>
+  <td align="right">4.47</td>
+  <td align="right">55.61</td>
+  <td align="right">37.97</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Olinda</td>
+  <td>EC</td>
+  <td align="right">69.8</td>
+  <td align="right">20</td>
+  <td align="right">83</td>
+  <td align="right">12.75</td>
+  <td align="right">-2.03</td>
+  <td align="right">-79.75</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Oliveira dos Brejinhos</td>
+  <td>BR</td>
+  <td align="right">69.29</td>
+  <td align="right">0</td>
+  <td align="right">53</td>
+  <td align="right">8.32</td>
+  <td align="right">-12.32</td>
+  <td align="right">-42.89</td>
+  <td>2018-09-29, 23:31:36</td>
+  </tr>
+  <tr>
+  <td>Olovyannaya</td>
+  <td>RU</td>
+  <td align="right">62.54</td>
+  <td align="right">0</td>
+  <td align="right">48</td>
+  <td align="right">8.43</td>
+  <td align="right">50.94</td>
+  <td align="right">115.59</td>
+  <td>2018-09-29, 23:30:47</td>
+  </tr>
+  <tr>
+  <td>Ongandjera</td>
+  <td> </td>
+  <td align="right">76.04</td>
+  <td align="right">100</td>
+  <td align="right">29</td>
+  <td align="right">8.43</td>
+  <td align="right">-17.88</td>
+  <td align="right">15.07</td>
+  <td>2018-09-29, 23:30:45</td>
+  </tr>
+  <tr>
+  <td>Osorno</td>
+  <td>CL</td>
+  <td align="right">34.01</td>
+  <td align="right">24</td>
+  <td align="right">89</td>
+  <td align="right">5.08</td>
+  <td align="right">-40.57</td>
+  <td align="right">-73.14</td>
+  <td>2018-09-29, 23:31:02</td>
+  </tr>
+  <tr>
+  <td>Ossora</td>
+  <td>RU</td>
+  <td align="right">44.99</td>
+  <td align="right">24</td>
+  <td align="right">93</td>
+  <td align="right">7.99</td>
+  <td align="right">59.24</td>
+  <td align="right">163.07</td>
+  <td>2018-09-29, 23:32:19</td>
+  </tr>
+  <tr>
+  <td>Ostrovnoy</td>
+  <td>RU</td>
+  <td align="right">29.96</td>
+  <td align="right">0</td>
+  <td align="right">90</td>
+  <td align="right">15.26</td>
+  <td align="right">68.05</td>
+  <td align="right">39.51</td>
+  <td>2018-09-29, 23:29:46</td>
+  </tr>
+  <tr>
+  <td>Ouro Preto</td>
+  <td>BR</td>
+  <td align="right">66.59</td>
+  <td align="right">92</td>
+  <td align="right">100</td>
+  <td align="right">2.95</td>
+  <td align="right">-20.39</td>
+  <td align="right">-43.5</td>
+  <td>2018-09-29, 23:31:32</td>
+  </tr>
+  <tr>
+  <td>Oyama</td>
+  <td>JP</td>
+  <td align="right">71.6</td>
+  <td align="right">90</td>
+  <td align="right">100</td>
+  <td align="right">1.12</td>
+  <td align="right">36.31</td>
+  <td align="right">139.8</td>
+  <td>2018-09-29, 22:00:00</td>
+  </tr>
+  <tr>
+  <td>Padang</td>
+  <td>ID</td>
+  <td align="right">79.46</td>
+  <td align="right">32</td>
+  <td align="right">100</td>
+  <td align="right">5.41</td>
+  <td align="right">-0.92</td>
+  <td align="right">100.36</td>
+  <td>2018-09-29, 23:30:33</td>
+  </tr>
+  <tr>
+  <td>Pakxan</td>
+  <td>LA</td>
+  <td align="right">86.39</td>
+  <td align="right">0</td>
+  <td align="right">63</td>
+  <td align="right">1.39</td>
+  <td align="right">18.39</td>
+  <td align="right">103.66</td>
+  <td>2018-09-29, 23:32:16</td>
+  </tr>
+  <tr>
+  <td>Pakxe</td>
+  <td>LA</td>
+  <td align="right">87.8</td>
+  <td align="right">40</td>
+  <td align="right">66</td>
+  <td align="right">6.93</td>
+  <td align="right">15.12</td>
+  <td align="right">105.78</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Pala</td>
+  <td>IN</td>
+  <td align="right">86.0</td>
+  <td align="right">20</td>
+  <td align="right">66</td>
+  <td align="right">3.36</td>
+  <td align="right">9.71</td>
+  <td align="right">76.68</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Pangnirtung</td>
+  <td>CA</td>
+  <td align="right">34.73</td>
+  <td align="right">92</td>
+  <td align="right">90</td>
+  <td align="right">13.24</td>
+  <td align="right">66.15</td>
+  <td align="right">-65.72</td>
+  <td>2018-09-29, 23:25:22</td>
+  </tr>
+  <tr>
+  <td>Paranaiba</td>
+  <td>BR</td>
+  <td align="right">73.7</td>
+  <td align="right">88</td>
+  <td align="right">84</td>
+  <td align="right">2.28</td>
+  <td align="right">-19.68</td>
+  <td align="right">-51.19</td>
+  <td>2018-09-29, 23:32:15</td>
+  </tr>
+  <tr>
+  <td>Paulo Ramos</td>
+  <td>BR</td>
+  <td align="right">78.65</td>
+  <td align="right">20</td>
+  <td align="right">76</td>
+  <td align="right">11.79</td>
+  <td align="right">-4.45</td>
+  <td align="right">-45.24</td>
+  <td>2018-09-29, 23:32:03</td>
+  </tr>
+  <tr>
+  <td>Payson</td>
+  <td>US</td>
+  <td align="right">75.02</td>
+  <td align="right">1</td>
+  <td align="right">28</td>
+  <td align="right">14.99</td>
+  <td align="right">40.04</td>
+  <td align="right">-111.73</td>
+  <td>2018-09-29, 22:56:00</td>
+  </tr>
+  <tr>
+  <td>Peniche</td>
+  <td>PT</td>
+  <td align="right">62.6</td>
+  <td align="right">75</td>
+  <td align="right">93</td>
+  <td align="right">5.82</td>
+  <td align="right">39.36</td>
+  <td align="right">-9.38</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Peoria</td>
+  <td>US</td>
+  <td align="right">56.48</td>
+  <td align="right">90</td>
+  <td align="right">87</td>
+  <td align="right">7.65</td>
+  <td align="right">40.69</td>
+  <td align="right">-89.59</td>
+  <td>2018-09-29, 23:15:00</td>
+  </tr>
+  <tr>
+  <td>Peru</td>
+  <td>US</td>
+  <td align="right">55.4</td>
+  <td align="right">90</td>
+  <td align="right">78</td>
+  <td align="right">4.7</td>
+  <td align="right">41.33</td>
+  <td align="right">-89.13</td>
+  <td>2018-09-29, 23:15:00</td>
+  </tr>
+  <tr>
+  <td>Peruibe</td>
+  <td>BR</td>
+  <td align="right">72.71</td>
+  <td align="right">80</td>
+  <td align="right">97</td>
+  <td align="right">16.04</td>
+  <td align="right">-24.32</td>
+  <td align="right">-47.0</td>
+  <td>2018-09-29, 23:30:01</td>
+  </tr>
+  <tr>
+  <td>Pervomayskiy</td>
+  <td>RU</td>
+  <td align="right">40.76</td>
+  <td align="right">0</td>
+  <td align="right">83</td>
+  <td align="right">4.74</td>
+  <td align="right">53.24</td>
+  <td align="right">40.29</td>
+  <td>2018-09-29, 23:30:39</td>
+  </tr>
+  <tr>
+  <td>Peterhead</td>
+  <td>AU</td>
+  <td align="right">66.2</td>
+  <td align="right">0</td>
+  <td align="right">39</td>
+  <td align="right">6.93</td>
+  <td align="right">-34.83</td>
+  <td align="right">138.5</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Peto</td>
+  <td>MX</td>
+  <td align="right">75.68</td>
+  <td align="right">20</td>
+  <td align="right">90</td>
+  <td align="right">3.51</td>
+  <td align="right">20.13</td>
+  <td align="right">-88.92</td>
+  <td>2018-09-29, 23:32:00</td>
+  </tr>
+  <tr>
+  <td>Petropavl</td>
+  <td>KZ</td>
+  <td align="right">59.0</td>
+  <td align="right">0</td>
+  <td align="right">58</td>
+  <td align="right">8.95</td>
+  <td align="right">54.87</td>
+  <td align="right">69.13</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Petropavlovsk-Kamchatskiy</td>
+  <td>RU</td>
+  <td align="right">57.2</td>
+  <td align="right">0</td>
+  <td align="right">35</td>
+  <td align="right">13.42</td>
+  <td align="right">53.05</td>
+  <td align="right">158.65</td>
+  <td>2018-09-29, 22:30:00</td>
+  </tr>
+  <tr>
+  <td>Pevek</td>
+  <td>RU</td>
+  <td align="right">49.76</td>
+  <td align="right">92</td>
+  <td align="right">79</td>
+  <td align="right">9.55</td>
+  <td align="right">69.7</td>
+  <td align="right">170.27</td>
+  <td>2018-09-29, 23:28:13</td>
+  </tr>
+  <tr>
+  <td>Pineville</td>
+  <td>US</td>
+  <td align="right">73.04</td>
+  <td align="right">90</td>
+  <td align="right">90</td>
+  <td align="right">3.36</td>
+  <td align="right">31.32</td>
+  <td align="right">-92.43</td>
+  <td>2018-09-29, 23:15:00</td>
+  </tr>
+  <tr>
+  <td>Pipri</td>
+  <td>IN</td>
+  <td align="right">89.45</td>
+  <td align="right">0</td>
+  <td align="right">57</td>
+  <td align="right">6.31</td>
+  <td align="right">24.21</td>
+  <td align="right">83.02</td>
+  <td>2018-09-29, 23:29:23</td>
+  </tr>
+  <tr>
+  <td>Pirovskoye</td>
+  <td>RU</td>
+  <td align="right">55.16</td>
+  <td align="right">8</td>
+  <td align="right">55</td>
+  <td align="right">12.8</td>
+  <td align="right">57.63</td>
+  <td align="right">92.27</td>
+  <td>2018-09-29, 23:30:38</td>
+  </tr>
+  <tr>
+  <td>Pisco</td>
+  <td>PE</td>
+  <td align="right">57.2</td>
+  <td align="right">0</td>
+  <td align="right">87</td>
+  <td align="right">5.82</td>
+  <td align="right">-13.71</td>
+  <td align="right">-76.2</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Ponta do Sol</td>
+  <td>BR</td>
+  <td align="right">67.31</td>
+  <td align="right">64</td>
+  <td align="right">88</td>
+  <td align="right">6.64</td>
+  <td align="right">-20.63</td>
+  <td align="right">-46.0</td>
+  <td>2018-09-29, 23:21:35</td>
+  </tr>
+  <tr>
+  <td>Port Alfred</td>
+  <td>ZA</td>
+  <td align="right">65.78</td>
+  <td align="right">0</td>
+  <td align="right">83</td>
+  <td align="right">20.51</td>
+  <td align="right">-33.59</td>
+  <td align="right">26.89</td>
+  <td>2018-09-29, 23:26:23</td>
+  </tr>
+  <tr>
+  <td>Port Blair</td>
+  <td>IN</td>
+  <td align="right">84.05</td>
+  <td align="right">0</td>
+  <td align="right">100</td>
+  <td align="right">2.17</td>
+  <td align="right">11.67</td>
+  <td align="right">92.75</td>
+  <td>2018-09-29, 23:25:23</td>
+  </tr>
+  <tr>
+  <td>Port Elizabeth</td>
+  <td>US</td>
+  <td align="right">60.98</td>
+  <td align="right">1</td>
+  <td align="right">96</td>
+  <td align="right">4.85</td>
+  <td align="right">39.31</td>
+  <td align="right">-74.98</td>
+  <td>2018-09-29, 22:56:00</td>
+  </tr>
+  <tr>
+  <td>Port Hardy</td>
+  <td>CA</td>
+  <td align="right">51.8</td>
+  <td align="right">75</td>
+  <td align="right">87</td>
+  <td align="right">7.99</td>
+  <td align="right">50.7</td>
+  <td align="right">-127.42</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Port Hedland</td>
+  <td>AU</td>
+  <td align="right">89.6</td>
+  <td align="right">8</td>
+  <td align="right">31</td>
+  <td align="right">19.46</td>
+  <td align="right">-20.31</td>
+  <td align="right">118.58</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Port Lincoln</td>
+  <td>AU</td>
+  <td align="right">63.89</td>
+  <td align="right">24</td>
+  <td align="right">72</td>
+  <td align="right">13.13</td>
+  <td align="right">-34.72</td>
+  <td align="right">135.86</td>
+  <td>2018-09-29, 23:27:56</td>
+  </tr>
+  <tr>
+  <td>Portland</td>
+  <td>US</td>
+  <td align="right">59.0</td>
+  <td align="right">1</td>
+  <td align="right">93</td>
+  <td align="right">1.72</td>
+  <td align="right">45.52</td>
+  <td align="right">-122.67</td>
+  <td>2018-09-29, 23:25:00</td>
+  </tr>
+  <tr>
+  <td>Portree</td>
+  <td>GB</td>
+  <td align="right">49.76</td>
+  <td align="right">92</td>
+  <td align="right">100</td>
+  <td align="right">24.76</td>
+  <td align="right">57.41</td>
+  <td align="right">-6.19</td>
+  <td>2018-09-29, 23:32:20</td>
+  </tr>
+  <tr>
+  <td>Praia da Vitoria</td>
+  <td>PT</td>
+  <td align="right">68.0</td>
+  <td align="right">20</td>
+  <td align="right">77</td>
+  <td align="right">22.08</td>
+  <td align="right">38.73</td>
+  <td align="right">-27.07</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Praya</td>
+  <td>ID</td>
+  <td align="right">93.2</td>
+  <td align="right">20</td>
+  <td align="right">44</td>
+  <td align="right">9.17</td>
+  <td align="right">-8.71</td>
+  <td align="right">116.27</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Presidencia Roque Saenz Pena</td>
+  <td>AR</td>
+  <td align="right">74.33</td>
+  <td align="right">0</td>
+  <td align="right">84</td>
+  <td align="right">8.66</td>
+  <td align="right">-26.79</td>
+  <td align="right">-60.44</td>
+  <td>2018-09-29, 23:30:37</td>
+  </tr>
+  <tr>
+  <td>Price</td>
+  <td>US</td>
+  <td align="right">57.92</td>
+  <td align="right">1</td>
+  <td align="right">6</td>
+  <td align="right">10.29</td>
+  <td align="right">39.6</td>
+  <td align="right">-110.81</td>
+  <td>2018-09-29, 22:53:00</td>
+  </tr>
+  <tr>
+  <td>Prince George</td>
+  <td>CA</td>
+  <td align="right">33.8</td>
+  <td align="right">1</td>
+  <td align="right">50</td>
+  <td align="right">13.87</td>
+  <td align="right">53.92</td>
+  <td align="right">-122.75</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Prince Rupert</td>
+  <td>CA</td>
+  <td align="right">46.4</td>
+  <td align="right">1</td>
+  <td align="right">57</td>
+  <td align="right">3.36</td>
+  <td align="right">54.32</td>
+  <td align="right">-130.32</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Provideniya</td>
+  <td>RU</td>
+  <td align="right">49.13</td>
+  <td align="right">92</td>
+  <td align="right">84</td>
+  <td align="right">25.55</td>
+  <td align="right">64.42</td>
+  <td align="right">-173.23</td>
+  <td>2018-09-29, 23:28:08</td>
+  </tr>
+  <tr>
+  <td>Puerto Ayora</td>
+  <td>EC</td>
+  <td align="right">69.65</td>
+  <td align="right">68</td>
+  <td align="right">100</td>
+  <td align="right">8.77</td>
+  <td align="right">-0.74</td>
+  <td align="right">-90.35</td>
+  <td>2018-09-29, 23:25:32</td>
+  </tr>
+  <tr>
+  <td>Puerto Leguizamo</td>
+  <td>CO</td>
+  <td align="right">77.48</td>
+  <td align="right">48</td>
+  <td align="right">84</td>
+  <td align="right">2.84</td>
+  <td align="right">-0.19</td>
+  <td align="right">-74.78</td>
+  <td>2018-09-29, 23:29:46</td>
+  </tr>
+  <tr>
+  <td>Puerto Lempira</td>
+  <td>HN</td>
+  <td align="right">74.51</td>
+  <td align="right">44</td>
+  <td align="right">92</td>
+  <td align="right">2.62</td>
+  <td align="right">15.27</td>
+  <td align="right">-83.77</td>
+  <td>2018-09-29, 23:29:22</td>
+  </tr>
+  <tr>
+  <td>Puerto Rondon</td>
+  <td>CO</td>
+  <td align="right">72.53</td>
+  <td align="right">12</td>
+  <td align="right">94</td>
+  <td align="right">2.73</td>
+  <td align="right">6.28</td>
+  <td align="right">-71.1</td>
+  <td>2018-09-29, 23:32:51</td>
+  </tr>
+  <tr>
+  <td>Puerto del Rosario</td>
+  <td>ES</td>
+  <td align="right">71.6</td>
+  <td align="right">40</td>
+  <td align="right">83</td>
+  <td align="right">8.05</td>
+  <td align="right">28.5</td>
+  <td align="right">-13.86</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Punta Arenas</td>
+  <td>CL</td>
+  <td align="right">33.8</td>
+  <td align="right">0</td>
+  <td align="right">64</td>
+  <td align="right">16.11</td>
+  <td align="right">-53.16</td>
+  <td align="right">-70.91</td>
+  <td>2018-09-29, 22:00:00</td>
+  </tr>
+  <tr>
+  <td>Pyapon</td>
+  <td>MM</td>
+  <td align="right">82.97</td>
+  <td align="right">80</td>
+  <td align="right">100</td>
+  <td align="right">4.74</td>
+  <td align="right">16.29</td>
+  <td align="right">95.68</td>
+  <td>2018-09-29, 23:27:50</td>
+  </tr>
+  <tr>
+  <td>Pychas</td>
+  <td>RU</td>
+  <td align="right">42.56</td>
+  <td align="right">88</td>
+  <td align="right">100</td>
+  <td align="right">7.99</td>
+  <td align="right">56.5</td>
+  <td align="right">52.44</td>
+  <td>2018-09-29, 23:32:48</td>
+  </tr>
+  <tr>
+  <td>Qaanaaq</td>
+  <td>GL</td>
+  <td align="right">16.46</td>
+  <td align="right">44</td>
+  <td align="right">100</td>
+  <td align="right">7.99</td>
+  <td align="right">77.48</td>
+  <td align="right">-69.36</td>
+  <td>2018-09-29, 23:25:05</td>
+  </tr>
+  <tr>
+  <td>Qandala</td>
+  <td>SO</td>
+  <td align="right">84.05</td>
+  <td align="right">12</td>
+  <td align="right">55</td>
+  <td align="right">2.62</td>
+  <td align="right">11.47</td>
+  <td align="right">49.87</td>
+  <td>2018-09-29, 23:31:58</td>
+  </tr>
+  <tr>
+  <td>Qasigiannguit</td>
+  <td>GL</td>
+  <td align="right">37.4</td>
+  <td align="right">48</td>
+  <td align="right">55</td>
+  <td align="right">19.46</td>
+  <td align="right">68.82</td>
+  <td align="right">-51.19</td>
+  <td>2018-09-29, 22:50:00</td>
+  </tr>
+  <tr>
+  <td>Quelimane</td>
+  <td>MZ</td>
+  <td align="right">78.8</td>
+  <td align="right">40</td>
+  <td align="right">78</td>
+  <td align="right">12.75</td>
+  <td align="right">-17.88</td>
+  <td align="right">36.89</td>
+  <td>2018-09-29, 22:00:00</td>
+  </tr>
+  <tr>
+  <td>Quthing</td>
+  <td>LS</td>
+  <td align="right">53.99</td>
+  <td align="right">0</td>
+  <td align="right">52</td>
+  <td align="right">3.96</td>
+  <td align="right">-30.4</td>
+  <td align="right">27.7</td>
+  <td>2018-09-29, 23:32:17</td>
+  </tr>
+  <tr>
+  <td>Rabo de Peixe</td>
+  <td>PT</td>
+  <td align="right">66.2</td>
+  <td align="right">40</td>
+  <td align="right">82</td>
+  <td align="right">11.41</td>
+  <td align="right">37.8</td>
+  <td align="right">-25.58</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Rafaela</td>
+  <td>AR</td>
+  <td align="right">58.49</td>
+  <td align="right">0</td>
+  <td align="right">94</td>
+  <td align="right">7.43</td>
+  <td align="right">-31.25</td>
+  <td align="right">-61.49</td>
+  <td>2018-09-29, 23:32:00</td>
+  </tr>
+  <tr>
+  <td>Rancho Veloz</td>
+  <td>CU</td>
+  <td align="right">75.2</td>
+  <td align="right">20</td>
+  <td align="right">88</td>
+  <td align="right">5.82</td>
+  <td align="right">22.88</td>
+  <td align="right">-80.39</td>
+  <td>2018-09-29, 22:51:00</td>
+  </tr>
+  <tr>
+  <td>Rantepao</td>
+  <td>ID</td>
+  <td align="right">80.36</td>
+  <td align="right">32</td>
+  <td align="right">73</td>
+  <td align="right">2.84</td>
+  <td align="right">-2.97</td>
+  <td align="right">119.9</td>
+  <td>2018-09-29, 23:31:06</td>
+  </tr>
+  <tr>
+  <td>Ratangarh</td>
+  <td>IN</td>
+  <td align="right">91.25</td>
+  <td align="right">0</td>
+  <td align="right">49</td>
+  <td align="right">4.63</td>
+  <td align="right">28.07</td>
+  <td align="right">74.62</td>
+  <td>2018-09-29, 23:28:55</td>
+  </tr>
+  <tr>
+  <td>Raton</td>
+  <td>US</td>
+  <td align="right">64.04</td>
+  <td align="right">1</td>
+  <td align="right">51</td>
+  <td align="right">4.7</td>
+  <td align="right">36.9</td>
+  <td align="right">-104.44</td>
+  <td>2018-09-29, 22:54:00</td>
+  </tr>
+  <tr>
+  <td>Raudeberg</td>
+  <td>NO</td>
+  <td align="right">48.2</td>
+  <td align="right">92</td>
+  <td align="right">81</td>
+  <td align="right">20.8</td>
+  <td align="right">61.99</td>
+  <td align="right">5.14</td>
+  <td>2018-09-29, 22:50:00</td>
+  </tr>
+  <tr>
+  <td>Ribeira Brava</td>
+  <td>PT</td>
+  <td align="right">71.6</td>
+  <td align="right">40</td>
+  <td align="right">73</td>
+  <td align="right">11.41</td>
+  <td align="right">32.65</td>
+  <td align="right">-17.07</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Ribeira Grande</td>
+  <td>PT</td>
+  <td align="right">69.8</td>
+  <td align="right">40</td>
+  <td align="right">68</td>
+  <td align="right">17.22</td>
+  <td align="right">38.52</td>
+  <td align="right">-28.7</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Rikitea</td>
+  <td>PF</td>
+  <td align="right">72.98</td>
+  <td align="right">92</td>
+  <td align="right">100</td>
+  <td align="right">11.79</td>
+  <td align="right">-23.12</td>
+  <td align="right">-134.97</td>
+  <td>2018-09-29, 23:25:55</td>
+  </tr>
+  <tr>
+  <td>Rio Gallegos</td>
+  <td>AR</td>
+  <td align="right">32.0</td>
+  <td align="right">90</td>
+  <td align="right">100</td>
+  <td align="right">14.99</td>
+  <td align="right">-51.62</td>
+  <td align="right">-69.22</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Rio Grande</td>
+  <td>BR</td>
+  <td align="right">67.22</td>
+  <td align="right">92</td>
+  <td align="right">97</td>
+  <td align="right">17.72</td>
+  <td align="right">-32.03</td>
+  <td align="right">-52.1</td>
+  <td>2018-09-29, 23:31:11</td>
+  </tr>
+  <tr>
+  <td>Rio Verde de Mato Grosso</td>
+  <td>BR</td>
+  <td align="right">71.0</td>
+  <td align="right">92</td>
+  <td align="right">77</td>
+  <td align="right">2.62</td>
+  <td align="right">-18.92</td>
+  <td align="right">-54.84</td>
+  <td>2018-09-29, 23:29:15</td>
+  </tr>
+  <tr>
+  <td>Ritchie</td>
+  <td>ZA</td>
+  <td align="right">64.4</td>
+  <td align="right">0</td>
+  <td align="right">52</td>
+  <td align="right">20.8</td>
+  <td align="right">-29.03</td>
+  <td align="right">24.6</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Rivers</td>
+  <td>CA</td>
+  <td align="right">39.2</td>
+  <td align="right">90</td>
+  <td align="right">60</td>
+  <td align="right">14.99</td>
+  <td align="right">50.03</td>
+  <td align="right">-100.23</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Riyadh</td>
+  <td>SA</td>
+  <td align="right">86.0</td>
+  <td align="right">0</td>
+  <td align="right">27</td>
+  <td align="right">4.7</td>
+  <td align="right">24.63</td>
+  <td align="right">46.72</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Roald</td>
+  <td>NO</td>
+  <td align="right">48.2</td>
+  <td align="right">75</td>
+  <td align="right">87</td>
+  <td align="right">11.41</td>
+  <td align="right">62.58</td>
+  <td align="right">6.12</td>
+  <td>2018-09-29, 22:50:00</td>
+  </tr>
+  <tr>
+  <td>Rocha</td>
+  <td>UY</td>
+  <td align="right">60.38</td>
+  <td align="right">80</td>
+  <td align="right">97</td>
+  <td align="right">5.19</td>
+  <td align="right">-34.48</td>
+  <td align="right">-54.34</td>
+  <td>2018-09-29, 23:31:55</td>
+  </tr>
+  <tr>
+  <td>Rome</td>
+  <td>IT</td>
+  <td align="right">62.6</td>
+  <td align="right">0</td>
+  <td align="right">100</td>
+  <td align="right">4.29</td>
+  <td align="right">41.89</td>
+  <td align="right">12.48</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Russell</td>
+  <td>AR</td>
+  <td align="right">57.2</td>
+  <td align="right">0</td>
+  <td align="right">67</td>
+  <td align="right">6.93</td>
+  <td align="right">-33.01</td>
+  <td align="right">-68.8</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Rylsk</td>
+  <td>RU</td>
+  <td align="right">40.94</td>
+  <td align="right">80</td>
+  <td align="right">95</td>
+  <td align="right">4.63</td>
+  <td align="right">51.57</td>
+  <td align="right">34.68</td>
+  <td>2018-09-29, 23:27:48</td>
+  </tr>
+  <tr>
+  <td>Sabha</td>
+  <td>LY</td>
+  <td align="right">65.96</td>
+  <td align="right">0</td>
+  <td align="right">76</td>
+  <td align="right">3.51</td>
+  <td align="right">27.03</td>
+  <td align="right">14.43</td>
+  <td>2018-09-29, 23:32:02</td>
+  </tr>
+  <tr>
+  <td>Saint Anthony</td>
+  <td>US</td>
+  <td align="right">64.94</td>
+  <td align="right">75</td>
+  <td align="right">46</td>
+  <td align="right">8.05</td>
+  <td align="right">43.97</td>
+  <td align="right">-111.68</td>
+  <td>2018-09-29, 23:15:00</td>
+  </tr>
+  <tr>
+  <td>Saint George</td>
+  <td>GR</td>
+  <td align="right">59.0</td>
+  <td align="right">75</td>
+  <td align="right">82</td>
+  <td align="right">16.11</td>
+  <td align="right">39.45</td>
+  <td align="right">22.34</td>
+  <td>2018-09-29, 22:50:00</td>
+  </tr>
+  <tr>
+  <td>Saint-Georges</td>
+  <td>CA</td>
+  <td align="right">45.53</td>
+  <td align="right">88</td>
+  <td align="right">99</td>
+  <td align="right">3.62</td>
+  <td align="right">46.12</td>
+  <td align="right">-70.67</td>
+  <td>2018-09-29, 23:32:16</td>
+  </tr>
+  <tr>
+  <td>Saint-Joseph</td>
+  <td>FR</td>
+  <td align="right">64.4</td>
+  <td align="right">0</td>
+  <td align="right">71</td>
+  <td align="right">5.82</td>
+  <td align="right">43.56</td>
+  <td align="right">6.97</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Saint-Philippe</td>
+  <td>CA</td>
+  <td align="right">51.8</td>
+  <td align="right">75</td>
+  <td align="right">81</td>
+  <td align="right">2.24</td>
+  <td align="right">45.36</td>
+  <td align="right">-73.48</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Sajanan</td>
+  <td>TN</td>
+  <td align="right">62.6</td>
+  <td align="right">0</td>
+  <td align="right">93</td>
+  <td align="right">3.36</td>
+  <td align="right">37.06</td>
+  <td align="right">9.24</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Saldanha</td>
+  <td>PT</td>
+  <td align="right">51.74</td>
+  <td align="right">0</td>
+  <td align="right">91</td>
+  <td align="right">2.62</td>
+  <td align="right">41.42</td>
+  <td align="right">-6.55</td>
+  <td>2018-09-29, 23:29:28</td>
+  </tr>
+  <tr>
+  <td>Salekhard</td>
+  <td>RU</td>
+  <td align="right">40.85</td>
+  <td align="right">36</td>
+  <td align="right">98</td>
+  <td align="right">12.46</td>
+  <td align="right">66.54</td>
+  <td align="right">66.62</td>
+  <td>2018-09-29, 23:31:13</td>
+  </tr>
+  <tr>
+  <td>Salinopolis</td>
+  <td>BR</td>
+  <td align="right">80.18</td>
+  <td align="right">48</td>
+  <td align="right">97</td>
+  <td align="right">15.93</td>
+  <td align="right">-0.61</td>
+  <td align="right">-47.36</td>
+  <td>2018-09-29, 23:31:26</td>
+  </tr>
+  <tr>
+  <td>Salto</td>
+  <td>UY</td>
+  <td align="right">66.77</td>
+  <td align="right">88</td>
+  <td align="right">99</td>
+  <td align="right">6.76</td>
+  <td align="right">-31.39</td>
+  <td align="right">-57.96</td>
+  <td>2018-09-29, 23:26:06</td>
+  </tr>
+  <tr>
+  <td>Sambava</td>
+  <td>MG</td>
+  <td align="right">75.05</td>
+  <td align="right">0</td>
+  <td align="right">100</td>
+  <td align="right">12.68</td>
+  <td align="right">-14.27</td>
+  <td align="right">50.17</td>
+  <td>2018-09-29, 23:29:48</td>
+  </tr>
+  <tr>
+  <td>San Cristobal</td>
+  <td>EC</td>
+  <td align="right">51.8</td>
+  <td align="right">75</td>
+  <td align="right">93</td>
+  <td align="right">2.24</td>
+  <td align="right">-0.39</td>
+  <td align="right">-78.55</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>San Juan</td>
+  <td>PR</td>
+  <td align="right">80.06</td>
+  <td align="right">40</td>
+  <td align="right">87</td>
+  <td align="right">10.67</td>
+  <td align="right">18.47</td>
+  <td align="right">-66.12</td>
+  <td>2018-09-29, 22:56:00</td>
+  </tr>
+  <tr>
+  <td>San Luis</td>
+  <td>AR</td>
+  <td align="right">53.36</td>
+  <td align="right">0</td>
+  <td align="right">77</td>
+  <td align="right">10.0</td>
+  <td align="right">-33.3</td>
+  <td align="right">-66.34</td>
+  <td>2018-09-29, 23:32:50</td>
+  </tr>
+  <tr>
+  <td>San Patricio</td>
+  <td>PY</td>
+  <td align="right">79.55</td>
+  <td align="right">64</td>
+  <td align="right">65</td>
+  <td align="right">5.75</td>
+  <td align="right">-26.98</td>
+  <td align="right">-56.83</td>
+  <td>2018-09-29, 23:25:49</td>
+  </tr>
+  <tr>
+  <td>San Quintin</td>
+  <td>PH</td>
+  <td align="right">80.18</td>
+  <td align="right">76</td>
+  <td align="right">77</td>
+  <td align="right">4.18</td>
+  <td align="right">17.54</td>
+  <td align="right">120.52</td>
+  <td>2018-09-29, 23:30:10</td>
+  </tr>
+  <tr>
+  <td>San Rafael del Sur</td>
+  <td>NI</td>
+  <td align="right">75.2</td>
+  <td align="right">75</td>
+  <td align="right">88</td>
+  <td align="right">6.93</td>
+  <td align="right">11.85</td>
+  <td align="right">-86.44</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Santa Cruz Cabralia</td>
+  <td>BR</td>
+  <td align="right">69.8</td>
+  <td align="right">20</td>
+  <td align="right">94</td>
+  <td align="right">2.24</td>
+  <td align="right">-16.28</td>
+  <td align="right">-39.02</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Santa Helena de Goias</td>
+  <td>BR</td>
+  <td align="right">71.72</td>
+  <td align="right">76</td>
+  <td align="right">81</td>
+  <td align="right">1.39</td>
+  <td align="right">-17.81</td>
+  <td align="right">-50.6</td>
+  <td>2018-09-29, 23:31:19</td>
+  </tr>
+  <tr>
+  <td>Santa Marta</td>
+  <td>CO</td>
+  <td align="right">81.35</td>
+  <td align="right">48</td>
+  <td align="right">100</td>
+  <td align="right">16.6</td>
+  <td align="right">11.24</td>
+  <td align="right">-74.21</td>
+  <td>2018-09-29, 23:29:43</td>
+  </tr>
+  <tr>
+  <td>Santa Rosa</td>
+  <td>AR</td>
+  <td align="right">47.78</td>
+  <td align="right">64</td>
+  <td align="right">64</td>
+  <td align="right">7.09</td>
+  <td align="right">-36.62</td>
+  <td align="right">-64.29</td>
+  <td>2018-09-29, 23:32:23</td>
+  </tr>
+  <tr>
+  <td>Sao Desiderio</td>
+  <td>BR</td>
+  <td align="right">76.49</td>
+  <td align="right">0</td>
+  <td align="right">29</td>
+  <td align="right">11.34</td>
+  <td align="right">-12.36</td>
+  <td align="right">-44.97</td>
+  <td>2018-09-29, 23:31:09</td>
+  </tr>
+  <tr>
+  <td>Sao Felix do Xingu</td>
+  <td>BR</td>
+  <td align="right">73.16</td>
+  <td align="right">8</td>
+  <td align="right">97</td>
+  <td align="right">1.95</td>
+  <td align="right">-6.64</td>
+  <td align="right">-51.99</td>
+  <td>2018-09-29, 23:28:55</td>
+  </tr>
+  <tr>
+  <td>Sao Filipe</td>
+  <td>CV</td>
+  <td align="right">76.94</td>
+  <td align="right">92</td>
+  <td align="right">100</td>
+  <td align="right">10.56</td>
+  <td align="right">14.9</td>
+  <td align="right">-24.5</td>
+  <td>2018-09-29, 23:28:40</td>
+  </tr>
+  <tr>
+  <td>Sao Gotardo</td>
+  <td>BR</td>
+  <td align="right">69.56</td>
+  <td align="right">80</td>
+  <td align="right">80</td>
+  <td align="right">11.34</td>
+  <td align="right">-19.31</td>
+  <td align="right">-46.05</td>
+  <td>2018-09-29, 23:31:30</td>
+  </tr>
+  <tr>
+  <td>Sao Joao da Barra</td>
+  <td>BR</td>
+  <td align="right">73.43</td>
+  <td align="right">88</td>
+  <td align="right">100</td>
+  <td align="right">9.55</td>
+  <td align="right">-21.64</td>
+  <td align="right">-41.05</td>
+  <td>2018-09-29, 23:28:10</td>
+  </tr>
+  <tr>
+  <td>Saryg-Sep</td>
+  <td>RU</td>
+  <td align="right">57.23</td>
+  <td align="right">0</td>
+  <td align="right">71</td>
+  <td align="right">2.39</td>
+  <td align="right">51.49</td>
+  <td align="right">95.55</td>
+  <td>2018-09-29, 23:31:55</td>
+  </tr>
+  <tr>
+  <td>Saskylakh</td>
+  <td>RU</td>
+  <td align="right">33.83</td>
+  <td align="right">80</td>
+  <td align="right">100</td>
+  <td align="right">15.37</td>
+  <td align="right">71.97</td>
+  <td align="right">114.09</td>
+  <td>2018-09-29, 23:28:31</td>
+  </tr>
+  <tr>
+  <td>Scarborough</td>
+  <td>GB</td>
+  <td align="right">50.0</td>
+  <td align="right">24</td>
+  <td align="right">87</td>
+  <td align="right">5.82</td>
+  <td align="right">54.28</td>
+  <td align="right">-0.41</td>
+  <td>2018-09-29, 22:50:00</td>
+  </tr>
+  <tr>
+  <td>Severo-Kurilsk</td>
+  <td>RU</td>
+  <td align="right">53.36</td>
+  <td align="right">0</td>
+  <td align="right">83</td>
+  <td align="right">11.01</td>
+  <td align="right">50.68</td>
+  <td align="right">156.12</td>
+  <td>2018-09-29, 23:26:16</td>
+  </tr>
+  <tr>
+  <td>Shache</td>
+  <td>CN</td>
+  <td align="right">70.01</td>
+  <td align="right">64</td>
+  <td align="right">27</td>
+  <td align="right">4.74</td>
+  <td align="right">38.42</td>
+  <td align="right">77.24</td>
+  <td>2018-09-29, 23:30:12</td>
+  </tr>
+  <tr>
+  <td>Shenjiamen</td>
+  <td>CN</td>
+  <td align="right">77.84</td>
+  <td align="right">0</td>
+  <td align="right">81</td>
+  <td align="right">21.85</td>
+  <td align="right">29.96</td>
+  <td align="right">122.3</td>
+  <td>2018-09-29, 23:28:34</td>
+  </tr>
+  <tr>
+  <td>Sherbakul</td>
+  <td>RU</td>
+  <td align="right">60.11</td>
+  <td align="right">48</td>
+  <td align="right">57</td>
+  <td align="right">6.42</td>
+  <td align="right">54.63</td>
+  <td align="right">72.39</td>
+  <td>2018-09-29, 23:31:08</td>
+  </tr>
+  <tr>
+  <td>Sheregesh</td>
+  <td>RU</td>
+  <td align="right">58.94</td>
+  <td align="right">0</td>
+  <td align="right">67</td>
+  <td align="right">3.29</td>
+  <td align="right">52.93</td>
+  <td align="right">87.98</td>
+  <td>2018-09-29, 23:28:38</td>
+  </tr>
+  <tr>
+  <td>Shimoda</td>
+  <td>JP</td>
+  <td align="right">73.4</td>
+  <td align="right">75</td>
+  <td align="right">94</td>
+  <td align="right">8.05</td>
+  <td align="right">34.7</td>
+  <td align="right">138.93</td>
+  <td>2018-09-29, 22:41:00</td>
+  </tr>
+  <tr>
+  <td>Shingu</td>
+  <td>JP</td>
+  <td align="right">80.6</td>
+  <td align="right">75</td>
+  <td align="right">78</td>
+  <td align="right">46.08</td>
+  <td align="right">33.72</td>
+  <td align="right">135.99</td>
+  <td>2018-09-29, 22:00:00</td>
+  </tr>
+  <tr>
+  <td>Shorapani</td>
+  <td>GE</td>
+  <td align="right">71.6</td>
+  <td align="right">0</td>
+  <td align="right">53</td>
+  <td align="right">12.75</td>
+  <td align="right">42.1</td>
+  <td align="right">43.08</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Shushtar</td>
+  <td>IR</td>
+  <td align="right">90.35</td>
+  <td align="right">0</td>
+  <td align="right">23</td>
+  <td align="right">5.75</td>
+  <td align="right">32.05</td>
+  <td align="right">48.86</td>
+  <td>2018-09-29, 23:32:39</td>
+  </tr>
+  <tr>
+  <td>Sibenik</td>
+  <td>HR</td>
+  <td align="right">38.33</td>
+  <td align="right">0</td>
+  <td align="right">86</td>
+  <td align="right">2.62</td>
+  <td align="right">45.81</td>
+  <td align="right">17.18</td>
+  <td>2018-09-29, 23:31:35</td>
+  </tr>
+  <tr>
+  <td>Sibolga</td>
+  <td>ID</td>
+  <td align="right">75.86</td>
+  <td align="right">32</td>
+  <td align="right">100</td>
+  <td align="right">1.39</td>
+  <td align="right">1.74</td>
+  <td align="right">98.78</td>
+  <td>2018-09-29, 23:27:45</td>
+  </tr>
+  <tr>
+  <td>Sinnamary</td>
+  <td>GF</td>
+  <td align="right">81.08</td>
+  <td align="right">12</td>
+  <td align="right">97</td>
+  <td align="right">12.12</td>
+  <td align="right">5.38</td>
+  <td align="right">-52.96</td>
+  <td>2018-09-29, 23:27:54</td>
+  </tr>
+  <tr>
+  <td>Sinop</td>
+  <td>TR</td>
+  <td align="right">68.0</td>
+  <td align="right">75</td>
+  <td align="right">82</td>
+  <td align="right">4.7</td>
+  <td align="right">42.03</td>
+  <td align="right">35.15</td>
+  <td>2018-09-29, 22:50:00</td>
+  </tr>
+  <tr>
+  <td>Sioux Lookout</td>
+  <td>CA</td>
+  <td align="right">41.0</td>
+  <td align="right">90</td>
+  <td align="right">80</td>
+  <td align="right">8.05</td>
+  <td align="right">50.1</td>
+  <td align="right">-91.92</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Sitka</td>
+  <td>US</td>
+  <td align="right">70.55</td>
+  <td align="right">0</td>
+  <td align="right">66</td>
+  <td align="right">17.72</td>
+  <td align="right">37.17</td>
+  <td align="right">-99.65</td>
+  <td>2018-09-29, 23:25:51</td>
+  </tr>
+  <tr>
+  <td>Sobolevo</td>
+  <td>RU</td>
+  <td align="right">40.49</td>
+  <td align="right">0</td>
+  <td align="right">87</td>
+  <td align="right">11.68</td>
+  <td align="right">54.43</td>
+  <td align="right">31.9</td>
+  <td>2018-09-29, 23:30:09</td>
+  </tr>
+  <tr>
+  <td>Soderhamn</td>
+  <td>SE</td>
+  <td align="right">48.05</td>
+  <td align="right">8</td>
+  <td align="right">80</td>
+  <td align="right">10.0</td>
+  <td align="right">61.3</td>
+  <td align="right">17.06</td>
+  <td>2018-09-29, 23:31:33</td>
+  </tr>
+  <tr>
+  <td>Sokoni</td>
+  <td>CD</td>
+  <td align="right">75.86</td>
+  <td align="right">0</td>
+  <td align="right">38</td>
+  <td align="right">13.69</td>
+  <td align="right">-12.89</td>
+  <td align="right">28.78</td>
+  <td>2018-09-29, 23:32:14</td>
+  </tr>
+  <tr>
+  <td>Sola</td>
+  <td>NO</td>
+  <td align="right">50.0</td>
+  <td align="right">40</td>
+  <td align="right">81</td>
+  <td align="right">12.75</td>
+  <td align="right">58.89</td>
+  <td align="right">5.65</td>
+  <td>2018-09-29, 22:50:00</td>
+  </tr>
+  <tr>
+  <td>Soria</td>
+  <td>ES</td>
+  <td align="right">39.68</td>
+  <td align="right">0</td>
+  <td align="right">83</td>
+  <td align="right">2.17</td>
+  <td align="right">41.76</td>
+  <td align="right">-2.46</td>
+  <td>2018-09-29, 23:24:57</td>
+  </tr>
+  <tr>
+  <td>Souillac</td>
+  <td>FR</td>
+  <td align="right">46.4</td>
+  <td align="right">0</td>
+  <td align="right">75</td>
+  <td align="right">3.18</td>
+  <td align="right">45.6</td>
+  <td align="right">-0.6</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Spornoye</td>
+  <td>RU</td>
+  <td align="right">42.8</td>
+  <td align="right">0</td>
+  <td align="right">81</td>
+  <td align="right">6.71</td>
+  <td align="right">50.84</td>
+  <td align="right">37.29</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Srednekolymsk</td>
+  <td>RU</td>
+  <td align="right">34.73</td>
+  <td align="right">92</td>
+  <td align="right">89</td>
+  <td align="right">6.2</td>
+  <td align="right">67.46</td>
+  <td align="right">153.71</td>
+  <td>2018-09-29, 23:31:38</td>
+  </tr>
+  <tr>
+  <td>Stokmarknes</td>
+  <td>NO</td>
+  <td align="right">44.72</td>
+  <td align="right">92</td>
+  <td align="right">100</td>
+  <td align="right">7.76</td>
+  <td align="right">68.56</td>
+  <td align="right">14.91</td>
+  <td>2018-09-29, 23:31:11</td>
+  </tr>
+  <tr>
+  <td>Storforshei</td>
+  <td>NO</td>
+  <td align="right">33.29</td>
+  <td align="right">92</td>
+  <td align="right">100</td>
+  <td align="right">2.39</td>
+  <td align="right">66.4</td>
+  <td align="right">14.52</td>
+  <td>2018-09-29, 23:31:50</td>
+  </tr>
+  <tr>
+  <td>Stromness</td>
+  <td>CA</td>
+  <td align="right">51.08</td>
+  <td align="right">90</td>
+  <td align="right">81</td>
+  <td align="right">3.36</td>
+  <td align="right">42.87</td>
+  <td align="right">-79.55</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Tahe</td>
+  <td>CN</td>
+  <td align="right">51.29</td>
+  <td align="right">0</td>
+  <td align="right">47</td>
+  <td align="right">7.65</td>
+  <td align="right">52.34</td>
+  <td align="right">124.71</td>
+  <td>2018-09-29, 23:32:15</td>
+  </tr>
+  <tr>
+  <td>Takaka</td>
+  <td>NZ</td>
+  <td align="right">54.17</td>
+  <td align="right">92</td>
+  <td align="right">87</td>
+  <td align="right">9.1</td>
+  <td align="right">-40.86</td>
+  <td align="right">172.81</td>
+  <td>2018-09-29, 23:30:19</td>
+  </tr>
+  <tr>
+  <td>Talnakh</td>
+  <td>RU</td>
+  <td align="right">41.03</td>
+  <td align="right">92</td>
+  <td align="right">96</td>
+  <td align="right">12.01</td>
+  <td align="right">69.49</td>
+  <td align="right">88.39</td>
+  <td>2018-09-29, 23:31:52</td>
+  </tr>
+  <tr>
+  <td>Tambun</td>
+  <td>MY</td>
+  <td align="right">91.4</td>
+  <td align="right">75</td>
+  <td align="right">63</td>
+  <td align="right">6.93</td>
+  <td align="right">4.62</td>
+  <td align="right">101.14</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Tarakan</td>
+  <td>ID</td>
+  <td align="right">84.95</td>
+  <td align="right">24</td>
+  <td align="right">89</td>
+  <td align="right">2.95</td>
+  <td align="right">3.3</td>
+  <td align="right">117.63</td>
+  <td>2018-09-29, 23:31:49</td>
+  </tr>
+  <tr>
+  <td>Tasiilaq</td>
+  <td>GL</td>
+  <td align="right">35.6</td>
+  <td align="right">44</td>
+  <td align="right">59</td>
+  <td align="right">17.22</td>
+  <td align="right">65.61</td>
+  <td align="right">-37.64</td>
+  <td>2018-09-29, 22:50:00</td>
+  </tr>
+  <tr>
+  <td>Taunggyi</td>
+  <td>MM</td>
+  <td align="right">74.15</td>
+  <td align="right">80</td>
+  <td align="right">91</td>
+  <td align="right">1.83</td>
+  <td align="right">20.78</td>
+  <td align="right">97.03</td>
+  <td>2018-09-29, 23:29:44</td>
+  </tr>
+  <tr>
+  <td>Taupo</td>
+  <td>NZ</td>
+  <td align="right">54.17</td>
+  <td align="right">8</td>
+  <td align="right">55</td>
+  <td align="right">5.41</td>
+  <td align="right">-38.68</td>
+  <td align="right">176.08</td>
+  <td>2018-09-29, 23:31:49</td>
+  </tr>
+  <tr>
+  <td>Tautira</td>
+  <td>PF</td>
+  <td align="right">77.0</td>
+  <td align="right">75</td>
+  <td align="right">73</td>
+  <td align="right">12.75</td>
+  <td align="right">-17.73</td>
+  <td align="right">-149.15</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Taywarah</td>
+  <td>AF</td>
+  <td align="right">63.44</td>
+  <td align="right">0</td>
+  <td align="right">37</td>
+  <td align="right">2.84</td>
+  <td align="right">33.35</td>
+  <td align="right">64.42</td>
+  <td>2018-09-29, 23:29:51</td>
+  </tr>
+  <tr>
+  <td>Te Anau</td>
+  <td>NZ</td>
+  <td align="right">49.94</td>
+  <td align="right">76</td>
+  <td align="right">99</td>
+  <td align="right">2.39</td>
+  <td align="right">-45.41</td>
+  <td align="right">167.72</td>
+  <td>2018-09-29, 23:29:44</td>
+  </tr>
+  <tr>
+  <td>Termez</td>
+  <td>AF</td>
+  <td align="right">78.8</td>
+  <td align="right">0</td>
+  <td align="right">21</td>
+  <td align="right">2.24</td>
+  <td align="right">37.23</td>
+  <td align="right">67.28</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Terrak</td>
+  <td>NO</td>
+  <td align="right">46.4</td>
+  <td align="right">92</td>
+  <td align="right">87</td>
+  <td align="right">13.87</td>
+  <td align="right">65.09</td>
+  <td align="right">12.37</td>
+  <td>2018-09-29, 22:50:00</td>
+  </tr>
+  <tr>
+  <td>Tessalit</td>
+  <td>ML</td>
+  <td align="right">74.33</td>
+  <td align="right">88</td>
+  <td align="right">49</td>
+  <td align="right">2.73</td>
+  <td align="right">20.2</td>
+  <td align="right">1.01</td>
+  <td>2018-09-29, 23:28:37</td>
+  </tr>
+  <tr>
+  <td>Teya</td>
+  <td>MX</td>
+  <td align="right">78.8</td>
+  <td align="right">5</td>
+  <td align="right">83</td>
+  <td align="right">6.93</td>
+  <td align="right">21.05</td>
+  <td align="right">-89.07</td>
+  <td>2018-09-29, 22:48:00</td>
+  </tr>
+  <tr>
+  <td>Thai Binh</td>
+  <td>VN</td>
+  <td align="right">85.58</td>
+  <td align="right">32</td>
+  <td align="right">78</td>
+  <td align="right">6.64</td>
+  <td align="right">20.45</td>
+  <td align="right">106.33</td>
+  <td>2018-09-29, 23:32:22</td>
+  </tr>
+  <tr>
+  <td>The Pas</td>
+  <td>CA</td>
+  <td align="right">30.2</td>
+  <td align="right">20</td>
+  <td align="right">63</td>
+  <td align="right">14.99</td>
+  <td align="right">53.82</td>
+  <td align="right">-101.24</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>The Valley</td>
+  <td>AI</td>
+  <td align="right">80.6</td>
+  <td align="right">20</td>
+  <td align="right">78</td>
+  <td align="right">3.36</td>
+  <td align="right">18.22</td>
+  <td align="right">-63.06</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Thinadhoo</td>
+  <td>MV</td>
+  <td align="right">82.7</td>
+  <td align="right">76</td>
+  <td align="right">100</td>
+  <td align="right">15.48</td>
+  <td align="right">0.53</td>
+  <td align="right">72.93</td>
+  <td>2018-09-29, 23:26:21</td>
+  </tr>
+  <tr>
+  <td>Thompson</td>
+  <td>CA</td>
+  <td align="right">28.4</td>
+  <td align="right">75</td>
+  <td align="right">74</td>
+  <td align="right">9.17</td>
+  <td align="right">55.74</td>
+  <td align="right">-97.86</td>
+  <td>2018-09-29, 23:05:00</td>
+  </tr>
+  <tr>
+  <td>Tiarei</td>
+  <td>PF</td>
+  <td align="right">77.0</td>
+  <td align="right">75</td>
+  <td align="right">73</td>
+  <td align="right">12.75</td>
+  <td align="right">-17.53</td>
+  <td align="right">-149.33</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Tibanban</td>
+  <td>PH</td>
+  <td align="right">84.68</td>
+  <td align="right">0</td>
+  <td align="right">96</td>
+  <td align="right">10.78</td>
+  <td align="right">6.63</td>
+  <td align="right">126.08</td>
+  <td>2018-09-29, 23:31:12</td>
+  </tr>
+  <tr>
+  <td>Tieli</td>
+  <td>CN</td>
+  <td align="right">63.26</td>
+  <td align="right">64</td>
+  <td align="right">74</td>
+  <td align="right">6.53</td>
+  <td align="right">46.98</td>
+  <td align="right">128.05</td>
+  <td>2018-09-29, 23:31:09</td>
+  </tr>
+  <tr>
+  <td>Tiksi</td>
+  <td>RU</td>
+  <td align="right">35.9</td>
+  <td align="right">88</td>
+  <td align="right">98</td>
+  <td align="right">9.44</td>
+  <td align="right">71.64</td>
+  <td align="right">128.87</td>
+  <td>2018-09-29, 23:30:44</td>
+  </tr>
+  <tr>
+  <td>Tiznit</td>
+  <td>MA</td>
+  <td align="right">67.58</td>
+  <td align="right">8</td>
+  <td align="right">86</td>
+  <td align="right">4.63</td>
+  <td align="right">29.7</td>
+  <td align="right">-9.73</td>
+  <td>2018-09-29, 23:31:35</td>
+  </tr>
+  <tr>
+  <td>Tocopilla</td>
+  <td>CL</td>
+  <td align="right">55.34</td>
+  <td align="right">56</td>
+  <td align="right">100</td>
+  <td align="right">1.16</td>
+  <td align="right">-22.09</td>
+  <td align="right">-70.2</td>
+  <td>2018-09-29, 23:26:17</td>
+  </tr>
+  <tr>
+  <td>Tomakomai</td>
+  <td>JP</td>
+  <td align="right">64.4</td>
+  <td align="right">75</td>
+  <td align="right">93</td>
+  <td align="right">6.93</td>
+  <td align="right">42.65</td>
+  <td align="right">141.6</td>
+  <td>2018-09-29, 22:30:00</td>
+  </tr>
+  <tr>
+  <td>Tonshayevo</td>
+  <td>RU</td>
+  <td align="right">40.76</td>
+  <td align="right">80</td>
+  <td align="right">90</td>
+  <td align="right">5.41</td>
+  <td align="right">57.74</td>
+  <td align="right">47.01</td>
+  <td>2018-09-29, 23:29:45</td>
+  </tr>
+  <tr>
+  <td>Torbay</td>
+  <td>CA</td>
+  <td align="right">57.2</td>
+  <td align="right">90</td>
+  <td align="right">100</td>
+  <td align="right">9.17</td>
+  <td align="right">47.66</td>
+  <td align="right">-52.73</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Torez</td>
+  <td>UA</td>
+  <td align="right">50.03</td>
+  <td align="right">92</td>
+  <td align="right">80</td>
+  <td align="right">13.47</td>
+  <td align="right">48.03</td>
+  <td align="right">38.62</td>
+  <td>2018-09-29, 23:31:24</td>
+  </tr>
+  <tr>
+  <td>Touros</td>
+  <td>BR</td>
+  <td align="right">76.4</td>
+  <td align="right">80</td>
+  <td align="right">89</td>
+  <td align="right">13.8</td>
+  <td align="right">-5.2</td>
+  <td align="right">-35.46</td>
+  <td>2018-09-29, 23:27:12</td>
+  </tr>
+  <tr>
+  <td>Trairi</td>
+  <td>BR</td>
+  <td align="right">78.56</td>
+  <td align="right">68</td>
+  <td align="right">100</td>
+  <td align="right">21.07</td>
+  <td align="right">-3.28</td>
+  <td align="right">-39.27</td>
+  <td>2018-09-29, 23:29:16</td>
+  </tr>
+  <tr>
+  <td>Tres Arroyos</td>
+  <td>AR</td>
+  <td align="right">45.98</td>
+  <td align="right">20</td>
+  <td align="right">84</td>
+  <td align="right">6.2</td>
+  <td align="right">-38.38</td>
+  <td align="right">-60.28</td>
+  <td>2018-09-29, 23:32:28</td>
+  </tr>
+  <tr>
+  <td>Tres Passos</td>
+  <td>BR</td>
+  <td align="right">73.16</td>
+  <td align="right">48</td>
+  <td align="right">79</td>
+  <td align="right">10.0</td>
+  <td align="right">-27.46</td>
+  <td align="right">-53.93</td>
+  <td>2018-09-29, 23:30:42</td>
+  </tr>
+  <tr>
+  <td>Trincomalee</td>
+  <td>LK</td>
+  <td align="right">84.32</td>
+  <td align="right">56</td>
+  <td align="right">97</td>
+  <td align="right">4.41</td>
+  <td align="right">8.58</td>
+  <td align="right">81.23</td>
+  <td>2018-09-29, 23:32:41</td>
+  </tr>
+  <tr>
+  <td>Tripoli</td>
+  <td>GR</td>
+  <td align="right">62.6</td>
+  <td align="right">75</td>
+  <td align="right">93</td>
+  <td align="right">5.82</td>
+  <td align="right">37.51</td>
+  <td align="right">22.37</td>
+  <td>2018-09-29, 22:50:00</td>
+  </tr>
+  <tr>
+  <td>Troitskoye</td>
+  <td>RU</td>
+  <td align="right">63.8</td>
+  <td align="right">0</td>
+  <td align="right">39</td>
+  <td align="right">4.07</td>
+  <td align="right">52.98</td>
+  <td align="right">84.68</td>
+  <td>2018-09-29, 23:32:02</td>
+  </tr>
+  <tr>
+  <td>Truth or Consequences</td>
+  <td>US</td>
+  <td align="right">71.06</td>
+  <td align="right">1</td>
+  <td align="right">33</td>
+  <td align="right">6.93</td>
+  <td align="right">33.13</td>
+  <td align="right">-107.25</td>
+  <td>2018-09-29, 22:53:00</td>
+  </tr>
+  <tr>
+  <td>Tuatapere</td>
+  <td>NZ</td>
+  <td align="right">52.28</td>
+  <td align="right">32</td>
+  <td align="right">93</td>
+  <td align="right">8.99</td>
+  <td align="right">-46.13</td>
+  <td align="right">167.69</td>
+  <td>2018-09-29, 23:29:24</td>
+  </tr>
+  <tr>
+  <td>Tuktoyaktuk</td>
+  <td>CA</td>
+  <td align="right">24.8</td>
+  <td align="right">90</td>
+  <td align="right">92</td>
+  <td align="right">3.36</td>
+  <td align="right">69.44</td>
+  <td align="right">-133.03</td>
+  <td>2018-09-29, 22:00:00</td>
+  </tr>
+  <tr>
+  <td>Tumut</td>
+  <td>AU</td>
+  <td align="right">57.41</td>
+  <td align="right">0</td>
+  <td align="right">57</td>
+  <td align="right">2.95</td>
+  <td align="right">-35.3</td>
+  <td align="right">148.22</td>
+  <td>2018-09-29, 23:30:20</td>
+  </tr>
+  <tr>
+  <td>Tura</td>
+  <td>IN</td>
+  <td align="right">84.23</td>
+  <td align="right">12</td>
+  <td align="right">87</td>
+  <td align="right">3.18</td>
+  <td align="right">25.52</td>
+  <td align="right">90.21</td>
+  <td>2018-09-29, 23:32:43</td>
+  </tr>
+  <tr>
+  <td>Turba</td>
+  <td>SY</td>
+  <td align="right">77.57</td>
+  <td align="right">48</td>
+  <td align="right">31</td>
+  <td align="right">5.41</td>
+  <td align="right">32.8</td>
+  <td align="right">36.77</td>
+  <td>2018-09-29, 23:28:38</td>
+  </tr>
+  <tr>
+  <td>Turukhansk</td>
+  <td>RU</td>
+  <td align="right">44.09</td>
+  <td align="right">76</td>
+  <td align="right">100</td>
+  <td align="right">12.46</td>
+  <td align="right">65.8</td>
+  <td align="right">87.96</td>
+  <td>2018-09-29, 23:31:59</td>
+  </tr>
+  <tr>
+  <td>Tygda</td>
+  <td>RU</td>
+  <td align="right">55.34</td>
+  <td align="right">0</td>
+  <td align="right">37</td>
+  <td align="right">7.54</td>
+  <td align="right">53.11</td>
+  <td align="right">126.33</td>
+  <td>2018-09-29, 23:28:38</td>
+  </tr>
+  <tr>
+  <td>Uglovskoye</td>
+  <td>RU</td>
+  <td align="right">65.69</td>
+  <td align="right">0</td>
+  <td align="right">44</td>
+  <td align="right">4.97</td>
+  <td align="right">51.36</td>
+  <td align="right">80.19</td>
+  <td>2018-09-29, 23:31:34</td>
+  </tr>
+  <tr>
+  <td>Ugoofaaru</td>
+  <td>MV</td>
+  <td align="right">83.06</td>
+  <td align="right">92</td>
+  <td align="right">100</td>
+  <td align="right">16.71</td>
+  <td align="right">5.67</td>
+  <td align="right">73.0</td>
+  <td>2018-09-29, 23:26:34</td>
+  </tr>
+  <tr>
+  <td>Ulladulla</td>
+  <td>AU</td>
+  <td align="right">62.6</td>
+  <td align="right">0</td>
+  <td align="right">42</td>
+  <td align="right">12.75</td>
+  <td align="right">-35.36</td>
+  <td align="right">150.48</td>
+  <td>2018-09-29, 22:00:00</td>
+  </tr>
+  <tr>
+  <td>Umea</td>
+  <td>SE</td>
+  <td align="right">42.8</td>
+  <td align="right">0</td>
+  <td align="right">87</td>
+  <td align="right">4.7</td>
+  <td align="right">63.83</td>
+  <td align="right">20.26</td>
+  <td>2018-09-29, 22:50:00</td>
+  </tr>
+  <tr>
+  <td>Upernavik</td>
+  <td>GL</td>
+  <td align="right">34.91</td>
+  <td align="right">76</td>
+  <td align="right">100</td>
+  <td align="right">10.45</td>
+  <td align="right">72.79</td>
+  <td align="right">-56.15</td>
+  <td>2018-09-29, 23:28:17</td>
+  </tr>
+  <tr>
+  <td>Ushuaia</td>
+  <td>AR</td>
+  <td align="right">30.2</td>
+  <td align="right">90</td>
+  <td align="right">86</td>
+  <td align="right">21.92</td>
+  <td align="right">-54.81</td>
+  <td align="right">-68.31</td>
+  <td>2018-09-29, 22:20:00</td>
+  </tr>
+  <tr>
+  <td>Ussel</td>
+  <td>FR</td>
+  <td align="right">44.81</td>
+  <td align="right">0</td>
+  <td align="right">80</td>
+  <td align="right">5.53</td>
+  <td align="right">45.55</td>
+  <td align="right">2.31</td>
+  <td>2018-09-29, 23:32:42</td>
+  </tr>
+  <tr>
+  <td>Vaini</td>
+  <td>IN</td>
+  <td align="right">81.53</td>
+  <td align="right">32</td>
+  <td align="right">93</td>
+  <td align="right">2.62</td>
+  <td align="right">15.34</td>
+  <td align="right">74.49</td>
+  <td>2018-09-29, 23:25:28</td>
+  </tr>
+  <tr>
+  <td>Vaitape</td>
+  <td>PF</td>
+  <td align="right">77.03</td>
+  <td align="right">0</td>
+  <td align="right">100</td>
+  <td align="right">9.22</td>
+  <td align="right">-16.52</td>
+  <td align="right">-151.75</td>
+  <td>2018-09-29, 23:28:59</td>
+  </tr>
+  <tr>
+  <td>Valley City</td>
+  <td>US</td>
+  <td align="right">41.0</td>
+  <td align="right">90</td>
+  <td align="right">100</td>
+  <td align="right">5.82</td>
+  <td align="right">46.92</td>
+  <td align="right">-98.0</td>
+  <td>2018-09-29, 22:55:00</td>
+  </tr>
+  <tr>
+  <td>Valparaiso</td>
+  <td>US</td>
+  <td align="right">55.94</td>
+  <td align="right">90</td>
+  <td align="right">63</td>
+  <td align="right">10.29</td>
+  <td align="right">41.47</td>
+  <td align="right">-87.06</td>
+  <td>2018-09-29, 23:15:00</td>
+  </tr>
+  <tr>
+  <td>Vao</td>
+  <td>EE</td>
+  <td align="right">48.41</td>
+  <td align="right">92</td>
+  <td align="right">97</td>
+  <td align="right">13.69</td>
+  <td align="right">59.1</td>
+  <td align="right">26.19</td>
+  <td>2018-09-29, 23:28:09</td>
+  </tr>
+  <tr>
+  <td>Vardo</td>
+  <td>US</td>
+  <td align="right">57.02</td>
+  <td align="right">1</td>
+  <td align="right">80</td>
+  <td align="right">3.18</td>
+  <td align="right">39.62</td>
+  <td align="right">-77.74</td>
+  <td>2018-09-29, 22:55:00</td>
+  </tr>
+  <tr>
+  <td>Victoria</td>
+  <td>BN</td>
+  <td align="right">89.6</td>
+  <td align="right">75</td>
+  <td align="right">66</td>
+  <td align="right">2.24</td>
+  <td align="right">5.28</td>
+  <td align="right">115.24</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Videira</td>
+  <td>BR</td>
+  <td align="right">62.18</td>
+  <td align="right">0</td>
+  <td align="right">96</td>
+  <td align="right">6.2</td>
+  <td align="right">-27.01</td>
+  <td align="right">-51.15</td>
+  <td>2018-09-29, 23:32:45</td>
+  </tr>
+  <tr>
+  <td>Vila Franca do Campo</td>
+  <td>PT</td>
+  <td align="right">66.2</td>
+  <td align="right">40</td>
+  <td align="right">82</td>
+  <td align="right">11.41</td>
+  <td align="right">37.72</td>
+  <td align="right">-25.43</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Viransehir</td>
+  <td>TR</td>
+  <td align="right">77.21</td>
+  <td align="right">20</td>
+  <td align="right">37</td>
+  <td align="right">1.16</td>
+  <td align="right">37.24</td>
+  <td align="right">39.76</td>
+  <td>2018-09-29, 23:29:47</td>
+  </tr>
+  <tr>
+  <td>Vostok</td>
+  <td>RU</td>
+  <td align="right">58.04</td>
+  <td align="right">20</td>
+  <td align="right">82</td>
+  <td align="right">2.84</td>
+  <td align="right">46.45</td>
+  <td align="right">135.83</td>
+  <td>2018-09-29, 23:29:51</td>
+  </tr>
+  <tr>
+  <td>Wad Rawah</td>
+  <td>SD</td>
+  <td align="right">88.55</td>
+  <td align="right">0</td>
+  <td align="right">34</td>
+  <td align="right">4.52</td>
+  <td align="right">15.16</td>
+  <td align="right">33.13</td>
+  <td>2018-09-29, 23:31:56</td>
+  </tr>
+  <tr>
+  <td>Wagga Wagga</td>
+  <td>AU</td>
+  <td align="right">68.0</td>
+  <td align="right">0</td>
+  <td align="right">24</td>
+  <td align="right">4.7</td>
+  <td align="right">-35.12</td>
+  <td align="right">147.37</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Wanlaweyn</td>
+  <td>SO</td>
+  <td align="right">80.0</td>
+  <td align="right">92</td>
+  <td align="right">81</td>
+  <td align="right">8.66</td>
+  <td align="right">2.62</td>
+  <td align="right">44.89</td>
+  <td>2018-09-29, 23:29:20</td>
+  </tr>
+  <tr>
+  <td>Wanning</td>
+  <td>AT</td>
+  <td align="right">42.8</td>
+  <td align="right">0</td>
+  <td align="right">70</td>
+  <td align="right">6.93</td>
+  <td align="right">48.64</td>
+  <td align="right">13.53</td>
+  <td>2018-09-29, 22:50:00</td>
+  </tr>
+  <tr>
+  <td>Weatherford</td>
+  <td>US</td>
+  <td align="right">71.96</td>
+  <td align="right">40</td>
+  <td align="right">90</td>
+  <td align="right">11.41</td>
+  <td align="right">32.76</td>
+  <td align="right">-97.8</td>
+  <td>2018-09-29, 22:55:00</td>
+  </tr>
+  <tr>
+  <td>Wenling</td>
+  <td>CN</td>
+  <td align="right">83.06</td>
+  <td align="right">0</td>
+  <td align="right">69</td>
+  <td align="right">13.35</td>
+  <td align="right">28.38</td>
+  <td align="right">121.38</td>
+  <td>2018-09-29, 23:31:27</td>
+  </tr>
+  <tr>
+  <td>Westport</td>
+  <td>IE</td>
+  <td align="right">46.4</td>
+  <td align="right">75</td>
+  <td align="right">93</td>
+  <td align="right">10.29</td>
+  <td align="right">53.8</td>
+  <td align="right">-9.52</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Xuddur</td>
+  <td>SO</td>
+  <td align="right">77.39</td>
+  <td align="right">0</td>
+  <td align="right">68</td>
+  <td align="right">11.45</td>
+  <td align="right">4.12</td>
+  <td align="right">43.89</td>
+  <td>2018-09-29, 23:30:35</td>
+  </tr>
+  <tr>
+  <td>Yakeshi</td>
+  <td>CN</td>
+  <td align="right">55.43</td>
+  <td align="right">20</td>
+  <td align="right">74</td>
+  <td align="right">8.77</td>
+  <td align="right">49.28</td>
+  <td align="right">120.73</td>
+  <td>2018-09-29, 23:31:02</td>
+  </tr>
+  <tr>
+  <td>Yangjiang</td>
+  <td>CN</td>
+  <td align="right">81.89</td>
+  <td align="right">0</td>
+  <td align="right">100</td>
+  <td align="right">14.58</td>
+  <td align="right">21.85</td>
+  <td align="right">111.96</td>
+  <td>2018-09-29, 23:29:02</td>
+  </tr>
+  <tr>
+  <td>Yellowknife</td>
+  <td>CA</td>
+  <td align="right">30.2</td>
+  <td align="right">90</td>
+  <td align="right">92</td>
+  <td align="right">5.82</td>
+  <td align="right">62.45</td>
+  <td align="right">-114.38</td>
+  <td>2018-09-29, 23:00:00</td>
+  </tr>
+  <tr>
+  <td>Yerbogachen</td>
+  <td>RU</td>
+  <td align="right">52.73</td>
+  <td align="right">0</td>
+  <td align="right">59</td>
+  <td align="right">7.87</td>
+  <td align="right">61.28</td>
+  <td align="right">108.01</td>
+  <td>2018-09-29, 23:30:11</td>
+  </tr>
+  <tr>
+  <td>Yilan</td>
+  <td>TW</td>
+  <td align="right">84.2</td>
+  <td align="right">20</td>
+  <td align="right">48</td>
+  <td align="right">12.75</td>
+  <td align="right">24.75</td>
+  <td align="right">121.75</td>
+  <td>2018-09-29, 22:30:00</td>
+  </tr>
+  <tr>
+  <td>Yueyang</td>
+  <td>CN</td>
+  <td align="right">81.35</td>
+  <td align="right">0</td>
+  <td align="right">65</td>
+  <td align="right">4.07</td>
+  <td align="right">29.36</td>
+  <td align="right">113.12</td>
+  <td>2018-09-29, 23:30:46</td>
+  </tr>
+  <tr>
+  <td>Yulara</td>
+  <td>AU</td>
+  <td align="right">89.6</td>
+  <td align="right">0</td>
+  <td align="right">13</td>
+  <td align="right">13.87</td>
+  <td align="right">-25.24</td>
+  <td align="right">130.99</td>
+  <td>2018-09-29, 22:00:00</td>
+  </tr>
+  <tr>
+  <td>Zempoala</td>
+  <td>MX</td>
+  <td align="right">53.9</td>
+  <td align="right">92</td>
+  <td align="right">94</td>
+  <td align="right">0.38</td>
+  <td align="right">20.09</td>
+  <td align="right">-98.0</td>
+  <td>2018-09-29, 23:30:44</td>
+  </tr>
+  <tr>
+  <td>Zhaozhou</td>
+  <td>CN</td>
+  <td align="right">54.44</td>
+  <td align="right">92</td>
+  <td align="right">100</td>
+  <td align="right">4.63</td>
+  <td align="right">45.71</td>
+  <td align="right">125.27</td>
+  <td>2018-09-29, 23:29:49</td>
+  </tr>
+  <tr>
+  <td>Zhirnovsk</td>
+  <td>RU</td>
+  <td align="right">43.73</td>
+  <td align="right">76</td>
+  <td align="right">82</td>
+  <td align="right">11.68</td>
+  <td align="right">50.98</td>
+  <td align="right">44.78</td>
+  <td>2018-09-29, 23:31:05</td>
+  </tr>
+  <tr>
+  <td>Zwedru</td>
+  <td>LR</td>
+  <td align="right">71.72</td>
+  <td align="right">100</td>
+  <td align="right">99</td>
+  <td align="right">3.74</td>
+  <td align="right">6.07</td>
+  <td align="right">-8.13</td>
+  <td>2018-09-29, 23:31:05</td>
+  </tr>
+  </tbody></table>
