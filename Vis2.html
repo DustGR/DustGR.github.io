@@ -13,9 +13,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Temperature - Weather Data</title>
+    <title>Cloud Cover - Weather Data</title>
 </head>
-  <!--Nav Bar (for Vis1.html)-->
+  <!--Nav Bar (for Vis2.html)-->
   <nav class="navbar navbar-default">
     <div class="container-fluid">
       <!-- Brand and toggle get grouped for better mobile display -->
@@ -39,8 +39,8 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-eye-open"></span> Plots<span class="caret"></span></a>
               <ul class="dropdown-menu">
-                <li><a class='current'>Temperature</a></li>
-                <li><a href="Vis2.html">Cloud Cover</a></li>
+                <li><a href="Vis1.html">Temperature</a></li>
+                <li><a class='current'>Cloud Cover</a></li>
                 <li><a href="Vis3.html">Wind</a></li>
                 <li><a href="Vis4.html">Humidity</a></li>
               </ul>
@@ -54,11 +54,12 @@
   <div class='row'>
     <div class='col-md-6 col-md-offset-3'>
       <figure>
-        <img src='figures/Temperature_Scatter.png' class='img-responsive'>
+        <img src='figures/Cloudiness_Scatter.png' class='img-responsive'>
       </figure>
       <figcaption>
         <p class='text-center'>
-            This graph shows a curve toward higher temperature near the equator (lattitude 0°). The data was collected at the end of summer in the northern hemisphere, which might explain why temperatures are still higher from 0 to 20° lattitude, just north of the equator, instead of directly at the equator.        </p>
+            Cloud conditions appear to be fairly evenly distributed among different lattitudes.  Cloud conditions do not appear to be affected by lattitude.
+        </p>
       </figcaption>
     </div>
   </div>
