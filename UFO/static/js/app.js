@@ -81,12 +81,18 @@ d3.selectAll(".dropdown-menu>li").on("click", function() {
 // Prevent reloading the page when form items are used
 d3.select("#filter-form").on("submit", function() {
     d3.event.preventDefault(); 
+    if (d3.select("#date-text").property("value") == ""){
+        filter['datetime'] = "none";
+    }
     }
 )
 
 //Update filter when date field is changed
 d3.select("#date-text").on("change", function() {
     filter['datetime'] = d3.select(this).property("value")
+    if (d3.select("#date-text").property("value") == ""){
+        filter['datetime'] = "none";
+    }
     }
 );
 
@@ -139,7 +145,7 @@ function populateTable() {
     filterData.forEach(encounter =>{
         var row = table.append("tr").attr("class", "table-body");
         Object.values(encounter).forEach(dat => {
-            row.append("td").text(dat)
+            row.append("td").html(dat)
         })
     })
 }
