@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>UFO Finder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/superhero/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
+  <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+  <div class="wrapper">
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html">UFO Sightings
+            <img class="nav-ufo" src="static/images/ufo.svg">
+          </a>
+        </div>
+      </div>
+    </nav>
+    <div class="hero text-center">
+      <h1>UFO Sightings</h1>
+      <p>The Truth is Out There</p>
+    </div>
+    <div class="container">
+      <div class="row margin-top-50">
+        <div class="col-md-2">
+          <aside class="filters">
+            <div class="panel panel-default">
+              <div class="panel-heading">Filter Search</div>
+              <div class="panel-body">
+                <form id="filter-form">
+                  <div class="form-group">
+                    <ul class="list-group" id="filters">
+                      <li class="filter list-group-item" id='date-sort'>
+                          <label for="date">Enter a Date</label>
+                          <input class="form-control" id="date-text" type="text" placeholder="1/11/2011" onsubmit='return false'>
+                      </li>
+                      <!--City filter menu-->
+                      <li class="filter list-group-item invis" id='city-sort'><!--Non-datetime divisions will be toggled via buttons-->
+                          <label for="city">City:</label> 
+                          <div class="btn-group">
+                          <button class="btn btn-default btm-sm dropdown-toggle filter-dropdown" id='city-dropdown' type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <span class='button-text' id='city-button-text'>City</span> <span class="caret"></span>
+                          </button>
+                          <!--City dropdown populate here:-->
+                          <ul class="dropdown-menu" id="city-menu">
+                            <li class='city-select' id='city-none'><a>None</a></li>
+                          </ul>
+                          </div>
+                        <span id='city-select-print'></span>
+                      </li>
+                      <!--State filter menu-->
+                      <li class='filter list-group-item invis' id='state-sort'>
+                          <label for="state">State:</label> 
+                          <div class="btn-group">
+                          <button class="btn btn-default btm-sm dropdown-toggle filter-dropdown" id='state-dropdown' type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <span class='button-text' id='state-button-text'>State</span> <span class="caret"></span>
+                          </button>
+                          <!--State dropdown populate here:-->
+                          <ul class="dropdown-menu" id="state-menu">
+                            <li class='state-select' id='state-none'><a>None</a></li>
+                          </ul>
+                          </div>
+                      </li>
+                      <!--Country filter menu-->
+                      <li class='filter list-group-item invis' id='country-sort'>
+                          <label for="country">Country:</label> 
+                          <div class="btn-group">
+                          <button class="btn btn-default btm-sm dropdown-toggle filter-dropdown" id='country-dropdown' type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <span class='button-text' id='country-button-text'>Country</span> <span class="caret"></span>
+                          </button>
+                          <!--Country dropdown populate here:-->
+                          <ul class="dropdown-menu" id="country-menu">
+                            <li class='country-select' id='country-none'><a>None</a></li>
+                          </ul>
+                          </div>
+                      <!--Shape filter menu-->
+                      <li class='filter list-group-item invis' id='shape-sort'>
+                          <label for="shape">Shape:</label> 
+                          <div class="btn-group">
+                          <button class="btn btn-default btm-sm dropdown-toggle filter-dropdown" id='shape-dropdown' type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              <span class='button-text' id='shape-button-text'>Shape</span> <span class="caret"></span>
+                          </button>
+                          <!--Shape dropdown populate here:-->
+                          <ul class="dropdown-menu" id="shape-menu">
+                            <li class='shape-select' id='shape-none'><a>None</a></li>
+                          </ul>
+                          </div>
+                      </li>
+                    </ul>
+                  </div>
+                  <button id="filter-btn" type="submit" class="btn btn-default">Filter Table</button>
+                </form>
+              </div>
+            </div>
+          </aside>
+        </div>
+        <div class="col-md-10">
+          <div id="table-area" class="">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th class="table-head"><a class="btn btn-default toggler" role="button" id='date-toggle'>Date</a></th>
+                  <th class="table-head"><a class="btn btn-default toggler" role="button" id='city-toggle'>City</a></th>
+                  <th class="table-head"><a class="btn btn-default toggler" role="button" id='state-toggle'>State</a></th>
+                  <th class="table-head"><a class="btn btn-default toggler" role="button" id='country-toggle'>Country</a></th>
+                  <th class="table-head"><a class="btn btn-default toggler" role="button" id='shape-toggle'>Shape</a></th>
+                  <th class="table-head">Duration</th>
+                  <th class="table-head">Comments</th>
+                </tr>
+              </thead>
+              <tbody id="ufo-table"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <span class="bottom">UFO Sightings</span>
+    </footer>
+  </div>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script><!-- Latest compiled and minified JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.js"></script>
+  <script src="static/js/data.js"></script>
+  <script src="static/js/app.js"></script>
+</body>
+
+</html>
